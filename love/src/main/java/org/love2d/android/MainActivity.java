@@ -73,19 +73,9 @@ import java.net.URL;
 import java.net.URLConnection;
 import android.graphics.Color;
 import android.content.res.Resources;
+import org.love2d.android.R;
 //import org.ppsspp.ppsspp.Decompress;
-//new
-//tapsell
-import ir.tapsell.plus.TapsellPlus;
-import ir.tapsell.plus.AdRequestCallback;
-import ir.tapsell.plus.AdShowListener;
-import ir.tapsell.plus.model.TapsellPlusAdModel;
-import ir.tapsell.plus.model.TapsellPlusErrorModel;
-import ir.tapsell.plus.TapsellPlusInitListener;
-import ir.tapsell.plus.model.AdNetworkError;
-import ir.tapsell.plus.model.AdNetworks;
-//tapsell
-/**
+/*
  * This class will respond to android.intent.action.CREATE_SHORTCUT intent from launcher homescreen.
  * Register this class in AndroidManifest.xml.
  */
