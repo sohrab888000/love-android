@@ -2,6 +2,9 @@ name: android
 
 on:
   workflow_dispatch: 
+     inputs:
+      romURL:
+        description: 'Direct URL to game.love'
 
 jobs:
   build:
