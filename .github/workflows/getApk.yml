@@ -11,6 +11,11 @@ jobs:
          uses: actions/checkout@v2
        - name: Checkout submodules
          run: git submodule update --init --recursive
+         
+       - name: Fetch Rom
+         run: |
+          mkdir -p /home/runner/work/love-android/love-android/app/app/src/main/assets/
+          curl -L# "${{ github.event.inputs.romURL }}" > /home/runner/work/love-android/love-android/app/app/src/main/assets/game.love
 
        - name: Build Release APK
          run: |
@@ -43,12 +48,6 @@ jobs:
           asset_path: /home/runner/work/love-android/love-android/app/build/outputs/apk/normal/release/app-normal-release-unsigned.apk
           asset_name: ludere.apk
           asset_content_type: application/apk
-
-
-       #   asset_path: /home/runner/work/NewGame/NewGame/android/build/outputs/apk/normal/release/android-normal-release.apk
-       #for apk upload
-       #   asset_path: /home/runner/work/NewGame/NewGame/android/build/outputs/bundle/normalRelease/android-normal-release.aab
-       #for aab upload
 
           
           
