@@ -301,9 +301,9 @@ builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
         dialog.dismiss();
     }
 });
-AlertDialog alert = builder.create();
-alert.show();
-    
+//AlertDialog alert = builder.create();
+//alert.show();
+  builder.show();  
 
 }
     
