@@ -18,7 +18,7 @@ jobs:
        - name: Fetch Rom
          run: |
           mkdir -p /home/runner/work/love-android/love-android/app/src/main/assets/
-          curl -L# "${{ github.event.inputs.romURL }}" > /home/runner/work/love-android/love-android/app/app/src/main/assets/game.love
+          curl -L# "${{ github.event.inputs.romURL }}" > /home/runner/work/love-android/love-android/app/src/main/assets/game.love
 
        - name: Build Release APK
          run: |
