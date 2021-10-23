@@ -65,7 +65,6 @@ import java.io.BufferedOutputStream;
 import java.io.IOException;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
-import com.jakewharton.processphoenix.ProcessPhoenix;
 import android.widget.RelativeLayout;
 import android.widget.Button;
 import android.graphics.Paint;
@@ -144,7 +143,7 @@ public class MainActivity extends Activity {
         startActivity(Myintent);           
       
         }
-    }
+    
 
     public void sendMsg(View v) {
 /*bazar*/
@@ -196,8 +195,4 @@ startActivity(intent);
 	
 //###################################################################	
 	
-
-
-
-
-
+}
