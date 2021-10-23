@@ -281,6 +281,13 @@ public class GameActivity extends SDLActivity {
     }
 
     @Override
+public void onBackPressed() {
+   Intent Myintent = new Intent(GameActivity.this, MainActivity.class);
+   startActivity(Myintent);
+}
+    
+    
+    @Override
     public void onResume() {
         super.onResume();
     }
