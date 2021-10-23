@@ -40,7 +40,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
          with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: /home/runner/work/love-android/love-android/app/build/outputs/apk/normal.apk
+          asset_path: /home/runner/work/love-android/love-android/app/build/outputs/apk/normal/release/app-normal-release-unsigned.apk
           asset_name: ludere.apk
           asset_content_type: application/apk
 
