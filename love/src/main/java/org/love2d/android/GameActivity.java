@@ -282,8 +282,29 @@ public class GameActivity extends SDLActivity {
 
     @Override
 public void onBackPressed() {
+    
+    AlertDialog.Builder builder = new AlertDialog.Builder(this);
+builder.setTitle("!یک پیام سایه ای از سیستم!");
+builder.setMessage("آیا می خواهید به منوی اصلی بازی بروید؟");
+//builder.setIcon(R.drawable.ic_launcher);
+builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+    public void onClick(DialogInterface dialog, int id) {
+        dialog.dismiss();
+       // chronometer.stop();    // stop chronometer here
    Intent Myintent = new Intent(GameActivity.this, MainActivity.class);
    startActivity(Myintent);
+        
+    }
+});
+builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+    public void onClick(DialogInterface dialog, int id) {
+        dialog.dismiss();
+    }
+});
+AlertDialog alert = builder.create();
+alert.show();
+    
+
 }
     
     
