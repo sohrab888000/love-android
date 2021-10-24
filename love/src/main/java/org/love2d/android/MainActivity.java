@@ -110,6 +110,7 @@ public class MainActivity extends Activity {
     public void start(View v) {
 	    
         // Do something in response to button click
+	/*    
         Button start_the_game_button = (Button) findViewById(R.id.start_the_game_button);
         start_the_game_button.setVisibility(View.GONE);
         Button comments = (Button) findViewById(R.id.comments);
@@ -127,7 +128,7 @@ public class MainActivity extends Activity {
         RelativeLayout relative = (RelativeLayout) findViewById(R.id.relative);
         relative.setBackgroundResource(0);
         relative.setBackgroundColor(Color.parseColor("#000000"));
-      
+        */
         Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
         startActivity(Myintent);           
       
