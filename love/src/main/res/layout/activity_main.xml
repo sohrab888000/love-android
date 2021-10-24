@@ -105,30 +105,30 @@
 
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/BackToBase"
-    android:layout_width="120dp"
+    android:layout_width="80dp"
     android:layout_height="40dp"
-    android:text="فصل اول"
+    android:text="بازگشت"
     android:layout_alignParentEnd="true"	    
-    android:layout_above="@id/sTwo"    
+    android:layout_above="@id/sOne"    
     android:onClick="back_to_base" />	
 	
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/send_email"
+    android:id="@+id/sThree"
     android:layout_width="120dp"
     android:layout_height="40dp"
-    android:text="ایمیل مستقیم به ما"
+    android:text="فصل سوم"
     android:layout_alignParentEnd="true"
-    android:layout_below="@+id/comments"    
-    android:onClick="sendingEmail" />
+    android:layout_below="@+id/sTwo"    
+    android:onClick="Season_THREE" />
     
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/group_games_page"
+    android:id="@+id/sFour"
     android:layout_width="120dp"
     android:layout_height="40dp"
-    android:text="بازی های دیگر ما"
+    android:text="فصل چهارم"
     android:layout_alignParentEnd="true"
-    android:layout_below="@+id/send_email"  
-    android:onClick="goToGamesPage" />
+    android:layout_below="@+id/sThree"    
+    android:onClick="Season_FOUR" />
 	
    <! -- Seasons menu-->	 
 	
