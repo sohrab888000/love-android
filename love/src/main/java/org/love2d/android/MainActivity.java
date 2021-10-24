@@ -79,20 +79,8 @@ import org.love2d.android.R;
  * Register this class in AndroidManifest.xml.
  */
 public class MainActivity extends Activity {
-        private static final int BUFFER_SIZE = 4096;
-	
-    // Defining Permission codes.
-    // We can give any value
-    // but unique for each permission.
-    private static final int STORAGE_PERMISSION_CODE = 1;
-	private static final String[] permissionsForStorage = {
-		Manifest.permission.WRITE_EXTERNAL_STORAGE,
-	};
-	
-	
-	
-	
-	
+
+		
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -106,42 +94,40 @@ public class MainActivity extends Activity {
 	
 	
 	
-//all button codes/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    public void start(View v) {
-	    
-        // Do something in response to button click
-	/*    
-        Button start_the_game_button = (Button) findViewById(R.id.start_the_game_button);
-        start_the_game_button.setVisibility(View.GONE);
-        Button comments = (Button) findViewById(R.id.comments);
-        comments.setVisibility(View.GONE);
-        Button game_page = (Button) findViewById(R.id.game_page);
-        game_page.setVisibility(View.GONE);
-        Button exit_button = (Button) findViewById(R.id.exit_button); 
-        exit_button.setVisibility(View.GONE);
-        Button send_email = (Button) findViewById(R.id.send_email); 
-        send_email.setVisibility(View.GONE);
-	      Button group_games_page = (Button) findViewById(R.id.group_games_page); 
-        group_games_page.setVisibility(View.GONE);
-	      Button start_the_hub = (Button) findViewById(R.id.start_the_hub); 
-        start_the_hub.setVisibility(View.GONE);
-        RelativeLayout relative = (RelativeLayout) findViewById(R.id.relative);
-        relative.setBackgroundResource(0);
-        relative.setBackgroundColor(Color.parseColor("#000000"));
-        */
-        Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
-        startActivity(Myintent);           
-      
-        }
+//all button codes base menu/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+public void start(View v) {	    
+	
+//Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
+//startActivity(Myintent);                 
+}
     
-
-    public void sendMsg(View v) {
+public void trainSome(View v) {	
 /*bazar*/
+/*
+1.write 13 into files/save/chooser.txt
+2.start gameActivity    
+*/  
+}		
+	
+public void goToPage(View v) {	
+/*bazar*/
+/*	
+Intent intent = new Intent(Intent.ACTION_VIEW); 
+intent.setData(Uri.parse("bazaar://details?id=" + "com.SandSprogrammingGroup.FIFA2022")); 
+intent.setPackage("com.farsitel.bazaar"); 
+startActivity(intent);    
+*/  
+}	
+		
+public void commenting(View v) {
+/*bazar*/
+/*
 Intent intent = new Intent(Intent.ACTION_EDIT); 
 intent.setData(Uri.parse("bazaar://details?id=" + "com.SandSprogrammingGroup.FIFA2022")); 
 intent.setPackage("com.farsitel.bazaar"); 
 startActivity(intent);
-    }
+*/  
+}
 
 public void sendingEmail(View v) {
 /*bazar*/
@@ -151,38 +137,50 @@ intent.setAction(Intent.ACTION_SENDTO);
 intent.setData(Uri.parse(url));
 intent.putExtra(Intent.EXTRA_SUBJECT, "نظر دهی");    
 startActivity(intent);
-    }
-
-public void goToPage(View v) {	
-/*bazar*/
-Intent intent = new Intent(Intent.ACTION_VIEW); 
-intent.setData(Uri.parse("bazaar://details?id=" + "com.SandSprogrammingGroup.FIFA2022")); 
-intent.setPackage("com.farsitel.bazaar"); 
-startActivity(intent);    
-    }
+}
 	
 public void goToGamesPage(View v) {	
 /*bazar*/
+/*	
 Intent intent = new Intent(Intent.ACTION_VIEW); 
 intent.setData(Uri.parse("bazaar://collection?slug=by_author&aid=" + "230310009713")); 
 intent.setPackage("com.farsitel.bazaar"); 
 startActivity(intent);   
-    }
+*/
+}
 	
-public void ourHub(View v) {	
-Uri uri = Uri.parse("http://sandsbros.ctcin.bio");
-Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-startActivity(intent);
-    }	
-	
-	
-    public void exit_game(View v) {
-	this.finishAffinity();	
-    }
-//all button codes/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+public void exit_game(View v) {
+this.finishAffinity();	
+}
+//all button codes base menu/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
 		
 	
-//###################################################################	
+//###################################################################	functions need for better managment!
+private void clearBaseMenuAndShowSeasonsMenu(){
+Button start_the_game_button = (Button) findViewById(R.id.start_the_game_button);
+start_the_game_button.setVisibility(View.GONE);
+start_the_game_button.setEnabled(false);
+Button training = (Button) findViewById(R.id.training);
+training.setVisibility(View.GONE);
+training.setEnabled(false);	
+Button game_page = (Button) findViewById(R.id.game_page);
+game_page.setVisibility(View.GONE);
+game_page.setEnabled(false);	
+Button comments = (Button) findViewById(R.id.comments);
+comments.setVisibility(View.GONE);
+comments.setEnabled(false);		
+Button send_email = (Button) findViewById(R.id.send_email); 
+send_email.setVisibility(View.GONE);
+send_email.setEnabled(false);	
+Button group_games_page = (Button) findViewById(R.id.group_games_page); 
+group_games_page.setVisibility(View.GONE);
+group_games_page.setEnabled(false);		
+Button exit_button = (Button) findViewById(R.id.exit_button); 
+exit_button.setVisibility(View.GONE);
+exit_button.setEnabled(false);		
+}	
+//###################################################################	functions need for better managment!
+	
 	
 }
