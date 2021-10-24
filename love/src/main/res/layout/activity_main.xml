@@ -23,7 +23,7 @@
     android:text="نظر دهی"
     android:layout_alignParentEnd="true"
     android:layout_centerVertical="true"
-    android:onClick="sendMsg" />
+    android:onClick="commenting" />
 	
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/game_page"
