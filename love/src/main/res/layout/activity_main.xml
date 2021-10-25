@@ -22,7 +22,6 @@
     android:layout_height="40dp"
     android:text="نظر دهی"
     android:layout_alignParentEnd="true"
-   <! -- android:layout_centerVertical="true"-->
     android:onClick="commenting" />
 	
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
@@ -91,7 +90,6 @@
     android:layout_height="40dp"
     android:text="فصل دوم"
     android:layout_alignParentEnd="true"
-    <! -- android:layout_centerVertical="true"-->
     android:onClick="Season_TWO" />
 	
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
@@ -143,7 +141,6 @@
     android:layout_height="40dp"
     android:text="جنگل دوم"
     android:layout_alignParentEnd="true"
-    <! -- android:layout_centerVertical="true"-->
     android:onClick="Season_One_E2" />
 	
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
@@ -185,7 +182,6 @@
     android:layout_height="40dp"
     android:text="یخبندان دوم"
     android:layout_alignParentEnd="true"
-    <! -- android:layout_centerVertical="true"-->
     android:onClick="Season_Two_E2" />
 	
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
@@ -227,7 +223,6 @@
     android:layout_height="40dp"
     android:text="بیابان دوم"
     android:layout_alignParentEnd="true"
-    <! -- android:layout_centerVertical="true"-->
     android:onClick="Season_Three_E2" />
 	
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
@@ -269,7 +264,6 @@
     android:layout_height="40dp"
     android:text="اقیانوس دوم"
     android:layout_alignParentEnd="true"
-    <! -- android:layout_centerVertical="true"-->
     android:onClick="Season_Four_E2" />
 	
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
