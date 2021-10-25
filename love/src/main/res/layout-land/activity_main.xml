@@ -1,108 +1,306 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@drawable/image"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/relative"
     android:descendantFocusability="blocksDescendants">
+	
+ <ImageView 
+	android:id="@+id/allback_images"    
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/image" />
     
-    <Button xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/start_the_game_button"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="شروع بازی"
-    android:layout_centerHorizontal="true"       
-    android:layout_centerVertical="true"
-    android:onClick="start" />
-    
+	
+    <! -- base menu-->	
+	
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/comments"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="120dp"
+    android:layout_height="40dp"
     android:text="نظر دهی"
-    android:layout_toLeftOf="@id/start_the_game_button"    
-    android:onClick="sendMsg" />
+    android:layout_alignParentEnd="true"
+    android:layout_centerVertical="true"
+    android:onClick="commenting" />
+	
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/game_page"
+    android:layout_width="120dp"
+    android:layout_height="40dp"
+    android:text="صفحه بازی"
+    android:layout_alignParentEnd="true"	    
+    android:layout_above="@id/comments"    
+    android:onClick="goToPage" /> 
     
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/training"
+    android:layout_width="120dp"
+    android:layout_height="40dp"
+    android:text="آموزشی"
+    android:layout_alignParentEnd="true"	    
+    android:layout_above="@id/game_page"    
+    android:onClick="trainSome" /> 	
+	
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/start_the_game_button"
+    android:layout_width="120dp"
+    android:layout_height="40dp"
+    android:text="شروع بازی"
+    android:layout_alignParentEnd="true"
+    android:layout_above="@id/training"
+    android:onClick="start" />		
+	
+   <Button xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/send_email"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="120dp"
+    android:layout_height="40dp"
     android:text="ایمیل مستقیم به ما"
-    android:layout_toLeftOf="@id/start_the_game_button"          
+    android:layout_alignParentEnd="true"
     android:layout_below="@+id/comments"    
     android:onClick="sendingEmail" />
     
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/game_page"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="صفحه بازی"
-    android:layout_toRightOf="@id/start_the_game_button"    
-    android:onClick="goToPage" />
+    android:id="@+id/group_games_page"
+    android:layout_width="120dp"
+    android:layout_height="40dp"
+    android:text="بازی های دیگر ما"
+    android:layout_alignParentEnd="true"
+    android:layout_below="@+id/send_email"  
+    android:onClick="goToGamesPage" />
     
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/exit_button"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="خروج"
-    android:layout_centerHorizontal="true"        
-    android:layout_below="@id/start_the_hub"    
-    android:onClick="exit_game" />
-    
-	
-    <Button xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/start_the_hub"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="HUB ما"
-    android:layout_centerHorizontal="true"       
-    android:layout_below="@id/start_the_game_button"  	    
-    android:onClick="ourHub" />
-	
-    <Button xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/second_start"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="شروع"
-    android:layout_centerHorizontal="true"       
-    android:layout_centerVertical="true"
-    android:onClick="second_start_game" 
-    android:visibility="gone"/>
-
-	<Button xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/group_games_page"
     android:layout_width="120dp"
-    android:layout_height="70dp"
-    android:text="بازی های دیگر ما"
-    android:layout_toRightOf="@id/start_the_game_button"    
-    android:layout_below="@id/game_page"		
-    android:textColor="@color/red"
-    android:textStyle="bold"	
-    android:background="@drawable/selector"
-    android:onClick="goToGamesPage" />
+    android:layout_height="40dp"
+    android:text="خروج"
+    android:layout_alignParentEnd="true"
+    android:layout_below="@+id/group_games_page"  
+    android:onClick="exit_game" />
 	
-    
-     <ProgressBar
-     android:id="@+id/pBar"
-     style="?android:attr/progressBarStyleLarge"
-    android:layout_centerHorizontal="true"       
+    <! -- base menu-->	
+	
+    <! -- ######################################################-->		
+	
+   <! -- Seasons menu-->	 
+   
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sTwo"
+    android:layout_width="120dp"
+    android:layout_height="40dp"
+    android:text="فصل دوم"
+    android:layout_alignParentEnd="true"
     android:layout_centerVertical="true"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_centerInParent="true"
-    android:visibility="invisible" />
-    android:indeterminate="true" />              
-    
-    
-     <TextView
-     android:id="@+id/textview"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-     android:textColor="#008000"
-     android:layout_below="@+id/pBar"
-    android:layout_centerHorizontal="true"       
-    android:layout_centerVertical="true"     
-     android:textSize="40dp"
-     android:textStyle="bold"/>
+    android:onClick="Season_TWO" />
+	
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sOne"
+    android:layout_width="120dp"
+    android:layout_height="40dp"
+    android:text="فصل اول"
+    android:layout_alignParentEnd="true"	    
+    android:layout_above="@id/sTwo"    
+    android:onClick="Season_ONE" />     
 
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/BackToBase"
+    android:layout_width="80dp"
+    android:layout_height="40dp"
+    android:text="بازگشت"
+    android:layout_alignParentEnd="true"	    
+    android:layout_above="@id/sOne"    
+    android:onClick="back_to_base" />	
+	
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sThree"
+    android:layout_width="120dp"
+    android:layout_height="40dp"
+    android:text="فصل سوم"
+    android:layout_alignParentEnd="true"
+    android:layout_below="@+id/sTwo"    
+    android:onClick="Season_THREE" />
+    
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sFour"
+    android:layout_width="120dp"
+    android:layout_height="40dp"
+    android:text="فصل چهارم"
+    android:layout_alignParentEnd="true"
+    android:layout_below="@+id/sThree"    
+    android:onClick="Season_FOUR" />
+	
+   <! -- Seasons menu-->	 
+	
+	
+    <! -- ######################################################-->		
+	
+   <! -- Seasons one-->	
+	
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sOneEtwo"
+    android:layout_width="120dp"
+    android:layout_height="40dp"
+    android:text="جنگل دوم"
+    android:layout_alignParentEnd="true"
+    android:layout_centerVertical="true"
+    android:onClick="Season_One_E2" />
+	
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sOneEone"
+    android:layout_width="120dp"
+    android:layout_height="40dp"
+    android:text="جنگل اول"
+    android:layout_alignParentEnd="true"	    
+    android:layout_above="@id/sOneEtwo"    
+    android:onClick="Season_One_E1" />     
+
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/BackToSeasonsFromOne"
+    android:layout_width="80dp"
+    android:layout_height="40dp"
+    android:text="بازگشت"
+    android:layout_alignParentEnd="true"	    
+    android:layout_above="@id/sOneEone"    
+    android:onClick="back_to_seasons_From_one" />	
+	
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sOneEthree"
+    android:layout_width="120dp"
+    android:layout_height="40dp"
+    android:text="جنگل سوم"
+    android:layout_alignParentEnd="true"
+    android:layout_below="@+id/sOneEtwo"    
+    android:onClick="Season_One_E3" />	
+	
+   <! -- Seasons one-->	
+	
+    <! -- ######################################################-->		
+	
+   <! -- Seasons two-->	
+	
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sTwoEtwo"
+    android:layout_width="120dp"
+    android:layout_height="40dp"
+    android:text="یخبندان دوم"
+    android:layout_alignParentEnd="true"
+    android:layout_centerVertical="true"
+    android:onClick="Season_Two_E2" />
+	
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sTwoEone"
+    android:layout_width="120dp"
+    android:layout_height="40dp"
+    android:text="یخبندان اول"
+    android:layout_alignParentEnd="true"	    
+    android:layout_above="@id/sTwoEtwo"    
+    android:onClick="Season_Two_E1" />     
+
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/BackToSeasonsFromTwo"
+    android:layout_width="80dp"
+    android:layout_height="40dp"
+    android:text="بازگشت"
+    android:layout_alignParentEnd="true"	    
+    android:layout_above="@id/sTwoEone"    
+    android:onClick="back_to_seasons_From_two" />	
+	
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sTwoEthree"
+    android:layout_width="120dp"
+    android:layout_height="40dp"
+    android:text="یخبندان سوم"
+    android:layout_alignParentEnd="true"
+    android:layout_below="@+id/sTwoEtwo"    
+    android:onClick="Season_Two_E3" />	
+	
+   <! -- Seasons two-->		
+	
+    <! -- ######################################################-->		
+	
+   <! -- Seasons three-->	
+	
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sThreeEtwo"
+    android:layout_width="120dp"
+    android:layout_height="40dp"
+    android:text="بیابان دوم"
+    android:layout_alignParentEnd="true"
+    android:layout_centerVertical="true"
+    android:onClick="Season_Three_E2" />
+	
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sThreeEone"
+    android:layout_width="120dp"
+    android:layout_height="40dp"
+    android:text="بیابان اول"
+    android:layout_alignParentEnd="true"	    
+    android:layout_above="@id/sThreeEtwo"    
+    android:onClick="Season_Three_E1" />     
+
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/BackToSeasonsFromThree"
+    android:layout_width="80dp"
+    android:layout_height="40dp"
+    android:text="بازگشت"
+    android:layout_alignParentEnd="true"	    
+    android:layout_above="@id/sThreeEone"    
+    android:onClick="back_to_seasons_From_three" />	
+	
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sThreeEthree"
+    android:layout_width="120dp"
+    android:layout_height="40dp"
+    android:text="بیابان سوم"
+    android:layout_alignParentEnd="true"
+    android:layout_below="@+id/sThreeEtwo"    
+    android:onClick="Season_Three_E3" />	
+	
+   <! -- Seasons three-->		
+	
+    <! -- ######################################################-->		
+	
+   <! -- Seasons four-->	
+	
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sFourEtwo"
+    android:layout_width="120dp"
+    android:layout_height="40dp"
+    android:text="اقیانوس دوم"
+    android:layout_alignParentEnd="true"
+    android:layout_centerVertical="true"
+    android:onClick="Season_Four_E2" />
+	
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sFourEone"
+    android:layout_width="120dp"
+    android:layout_height="40dp"
+    android:text="اقیانوس اول"
+    android:layout_alignParentEnd="true"	    
+    android:layout_above="@id/sFourEtwo"    
+    android:onClick="Season_Four_E1" />     
+
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/BackToSeasonsFromFour"
+    android:layout_width="80dp"
+    android:layout_height="40dp"
+    android:text="بازگشت"
+    android:layout_alignParentEnd="true"	    
+    android:layout_above="@id/sFourEone"    
+    android:onClick="back_to_seasons_From_four" />	
+	
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sFourEthree"
+    android:layout_width="120dp"
+    android:layout_height="40dp"
+    android:text="اقیانوس سوم"
+    android:layout_alignParentEnd="true"
+    android:layout_below="@+id/sFourEtwo"    
+    android:onClick="Season_Four_E3" />	
+	
+   <! -- Seasons four-->	
+	
+
+	
 </RelativeLayout>
