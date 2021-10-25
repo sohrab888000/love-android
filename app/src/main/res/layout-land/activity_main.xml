@@ -14,7 +14,7 @@
         android:src="@drawable/image" />
     
 	
-    <! -- base menu-->	
+    <!-- base menu-->	
 	
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/comments"
@@ -22,7 +22,6 @@
     android:layout_height="40dp"
     android:text="نظر دهی"
     android:layout_alignParentEnd="true"
-   <! -- android:layout_centerVertical="true"-->
     android:onClick="commenting" />
 	
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
@@ -79,11 +78,11 @@
     android:layout_below="@+id/group_games_page"  
     android:onClick="exit_game" />
 	
-    <! -- base menu-->	
+    <!-- base menu-->	
 	
-    <! -- ######################################################-->		
+    <!-- ######################################################-->		
 	
-   <! -- Seasons menu-->	 
+   <!-- Seasons menu-->	 
    
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/sTwo"
@@ -91,7 +90,6 @@
     android:layout_height="40dp"
     android:text="فصل دوم"
     android:layout_alignParentEnd="true"
-    <! -- android:layout_centerVertical="true"-->
     android:onClick="Season_TWO" />
 	
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
@@ -130,12 +128,12 @@
     android:layout_below="@+id/sThree"    
     android:onClick="Season_FOUR" />
 	
-   <! -- Seasons menu-->	 
+   <!-- Seasons menu-->	 
 	
 	
-    <! -- ######################################################-->		
+    <!-- ######################################################-->		
 	
-   <! -- Seasons one-->	
+   <!-- Seasons one-->	
 	
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/sOneEtwo"
@@ -143,7 +141,6 @@
     android:layout_height="40dp"
     android:text="جنگل دوم"
     android:layout_alignParentEnd="true"
-    <! -- android:layout_centerVertical="true"-->
     android:onClick="Season_One_E2" />
 	
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
@@ -173,11 +170,11 @@
     android:layout_below="@+id/sOneEtwo"    
     android:onClick="Season_One_E3" />	
 	
-   <! -- Seasons one-->	
+   <!-- Seasons one-->	
 	
-    <! -- ######################################################-->		
+    <!-- ######################################################-->		
 	
-   <! -- Seasons two-->	
+   <!-- Seasons two-->	
 	
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/sTwoEtwo"
@@ -185,7 +182,6 @@
     android:layout_height="40dp"
     android:text="یخبندان دوم"
     android:layout_alignParentEnd="true"
-    <! -- android:layout_centerVertical="true"-->
     android:onClick="Season_Two_E2" />
 	
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
@@ -215,11 +211,11 @@
     android:layout_below="@+id/sTwoEtwo"    
     android:onClick="Season_Two_E3" />	
 	
-   <! -- Seasons two-->		
+   <!-- Seasons two-->		
 	
-    <! -- ######################################################-->		
+    <!-- ######################################################-->		
 	
-   <! -- Seasons three-->	
+   <!-- Seasons three-->	
 	
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/sThreeEtwo"
@@ -227,7 +223,6 @@
     android:layout_height="40dp"
     android:text="بیابان دوم"
     android:layout_alignParentEnd="true"
-    <! -- android:layout_centerVertical="true"-->
     android:onClick="Season_Three_E2" />
 	
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
@@ -257,11 +252,11 @@
     android:layout_below="@+id/sThreeEtwo"    
     android:onClick="Season_Three_E3" />	
 	
-   <! -- Seasons three-->		
+   <!-- Seasons three-->		
 	
-    <! -- ######################################################-->		
+    <!-- ######################################################-->		
 	
-   <! -- Seasons four-->	
+   <!-- Seasons four-->	
 	
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/sFourEtwo"
@@ -269,7 +264,6 @@
     android:layout_height="40dp"
     android:text="اقیانوس دوم"
     android:layout_alignParentEnd="true"
-    <! -- android:layout_centerVertical="true"-->
     android:onClick="Season_Four_E2" />
 	
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
@@ -299,7 +293,7 @@
     android:layout_below="@+id/sFourEtwo"    
     android:onClick="Season_Four_E3" />	
 	
-   <! -- Seasons four-->	
+   <!-- Seasons four-->	
 	
 
 	
