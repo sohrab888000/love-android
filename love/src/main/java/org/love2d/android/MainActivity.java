@@ -344,7 +344,7 @@ public void Season_Four_E3(View v) {
 //***********************************^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^**********************************	
 //###################################################################	functions need for better managment!
 //base menu	
-private void showBaseMenu(){
+public static void showBaseMenu(){
 Button start_the_game_button = (Button) findViewById(R.id.start_the_game_button);
 start_the_game_button.setVisibility(View.VISIBLE);
 start_the_game_button.setEnabled(true);
@@ -367,7 +367,7 @@ Button exit_button = (Button) findViewById(R.id.exit_button);
 exit_button.setVisibility(View.VISIBLE);
 exit_button.setEnabled(true);		
 }	
-private void clearBaseMenu(){
+public static void clearBaseMenu(){
 Button start_the_game_button = (Button) findViewById(R.id.start_the_game_button);
 start_the_game_button.setVisibility(View.GONE);
 start_the_game_button.setEnabled(false);
@@ -393,7 +393,7 @@ exit_button.setEnabled(false);
 //base menu
 //##############################
 //Seasons menu	
-private void showSeasonsMenu(){
+public static void showSeasonsMenu(){
 Button BackToBase = (Button) findViewById(R.id.BackToBase);
 BackToBase.setVisibility(View.VISIBLE);
 BackToBase.setEnabled(true);
@@ -410,7 +410,7 @@ Button sFour = (Button) findViewById(R.id.sFour);
 sFour.setVisibility(View.VISIBLE);
 sFour.setEnabled(true);		
 }	
-private void clearSeasonsMenu(){
+public static void clearSeasonsMenu(){
 Button BackToBase = (Button) findViewById(R.id.BackToBase);
 BackToBase.setVisibility(View.GONE);
 BackToBase.setEnabled(false);
@@ -430,7 +430,7 @@ sFour.setEnabled(false);
 //Seasons menu
 //############################
 //Season one	
-private void showSeasonsOne(){
+public static void showSeasonsOne(){
 Button BackToSeasonsFromOne = (Button) findViewById(R.id.BackToSeasonsFromOne);
 BackToSeasonsFromOne.setVisibility(View.VISIBLE);
 BackToSeasonsFromOne.setEnabled(true);
@@ -444,7 +444,7 @@ Button sOneEthree = (Button) findViewById(R.id.sOneEthree);
 sOneEthree.setVisibility(View.VISIBLE);
 sOneEthree.setEnabled(true);				
 }		
-private void clearSeasonsOne(){
+public static void clearSeasonsOne(){
 Button BackToSeasonsFromOne = (Button) findViewById(R.id.BackToSeasonsFromOne);
 BackToSeasonsFromOne.setVisibility(View.GONE);
 BackToSeasonsFromOne.setEnabled(false);
@@ -461,7 +461,7 @@ sOneEthree.setEnabled(false);
 //Season one
 //#############################
 //Season two	
-private void showSeasonsTwo(){
+public static void showSeasonsTwo(){
 Button BackToSeasonsFromTwo = (Button) findViewById(R.id.BackToSeasonsFromTwo);
 BackToSeasonsFromTwo.setVisibility(View.VISIBLE);
 BackToSeasonsFromTwo.setEnabled(true);
@@ -475,7 +475,7 @@ Button sTwoEthree = (Button) findViewById(R.id.sTwoEthree);
 sTwoEthree.setVisibility(View.VISIBLE);
 sTwoEthree.setEnabled(true);				
 }		
-private void clearSeasonsTwo(){
+public static void clearSeasonsTwo(){
 Button BackToSeasonsFromTwo = (Button) findViewById(R.id.BackToSeasonsFromTwo);
 BackToSeasonsFromTwo.setVisibility(View.GONE);
 BackToSeasonsFromTwo.setEnabled(false);
@@ -492,7 +492,7 @@ sTwoEthree.setEnabled(false);
 //Season two
 //##########################
 //Season three
-private void showSeasonsThree(){
+public static void showSeasonsThree(){
 Button BackToSeasonsFromThree = (Button) findViewById(R.id.BackToSeasonsFromThree);
 BackToSeasonsFromThree.setVisibility(View.VISIBLE);
 BackToSeasonsFromThree.setEnabled(true);
@@ -506,7 +506,7 @@ Button sThreeEthree = (Button) findViewById(R.id.sThreeEthree);
 sThreeEthree.setVisibility(View.VISIBLE);
 sThreeEthree.setEnabled(true);				
 }
-private void clearSeasonsThree(){
+public static void clearSeasonsThree(){
 Button BackToSeasonsFromThree = (Button) findViewById(R.id.BackToSeasonsFromThree);
 BackToSeasonsFromThree.setVisibility(View.GONE);
 BackToSeasonsFromThree.setEnabled(false);
@@ -523,7 +523,7 @@ sThreeEthree.setEnabled(false);
 //Season three 
 //##################################
 //Season four
-private void showSeasonsFour(){
+public static void showSeasonsFour(){
 Button BackToSeasonsFromFour = (Button) findViewById(R.id.BackToSeasonsFromFour);
 BackToSeasonsFromFour.setVisibility(View.VISIBLE);
 BackToSeasonsFromFour.setEnabled(true);
@@ -537,7 +537,7 @@ Button sFourEthree = (Button) findViewById(R.id.sFourEthree);
 sFourEthree.setVisibility(View.VISIBLE);
 sFourEthree.setEnabled(true);				
 }	
-private void clearSeasonsFour(){
+public static void clearSeasonsFour(){
 Button BackToSeasonsFromFour = (Button) findViewById(R.id.BackToSeasonsFromFour);
 BackToSeasonsFromFour.setVisibility(View.VISIBLE);
 BackToSeasonsFromFour.setEnabled(true);
