@@ -92,27 +92,30 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
+		//clear all menues except base menu
+		clearSeasonsMenu();
+		clearSeasonsOne();
+		clearSeasonsTwo();
+		clearSeasonsThree();
+		clearSeasonsFour();	
+		//clear all menues except base menu
 	}
-	
-	
-	
-	
-	
-	
 	
 	
 //all button codes base menu/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 public void start(View v) {	    
-	
-//Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
-//startActivity(Myintent);                 
+clearBaseMenu();
+//here between should be an animation that change base menu background to Seasons menu	
+showSeasonsMenu();	               
 }
     
 public void trainSome(View v) {	
-/*bazar*/
 /*
-1.write 13 into files/save/chooser.txt
+1.write 0 into files/save/chooser.txt
 2.start gameActivity    
+//Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
+//startActivity(Myintent);  
 */  
 }		
 	
@@ -160,9 +163,185 @@ public void exit_game(View v) {
 this.finishAffinity();	
 }
 //all button codes base menu/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//***********************************^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^**********************************	
+//all button codes Seasons menu/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+public void back_to_base(View v) {	    
+clearSeasonsMenu();	    
+//here between should be an animation that change Seasons menu background to Base menu	
+showBaseMenu();	
+}
+    
+public void Season_ONE(View v) {	
+clearSeasonsMenu();
+ImageView allback_images = (ImageView) findViewById(R.id.allback_images); 	
+ImageViewAnimatedChange(MainActivity.this,allback_images,R.drawable.s_one);
+showSeasonsOne();	 
+}		
 	
+public void Season_TWO(View v) {	
+clearSeasonsMenu();
+ImageView allback_images = (ImageView) findViewById(R.id.allback_images); 	
+ImageViewAnimatedChange(MainActivity.this,allback_images,R.drawable.s_two);
+showSeasonsTwo();
+}	
 		
+public void Season_THREE(View v) {
+clearSeasonsMenu();
+ImageView allback_images = (ImageView) findViewById(R.id.allback_images); 	
+ImageViewAnimatedChange(MainActivity.this,allback_images,R.drawable.s_three);
+showSeasonsThree();
+}
+
+public void Season_FOUR(View v) {
+clearSeasonsMenu();
+ImageView allback_images = (ImageView) findViewById(R.id.allback_images); 	
+ImageViewAnimatedChange(MainActivity.this,allback_images,R.drawable.s_four);
+showSeasonsFour();
+}
+//all button codes Seasons menu/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//***********************************^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^**********************************	
+//all button codes Season one/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+public void back_to_seasons_From_one(View v) {	    
+clearSeasonsOne();
+//here between should be an animation that change Season one background to Seasons menu	
+showSeasonsMenu();
+}
+    
+public void Season_One_E1(View v) {	
+/*
+1.write 1 into files/save/chooser.txt
+2.start gameActivity    
+//Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
+//startActivity(Myintent);  
+*/ 	 
+}		
 	
+public void Season_One_E2(View v) {	
+/*
+1.write 2 into files/save/chooser.txt
+2.start gameActivity    
+//Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
+//startActivity(Myintent);  
+*/ 
+}	
+		
+public void Season_One_E3(View v) {
+/*
+1.write 3 into files/save/chooser.txt
+2.start gameActivity    
+//Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
+//startActivity(Myintent);  
+*/ 
+}
+
+//all button codes Season one/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//***********************************^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^**********************************	
+//all button codes Season two/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+public void back_to_seasons_From_two(View v) {	    	    
+clearSeasonsTwo();
+//here between should be an animation that change Season two background to Seasons menu	
+showSeasonsMenu();
+}
+    
+public void Season_Two_E1(View v) {	
+/*
+1.write 4 into files/save/chooser.txt
+2.start gameActivity    
+//Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
+//startActivity(Myintent);  
+*/ 	 
+}		
+	
+public void Season_Two_E2(View v) {	
+/*
+1.write 5 into files/save/chooser.txt
+2.start gameActivity    
+//Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
+//startActivity(Myintent);  
+*/ 
+}	
+		
+public void Season_Two_E3(View v) {
+/*
+1.write 6 into files/save/chooser.txt
+2.start gameActivity    
+//Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
+//startActivity(Myintent);  
+*/ 
+}
+//all button codes Season two/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//***********************************^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^**********************************	
+//all button codes Season three/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+public void back_to_seasons_From_three(View v) {	    	    
+clearSeasonsThree();
+//here between should be an animation that change Season three background to Seasons menu	
+showSeasonsMenu();
+}
+    
+public void Season_Three_E1(View v) {	
+/*
+1.write 7 into files/save/chooser.txt
+2.start gameActivity    
+//Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
+//startActivity(Myintent);  
+*/ 	 
+}		
+	
+public void Season_Three_E2(View v) {	
+/*
+1.write 8 into files/save/chooser.txt
+2.start gameActivity    
+//Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
+//startActivity(Myintent);  
+*/ 
+}	
+		
+public void Season_Three_E3(View v) {
+/*
+1.write 9 into files/save/chooser.txt
+2.start gameActivity    
+//Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
+//startActivity(Myintent);  
+*/ 
+}
+//all button codes Season three/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//***********************************^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^**********************************		
+//all button codes Season four/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+public void back_to_seasons_From_four(View v) {	    	    
+clearSeasonsFour();
+//here between should be an animation that change Season four background to Seasons menu	
+showSeasonsMenu();
+}
+    
+public void Season_Four_E1(View v) {	
+/*
+1.write 10 into files/save/chooser.txt
+2.start gameActivity    
+//Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
+//startActivity(Myintent);  
+*/ 	 
+}		
+	
+public void Season_Four_E2(View v) {	
+/*
+1.write 11 into files/save/chooser.txt
+2.start gameActivity    
+//Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
+//startActivity(Myintent);  
+*/ 
+}	
+		
+public void Season_Four_E3(View v) {
+/*
+1.write 12 into files/save/chooser.txt
+2.start gameActivity    
+//Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
+//startActivity(Myintent);  
+*/ 
+}
+//all button codes Season three/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//***********************************^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^**********************************	
+//***********************************^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^**********************************	
 //###################################################################	functions need for better managment!
 //base menu	
 private void showBaseMenu(){
@@ -376,4 +555,33 @@ sFourEthree.setEnabled(true);
 //###################################################################	functions need for better managment!
 	
 	
+//**********************^^^^^^^^^^^^^^^^^^^^^^^^^^****************************^^^^^^^^^^^^^^^^^^^^^^******************
+	
+	
+//###################################################################	functions need for Animations!
+public static void ImageViewAnimatedChange(final Context c,final ImageView v ,final int resId) {
+    final Animation anim_out = AnimationUtils.loadAnimation(c, android.R.anim.fade_out); 
+    final Animation anim_in  = AnimationUtils.loadAnimation(c, android.R.anim.fade_in); 
+    anim_out.setAnimationListener(new AnimationListener()
+    {
+        @Override public void onAnimationStart(Animation animation) {}
+        @Override public void onAnimationRepeat(Animation animation) {}
+        @Override public void onAnimationEnd(Animation animation)
+        {
+	    Bitmap bImage = BitmapFactory.decodeResource(c.getResources(), resId);
+            v.setImageBitmap(bImage); 
+            anim_in.setAnimationListener(new AnimationListener() {
+                @Override public void onAnimationStart(Animation animation) {}
+                @Override public void onAnimationRepeat(Animation animation) {}
+                @Override public void onAnimationEnd(Animation animation) {}
+            });
+            v.startAnimation(anim_in);
+        }
+    });
+    v.startAnimation(anim_out);
+}		
+//###################################################################	functions need for Animations!
+	
+
+
 }
