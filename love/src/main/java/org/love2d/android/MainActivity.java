@@ -173,28 +173,28 @@ showBaseMenu();
     
 public void Season_ONE(View v) {	
 clearSeasonsMenu();
-ImageView allback_images = (ImageView) MainActivity.this.findViewById(R.id.allback_images); 	
+ImageView allback_images = (ImageView) MainActivity.findViewById(R.id.allback_images); 	
 ImageViewAnimatedChange(MainActivity.this,allback_images,R.drawable.s_one);
 showSeasonsOne();	 
 }		
 	
 public void Season_TWO(View v) {	
 clearSeasonsMenu();
-ImageView allback_images = (ImageView) MainActivity.this.findViewById(R.id.allback_images); 	
+ImageView allback_images = (ImageView) MainActivity.findViewById(R.id.allback_images); 	
 ImageViewAnimatedChange(MainActivity.this,allback_images,R.drawable.s_two);
 showSeasonsTwo();
 }	
 		
 public void Season_THREE(View v) {
 clearSeasonsMenu();
-ImageView allback_images = (ImageView) MainActivity.this.findViewById(R.id.allback_images); 	
+ImageView allback_images = (ImageView) MainActivity.findViewById(R.id.allback_images); 	
 ImageViewAnimatedChange(MainActivity.this,allback_images,R.drawable.s_three);
 showSeasonsThree();
 }
 
 public void Season_FOUR(View v) {
 clearSeasonsMenu();
-ImageView allback_images = (ImageView) MainActivity.this.findViewById(R.id.allback_images); 	
+ImageView allback_images = (ImageView) MainActivity.findViewById(R.id.allback_images); 	
 ImageViewAnimatedChange(MainActivity.this,allback_images,R.drawable.s_four);
 showSeasonsFour();
 }
@@ -345,48 +345,48 @@ public void Season_Four_E3(View v) {
 //###################################################################	functions need for better managment!
 //base menu	
 public static void showBaseMenu(){
-Button start_the_game_button = (Button) MainActivity.this.findViewById(R.id.start_the_game_button);
+Button start_the_game_button = (Button) MainActivity.findViewById(R.id.start_the_game_button);
 start_the_game_button.setVisibility(View.VISIBLE);
 start_the_game_button.setEnabled(true);
-Button training = (Button) MainActivity.this.findViewById(R.id.training);
+Button training = (Button) MainActivity.findViewById(R.id.training);
 training.setVisibility(View.VISIBLE);
 training.setEnabled(true);	
-Button game_page = (Button) MainActivity.this.findViewById(R.id.game_page);
+Button game_page = (Button) MainActivity.findViewById(R.id.game_page);
 game_page.setVisibility(View.VISIBLE);
 game_page.setEnabled(true);	
-Button comments = (Button) MainActivity.this.findViewById(R.id.comments);
+Button comments = (Button) MainActivity.findViewById(R.id.comments);
 comments.setVisibility(View.VISIBLE);
 comments.setEnabled(true);		
-Button send_email = (Button) MainActivity.this.findViewById(R.id.send_email); 
+Button send_email = (Button) MainActivity.findViewById(R.id.send_email); 
 send_email.setVisibility(View.VISIBLE);
 send_email.setEnabled(true);	
-Button group_games_page = (Button) MainActivity.this.findViewById(R.id.group_games_page); 
+Button group_games_page = (Button) MainActivity.findViewById(R.id.group_games_page); 
 group_games_page.setVisibility(View.VISIBLE);
 group_games_page.setEnabled(true);		
-Button exit_button = (Button) MainActivity.this.findViewById(R.id.exit_button); 
+Button exit_button = (Button) MainActivity.findViewById(R.id.exit_button); 
 exit_button.setVisibility(View.VISIBLE);
 exit_button.setEnabled(true);		
 }	
 public static void clearBaseMenu(){
-Button start_the_game_button = (Button) MainActivity.this.findViewById(R.id.start_the_game_button);
+Button start_the_game_button = (Button) MainActivity.findViewById(R.id.start_the_game_button);
 start_the_game_button.setVisibility(View.GONE);
 start_the_game_button.setEnabled(false);
-Button training = (Button) MainActivity.this.findViewById(R.id.training);
+Button training = (Button) MainActivity.findViewById(R.id.training);
 training.setVisibility(View.GONE);
 training.setEnabled(false);	
-Button game_page = (Button) MainActivity.this.findViewById(R.id.game_page);
+Button game_page = (Button) MainActivity.findViewById(R.id.game_page);
 game_page.setVisibility(View.GONE);
 game_page.setEnabled(false);	
-Button comments = (Button) MainActivity.this.findViewById(R.id.comments);
+Button comments = (Button) MainActivity.findViewById(R.id.comments);
 comments.setVisibility(View.GONE);
 comments.setEnabled(false);		
-Button send_email = (Button) MainActivity.this.findViewById(R.id.send_email); 
+Button send_email = (Button) MainActivity.findViewById(R.id.send_email); 
 send_email.setVisibility(View.GONE);
 send_email.setEnabled(false);	
-Button group_games_page = (Button) MainActivity.this.findViewById(R.id.group_games_page); 
+Button group_games_page = (Button) MainActivity.findViewById(R.id.group_games_page); 
 group_games_page.setVisibility(View.GONE);
 group_games_page.setEnabled(false);		
-Button exit_button = (Button) MainActivity.this.findViewById(R.id.exit_button); 
+Button exit_button = (Button) MainActivity.findViewById(R.id.exit_button); 
 exit_button.setVisibility(View.GONE);
 exit_button.setEnabled(false);		
 }		
@@ -394,36 +394,36 @@ exit_button.setEnabled(false);
 //##############################
 //Seasons menu	
 public static void showSeasonsMenu(){
-Button BackToBase = (Button) MainActivity.this.findViewById(R.id.BackToBase);
+Button BackToBase = (Button) MainActivity.findViewById(R.id.BackToBase);
 BackToBase.setVisibility(View.VISIBLE);
 BackToBase.setEnabled(true);
-Button sOne = (Button) MainActivity.this.findViewById(R.id.sOne);
+Button sOne = (Button) MainActivity.findViewById(R.id.sOne);
 sOne.setVisibility(View.VISIBLE);
 sOne.setEnabled(true);	
-Button sTwo = (Button) MainActivity.this.findViewById(R.id.sTwo);
+Button sTwo = (Button) MainActivity.findViewById(R.id.sTwo);
 sTwo.setVisibility(View.VISIBLE);
 sTwo.setEnabled(true);	
-Button sThree = (Button) MainActivity.this.findViewById(R.id.sThree);
+Button sThree = (Button) MainActivity.findViewById(R.id.sThree);
 sThree.setVisibility(View.VISIBLE);
 sThree.setEnabled(true);		
-Button sFour = (Button) MainActivity.this.findViewById(R.id.sFour); 
+Button sFour = (Button) MainActivity.findViewById(R.id.sFour); 
 sFour.setVisibility(View.VISIBLE);
 sFour.setEnabled(true);		
 }	
 public static void clearSeasonsMenu(){
-Button BackToBase = (Button) MainActivity.this.findViewById(R.id.BackToBase);
+Button BackToBase = (Button) MainActivity.findViewById(R.id.BackToBase);
 BackToBase.setVisibility(View.GONE);
 BackToBase.setEnabled(false);
-Button sOne = (Button) MainActivity.this.findViewById(R.id.sOne);
+Button sOne = (Button) MainActivity.findViewById(R.id.sOne);
 sOne.setVisibility(View.GONE);
 sOne.setEnabled(false);	
-Button sTwo = (Button) MainActivity.this.findViewById(R.id.sTwo);
+Button sTwo = (Button) MainActivity.findViewById(R.id.sTwo);
 sTwo.setVisibility(View.GONE);
 sTwo.setEnabled(false);	
-Button sThree = (Button) MainActivity.this.findViewById(R.id.sThree);
+Button sThree = (Button) MainActivity.findViewById(R.id.sThree);
 sThree.setVisibility(View.GONE);
 sThree.setEnabled(false);		
-Button sFour = (Button) MainActivity.this.findViewById(R.id.sFour); 
+Button sFour = (Button) MainActivity.findViewById(R.id.sFour); 
 sFour.setVisibility(View.GONE);
 sFour.setEnabled(false);			
 }	
@@ -431,30 +431,30 @@ sFour.setEnabled(false);
 //############################
 //Season one	
 public static void showSeasonsOne(){
-Button BackToSeasonsFromOne = (Button) MainActivity.this.findViewById(R.id.BackToSeasonsFromOne);
+Button BackToSeasonsFromOne = (Button) MainActivity.findViewById(R.id.BackToSeasonsFromOne);
 BackToSeasonsFromOne.setVisibility(View.VISIBLE);
 BackToSeasonsFromOne.setEnabled(true);
-Button sOneEone = (Button) MainActivity.this.findViewById(R.id.sOneEone);
+Button sOneEone = (Button) MainActivity.findViewById(R.id.sOneEone);
 sOneEone.setVisibility(View.VISIBLE);
 sOneEone.setEnabled(true);	
-Button sOneEtwo = (Button) MainActivity.this.findViewById(R.id.sOneEtwo);
+Button sOneEtwo = (Button) MainActivity.findViewById(R.id.sOneEtwo);
 sOneEtwo.setVisibility(View.VISIBLE);
 sOneEtwo.setEnabled(true);	
-Button sOneEthree = (Button) MainActivity.this.findViewById(R.id.sOneEthree);
+Button sOneEthree = (Button) MainActivity.findViewById(R.id.sOneEthree);
 sOneEthree.setVisibility(View.VISIBLE);
 sOneEthree.setEnabled(true);				
 }		
 public static void clearSeasonsOne(){
-Button BackToSeasonsFromOne = (Button) MainActivity.this.findViewById(R.id.BackToSeasonsFromOne);
+Button BackToSeasonsFromOne = (Button) MainActivity.findViewById(R.id.BackToSeasonsFromOne);
 BackToSeasonsFromOne.setVisibility(View.GONE);
 BackToSeasonsFromOne.setEnabled(false);
-Button sOneEone = (Button) MainActivity.this.findViewById(R.id.sOneEone);
+Button sOneEone = (Button) MainActivity.findViewById(R.id.sOneEone);
 sOneEone.setVisibility(View.GONE);
 sOneEone.setEnabled(false);	
-Button sOneEtwo = (Button) MainActivity.this.findViewById(R.id.sOneEtwo);
+Button sOneEtwo = (Button) MainActivity.findViewById(R.id.sOneEtwo);
 sOneEtwo.setVisibility(View.GONE);
 sOneEtwo.setEnabled(false);	
-Button sOneEthree = (Button) MainActivity.this.findViewById(R.id.sOneEthree);
+Button sOneEthree = (Button) MainActivity.findViewById(R.id.sOneEthree);
 sOneEthree.setVisibility(View.GONE);
 sOneEthree.setEnabled(false);				
 }	
@@ -462,30 +462,30 @@ sOneEthree.setEnabled(false);
 //#############################
 //Season two	
 public static void showSeasonsTwo(){
-Button BackToSeasonsFromTwo = (Button) MainActivity.this.findViewById(R.id.BackToSeasonsFromTwo);
+Button BackToSeasonsFromTwo = (Button) MainActivity.findViewById(R.id.BackToSeasonsFromTwo);
 BackToSeasonsFromTwo.setVisibility(View.VISIBLE);
 BackToSeasonsFromTwo.setEnabled(true);
-Button sTwoEone = (Button) MainActivity.this.findViewById(R.id.sTwoEone);
+Button sTwoEone = (Button) MainActivity.findViewById(R.id.sTwoEone);
 sTwoEone.setVisibility(View.VISIBLE);
 sTwoEone.setEnabled(true);	
-Button sTwoEtwo = (Button) MainActivity.this.findViewById(R.id.sTwoEtwo);
+Button sTwoEtwo = (Button) MainActivity.findViewById(R.id.sTwoEtwo);
 sTwoEtwo.setVisibility(View.VISIBLE);
 sTwoEtwo.setEnabled(true);	
-Button sTwoEthree = (Button) MainActivity.this.findViewById(R.id.sTwoEthree);
+Button sTwoEthree = (Button) MainActivity.findViewById(R.id.sTwoEthree);
 sTwoEthree.setVisibility(View.VISIBLE);
 sTwoEthree.setEnabled(true);				
 }		
 public static void clearSeasonsTwo(){
-Button BackToSeasonsFromTwo = (Button) MainActivity.this.findViewById(R.id.BackToSeasonsFromTwo);
+Button BackToSeasonsFromTwo = (Button) MainActivity.findViewById(R.id.BackToSeasonsFromTwo);
 BackToSeasonsFromTwo.setVisibility(View.GONE);
 BackToSeasonsFromTwo.setEnabled(false);
-Button sTwoEone = (Button) MainActivity.this.findViewById(R.id.sTwoEone);
+Button sTwoEone = (Button) MainActivity.findViewById(R.id.sTwoEone);
 sTwoEone.setVisibility(View.GONE);
 sTwoEone.setEnabled(false);	
-Button sTwoEtwo = (Button) MainActivity.this.findViewById(R.id.sTwoEtwo);
+Button sTwoEtwo = (Button) MainActivity.findViewById(R.id.sTwoEtwo);
 sTwoEtwo.setVisibility(View.GONE);
 sTwoEtwo.setEnabled(false);	
-Button sTwoEthree = (Button) MainActivity.this.findViewById(R.id.sTwoEthree);
+Button sTwoEthree = (Button) MainActivity.findViewById(R.id.sTwoEthree);
 sTwoEthree.setVisibility(View.GONE);
 sTwoEthree.setEnabled(false);				
 }	
@@ -493,30 +493,30 @@ sTwoEthree.setEnabled(false);
 //##########################
 //Season three
 public static void showSeasonsThree(){
-Button BackToSeasonsFromThree = (Button) MainActivity.this.findViewById(R.id.BackToSeasonsFromThree);
+Button BackToSeasonsFromThree = (Button) MainActivity.findViewById(R.id.BackToSeasonsFromThree);
 BackToSeasonsFromThree.setVisibility(View.VISIBLE);
 BackToSeasonsFromThree.setEnabled(true);
-Button sThreeEone = (Button) MainActivity.this.findViewById(R.id.sThreeEone);
+Button sThreeEone = (Button) MainActivity.findViewById(R.id.sThreeEone);
 sThreeEone.setVisibility(View.VISIBLE);
 sThreeEone.setEnabled(true);	
-Button sThreeEtwo = (Button) MainActivity.this.findViewById(R.id.sThreeEtwo);
+Button sThreeEtwo = (Button) MainActivity.findViewById(R.id.sThreeEtwo);
 sThreeEtwo.setVisibility(View.VISIBLE);
 sThreeEtwo.setEnabled(true);	
-Button sThreeEthree = (Button) MainActivity.this.findViewById(R.id.sThreeEthree);
+Button sThreeEthree = (Button) MainActivity.findViewById(R.id.sThreeEthree);
 sThreeEthree.setVisibility(View.VISIBLE);
 sThreeEthree.setEnabled(true);				
 }
 public static void clearSeasonsThree(){
-Button BackToSeasonsFromThree = (Button) MainActivity.this.findViewById(R.id.BackToSeasonsFromThree);
+Button BackToSeasonsFromThree = (Button) MainActivity.findViewById(R.id.BackToSeasonsFromThree);
 BackToSeasonsFromThree.setVisibility(View.GONE);
 BackToSeasonsFromThree.setEnabled(false);
-Button sThreeEone = (Button) MainActivity.this.findViewById(R.id.sThreeEone);
+Button sThreeEone = (Button) MainActivity.findViewById(R.id.sThreeEone);
 sThreeEone.setVisibility(View.GONE);
 sThreeEone.setEnabled(false);	
-Button sThreeEtwo = (Button) MainActivity.this.findViewById(R.id.sThreeEtwo);
+Button sThreeEtwo = (Button) MainActivity.findViewById(R.id.sThreeEtwo);
 sThreeEtwo.setVisibility(View.GONE);
 sThreeEtwo.setEnabled(false);	
-Button sThreeEthree = (Button) MainActivity.this.findViewById(R.id.sThreeEthree);
+Button sThreeEthree = (Button) MainActivity.findViewById(R.id.sThreeEthree);
 sThreeEthree.setVisibility(View.GONE);
 sThreeEthree.setEnabled(false);				
 }
@@ -524,30 +524,30 @@ sThreeEthree.setEnabled(false);
 //##################################
 //Season four
 public static void showSeasonsFour(){
-Button BackToSeasonsFromFour = (Button) MainActivity.this.findViewById(R.id.BackToSeasonsFromFour);
+Button BackToSeasonsFromFour = (Button) MainActivity.findViewById(R.id.BackToSeasonsFromFour);
 BackToSeasonsFromFour.setVisibility(View.VISIBLE);
 BackToSeasonsFromFour.setEnabled(true);
-Button sFourEone = (Button) MainActivity.this.findViewById(R.id.sFourEone);
+Button sFourEone = (Button) MainActivity.findViewById(R.id.sFourEone);
 sFourEone.setVisibility(View.VISIBLE);
 sFourEone.setEnabled(true);	
-Button sFourEtwo = (Button) MainActivity.this.findViewById(R.id.sFourEtwo);
+Button sFourEtwo = (Button) MainActivity.findViewById(R.id.sFourEtwo);
 sFourEtwo.setVisibility(View.VISIBLE);
 sFourEtwo.setEnabled(true);	
-Button sFourEthree = (Button) MainActivity.this.findViewById(R.id.sFourEthree);
+Button sFourEthree = (Button) MainActivity.findViewById(R.id.sFourEthree);
 sFourEthree.setVisibility(View.VISIBLE);
 sFourEthree.setEnabled(true);				
 }	
 public static void clearSeasonsFour(){
-Button BackToSeasonsFromFour = (Button) MainActivity.this.findViewById(R.id.BackToSeasonsFromFour);
+Button BackToSeasonsFromFour = (Button) MainActivity.findViewById(R.id.BackToSeasonsFromFour);
 BackToSeasonsFromFour.setVisibility(View.VISIBLE);
 BackToSeasonsFromFour.setEnabled(true);
-Button sFourEone = (Button) MainActivity.this.findViewById(R.id.sFourEone);
+Button sFourEone = (Button) MainActivity.findViewById(R.id.sFourEone);
 sFourEone.setVisibility(View.VISIBLE);
 sFourEone.setEnabled(true);	
-Button sFourEtwo = (Button) MainActivity.this.findViewById(R.id.sFourEtwo);
+Button sFourEtwo = (Button) MainActivity.findViewById(R.id.sFourEtwo);
 sFourEtwo.setVisibility(View.VISIBLE);
 sFourEtwo.setEnabled(true);	
-Button sFourEthree = (Button) MainActivity.this.findViewById(R.id.sFourEthree);
+Button sFourEthree = (Button) MainActivity.findViewById(R.id.sFourEthree);
 sFourEthree.setVisibility(View.VISIBLE);
 sFourEthree.setEnabled(true);				
 }	
