@@ -73,7 +73,14 @@ import java.net.URLConnection;
 import android.graphics.Color;
 import android.content.res.Resources;
 import org.love2d.android.R;
-//import org.ppsspp.ppsspp.Decompress;
+//to image view and background changing animation!
+import android.widget.ImageView;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.view.animation.Animation.AnimationListener;
+//
 /*
  * This class will respond to android.intent.action.CREATE_SHORTCUT intent from launcher homescreen.
  * Register this class in AndroidManifest.xml.
@@ -157,7 +164,31 @@ this.finishAffinity();
 		
 	
 //###################################################################	functions need for better managment!
-private void clearBaseMenuAndShowSeasonsMenu(){
+//base menu	
+private void showBaseMenu(){
+Button start_the_game_button = (Button) findViewById(R.id.start_the_game_button);
+start_the_game_button.setVisibility(View.VISIBLE);
+start_the_game_button.setEnabled(true);
+Button training = (Button) findViewById(R.id.training);
+training.setVisibility(View.VISIBLE);
+training.setEnabled(true);	
+Button game_page = (Button) findViewById(R.id.game_page);
+game_page.setVisibility(View.VISIBLE);
+game_page.setEnabled(true);	
+Button comments = (Button) findViewById(R.id.comments);
+comments.setVisibility(View.VISIBLE);
+comments.setEnabled(true);		
+Button send_email = (Button) findViewById(R.id.send_email); 
+send_email.setVisibility(View.VISIBLE);
+send_email.setEnabled(true);	
+Button group_games_page = (Button) findViewById(R.id.group_games_page); 
+group_games_page.setVisibility(View.VISIBLE);
+group_games_page.setEnabled(true);		
+Button exit_button = (Button) findViewById(R.id.exit_button); 
+exit_button.setVisibility(View.VISIBLE);
+exit_button.setEnabled(true);		
+}	
+private void clearBaseMenu(){
 Button start_the_game_button = (Button) findViewById(R.id.start_the_game_button);
 start_the_game_button.setVisibility(View.GONE);
 start_the_game_button.setEnabled(false);
@@ -179,7 +210,169 @@ group_games_page.setEnabled(false);
 Button exit_button = (Button) findViewById(R.id.exit_button); 
 exit_button.setVisibility(View.GONE);
 exit_button.setEnabled(false);		
+}		
+//base menu
+//##############################
+//Seasons menu	
+private void showSeasonsMenu(){
+Button BackToBase = (Button) findViewById(R.id.BackToBase);
+BackToBase.setVisibility(View.VISIBLE);
+BackToBase.setEnabled(true);
+Button sOne = (Button) findViewById(R.id.sOne);
+sOne.setVisibility(View.VISIBLE);
+sOne.setEnabled(true);	
+Button sTwo = (Button) findViewById(R.id.sTwo);
+sTwo.setVisibility(View.VISIBLE);
+sTwo.setEnabled(true);	
+Button sThree = (Button) findViewById(R.id.sThree);
+sThree.setVisibility(View.VISIBLE);
+sThree.setEnabled(true);		
+Button sFour = (Button) findViewById(R.id.sFour); 
+sFour.setVisibility(View.VISIBLE);
+sFour.setEnabled(true);		
 }	
+private void clearSeasonsMenu(){
+Button BackToBase = (Button) findViewById(R.id.BackToBase);
+BackToBase.setVisibility(View.GONE);
+BackToBase.setEnabled(false);
+Button sOne = (Button) findViewById(R.id.sOne);
+sOne.setVisibility(View.GONE);
+sOne.setEnabled(false);	
+Button sTwo = (Button) findViewById(R.id.sTwo);
+sTwo.setVisibility(View.GONE);
+sTwo.setEnabled(false);	
+Button sThree = (Button) findViewById(R.id.sThree);
+sThree.setVisibility(View.GONE);
+sThree.setEnabled(false);		
+Button sFour = (Button) findViewById(R.id.sFour); 
+sFour.setVisibility(View.GONE);
+sFour.setEnabled(false);			
+}	
+//Seasons menu
+//############################
+//Season one	
+private void showSeasonsOne(){
+Button BackToSeasonsFromOne = (Button) findViewById(R.id.BackToSeasonsFromOne);
+BackToSeasonsFromOne.setVisibility(View.VISIBLE);
+BackToSeasonsFromOne.setEnabled(true);
+Button sOneEone = (Button) findViewById(R.id.sOneEone);
+sOneEone.setVisibility(View.VISIBLE);
+sOneEone.setEnabled(true);	
+Button sOneEtwo = (Button) findViewById(R.id.sOneEtwo);
+sOneEtwo.setVisibility(View.VISIBLE);
+sOneEtwo.setEnabled(true);	
+Button sOneEthree = (Button) findViewById(R.id.sOneEthree);
+sOneEthree.setVisibility(View.VISIBLE);
+sOneEthree.setEnabled(true);				
+}		
+private void clearSeasonsOne(){
+Button BackToSeasonsFromOne = (Button) findViewById(R.id.BackToSeasonsFromOne);
+BackToSeasonsFromOne.setVisibility(View.GONE);
+BackToSeasonsFromOne.setEnabled(false);
+Button sOneEone = (Button) findViewById(R.id.sOneEone);
+sOneEone.setVisibility(View.GONE);
+sOneEone.setEnabled(false);	
+Button sOneEtwo = (Button) findViewById(R.id.sOneEtwo);
+sOneEtwo.setVisibility(View.GONE);
+sOneEtwo.setEnabled(false);	
+Button sOneEthree = (Button) findViewById(R.id.sOneEthree);
+sOneEthree.setVisibility(View.GONE);
+sOneEthree.setEnabled(false);				
+}	
+//Season one
+//#############################
+//Season two	
+private void showSeasonsTwo(){
+Button BackToSeasonsFromTwo = (Button) findViewById(R.id.BackToSeasonsFromTwo);
+BackToSeasonsFromTwo.setVisibility(View.VISIBLE);
+BackToSeasonsFromTwo.setEnabled(true);
+Button sTwoEone = (Button) findViewById(R.id.sTwoEone);
+sTwoEone.setVisibility(View.VISIBLE);
+sTwoEone.setEnabled(true);	
+Button sTwoEtwo = (Button) findViewById(R.id.sTwoEtwo);
+sTwoEtwo.setVisibility(View.VISIBLE);
+sTwoEtwo.setEnabled(true);	
+Button sTwoEthree = (Button) findViewById(R.id.sTwoEthree);
+sTwoEthree.setVisibility(View.VISIBLE);
+sTwoEthree.setEnabled(true);				
+}		
+private void clearSeasonsTwo(){
+Button BackToSeasonsFromTwo = (Button) findViewById(R.id.BackToSeasonsFromTwo);
+BackToSeasonsFromTwo.setVisibility(View.GONE);
+BackToSeasonsFromTwo.setEnabled(false);
+Button sTwoEone = (Button) findViewById(R.id.sTwoEone);
+sTwoEone.setVisibility(View.GONE);
+sTwoEone.setEnabled(false);	
+Button sTwoEtwo = (Button) findViewById(R.id.sTwoEtwo);
+sTwoEtwo.setVisibility(View.GONE);
+sTwoEtwo.setEnabled(false);	
+Button sTwoEthree = (Button) findViewById(R.id.sTwoEthree);
+sTwoEthree.setVisibility(View.GONE);
+sTwoEthree.setEnabled(false);				
+}	
+//Season two
+//##########################
+//Season three
+private void showSeasonsThree(){
+Button BackToSeasonsFromThree = (Button) findViewById(R.id.BackToSeasonsFromThree);
+BackToSeasonsFromThree.setVisibility(View.VISIBLE);
+BackToSeasonsFromThree.setEnabled(true);
+Button sThreeEone = (Button) findViewById(R.id.sThreeEone);
+sThreeEone.setVisibility(View.VISIBLE);
+sThreeEone.setEnabled(true);	
+Button sThreeEtwo = (Button) findViewById(R.id.sThreeEtwo);
+sThreeEtwo.setVisibility(View.VISIBLE);
+sThreeEtwo.setEnabled(true);	
+Button sThreeEthree = (Button) findViewById(R.id.sThreeEthree);
+sThreeEthree.setVisibility(View.VISIBLE);
+sThreeEthree.setEnabled(true);				
+}
+private void clearSeasonsThree(){
+Button BackToSeasonsFromThree = (Button) findViewById(R.id.BackToSeasonsFromThree);
+BackToSeasonsFromThree.setVisibility(View.GONE);
+BackToSeasonsFromThree.setEnabled(false);
+Button sThreeEone = (Button) findViewById(R.id.sThreeEone);
+sThreeEone.setVisibility(View.GONE);
+sThreeEone.setEnabled(false);	
+Button sThreeEtwo = (Button) findViewById(R.id.sThreeEtwo);
+sThreeEtwo.setVisibility(View.GONE);
+sThreeEtwo.setEnabled(false);	
+Button sThreeEthree = (Button) findViewById(R.id.sThreeEthree);
+sThreeEthree.setVisibility(View.GONE);
+sThreeEthree.setEnabled(false);				
+}
+//Season three 
+//##################################
+//Season four
+private void showSeasonsFour(){
+Button BackToSeasonsFromFour = (Button) findViewById(R.id.BackToSeasonsFromFour);
+BackToSeasonsFromFour.setVisibility(View.VISIBLE);
+BackToSeasonsFromFour.setEnabled(true);
+Button sFourEone = (Button) findViewById(R.id.sFourEone);
+sFourEone.setVisibility(View.VISIBLE);
+sFourEone.setEnabled(true);	
+Button sFourEtwo = (Button) findViewById(R.id.sFourEtwo);
+sFourEtwo.setVisibility(View.VISIBLE);
+sFourEtwo.setEnabled(true);	
+Button sFourEthree = (Button) findViewById(R.id.sFourEthree);
+sFourEthree.setVisibility(View.VISIBLE);
+sFourEthree.setEnabled(true);				
+}	
+private void clearSeasonsFour(){
+Button BackToSeasonsFromFour = (Button) findViewById(R.id.BackToSeasonsFromFour);
+BackToSeasonsFromFour.setVisibility(View.VISIBLE);
+BackToSeasonsFromFour.setEnabled(true);
+Button sFourEone = (Button) findViewById(R.id.sFourEone);
+sFourEone.setVisibility(View.VISIBLE);
+sFourEone.setEnabled(true);	
+Button sFourEtwo = (Button) findViewById(R.id.sFourEtwo);
+sFourEtwo.setVisibility(View.VISIBLE);
+sFourEtwo.setEnabled(true);	
+Button sFourEthree = (Button) findViewById(R.id.sFourEthree);
+sFourEthree.setVisibility(View.VISIBLE);
+sFourEthree.setEnabled(true);				
+}	
+//Season four	
 //###################################################################	functions need for better managment!
 	
 	
