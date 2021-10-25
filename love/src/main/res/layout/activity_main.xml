@@ -21,7 +21,6 @@
     android:layout_width="120dp"
     android:layout_height="40dp"
     android:text="نظر دهی"
-    android:layout_alignParentEnd="true"
     android:layout_centerVertical="true"	    
     android:onClick="commenting" />
 	
@@ -30,7 +29,6 @@
     android:layout_width="120dp"
     android:layout_height="40dp"
     android:text="صفحه بازی"
-    android:layout_alignParentEnd="true"	    
     android:layout_above="@id/comments"    
     android:onClick="goToPage" /> 
     
@@ -39,7 +37,6 @@
     android:layout_width="120dp"
     android:layout_height="40dp"
     android:text="آموزشی"
-    android:layout_alignParentEnd="true"	    
     android:layout_above="@id/game_page"    
     android:onClick="trainSome" /> 	
 	
@@ -48,7 +45,6 @@
     android:layout_width="120dp"
     android:layout_height="40dp"
     android:text="شروع بازی"
-    android:layout_alignParentEnd="true"
     android:layout_above="@id/training"
     android:onClick="start" />		
 	
@@ -57,7 +53,6 @@
     android:layout_width="120dp"
     android:layout_height="40dp"
     android:text="ایمیل مستقیم به ما"
-    android:layout_alignParentEnd="true"
     android:layout_below="@+id/comments"    
     android:onClick="sendingEmail" />
     
@@ -66,7 +61,6 @@
     android:layout_width="120dp"
     android:layout_height="40dp"
     android:text="بازی های دیگر ما"
-    android:layout_alignParentEnd="true"
     android:layout_below="@+id/send_email"  
     android:onClick="goToGamesPage" />
     
@@ -76,7 +70,6 @@
     android:layout_height="40dp"
     android:text="خروج"
     android:layout_alignParentEnd="true"
-    android:layout_below="@+id/group_games_page"  
     android:onClick="exit_game" />
 	
     <!-- base menu-->	
@@ -90,7 +83,7 @@
     android:layout_width="120dp"
     android:layout_height="40dp"
     android:text="فصل دوم"
-    android:layout_alignParentEnd="true"
+    android:layout_centerVertical="true"	    	    
     android:onClick="Season_TWO" />
 	
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
@@ -98,7 +91,6 @@
     android:layout_width="120dp"
     android:layout_height="40dp"
     android:text="فصل اول"
-    android:layout_alignParentEnd="true"	    
     android:layout_above="@id/sTwo"    
     android:onClick="Season_ONE" />     
 
@@ -107,7 +99,6 @@
     android:layout_width="80dp"
     android:layout_height="40dp"
     android:text="بازگشت"
-    android:layout_alignParentEnd="true"	    
     android:layout_above="@id/sOne"    
     android:onClick="back_to_base" />	
 	
@@ -116,7 +107,6 @@
     android:layout_width="120dp"
     android:layout_height="40dp"
     android:text="فصل سوم"
-    android:layout_alignParentEnd="true"
     android:layout_below="@+id/sTwo"    
     android:onClick="Season_THREE" />
     
@@ -125,7 +115,6 @@
     android:layout_width="120dp"
     android:layout_height="40dp"
     android:text="فصل چهارم"
-    android:layout_alignParentEnd="true"
     android:layout_below="@+id/sThree"    
     android:onClick="Season_FOUR" />
 	
@@ -141,7 +130,7 @@
     android:layout_width="120dp"
     android:layout_height="40dp"
     android:text="جنگل دوم"
-    android:layout_alignParentEnd="true"
+    android:layout_centerVertical="true"	    	    
     android:onClick="Season_One_E2" />
 	
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
@@ -149,7 +138,6 @@
     android:layout_width="120dp"
     android:layout_height="40dp"
     android:text="جنگل اول"
-    android:layout_alignParentEnd="true"	    
     android:layout_above="@id/sOneEtwo"    
     android:onClick="Season_One_E1" />     
 
@@ -158,7 +146,6 @@
     android:layout_width="80dp"
     android:layout_height="40dp"
     android:text="بازگشت"
-    android:layout_alignParentEnd="true"	    
     android:layout_above="@id/sOneEone"    
     android:onClick="back_to_seasons_From_one" />	
 	
@@ -167,7 +154,6 @@
     android:layout_width="120dp"
     android:layout_height="40dp"
     android:text="جنگل سوم"
-    android:layout_alignParentEnd="true"
     android:layout_below="@+id/sOneEtwo"    
     android:onClick="Season_One_E3" />	
 	
@@ -182,7 +168,7 @@
     android:layout_width="120dp"
     android:layout_height="40dp"
     android:text="یخبندان دوم"
-    android:layout_alignParentEnd="true"
+    android:layout_centerVertical="true"	    	    
     android:onClick="Season_Two_E2" />
 	
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
@@ -190,7 +176,6 @@
     android:layout_width="120dp"
     android:layout_height="40dp"
     android:text="یخبندان اول"
-    android:layout_alignParentEnd="true"	    
     android:layout_above="@id/sTwoEtwo"    
     android:onClick="Season_Two_E1" />     
 
@@ -199,7 +184,6 @@
     android:layout_width="80dp"
     android:layout_height="40dp"
     android:text="بازگشت"
-    android:layout_alignParentEnd="true"	    
     android:layout_above="@id/sTwoEone"    
     android:onClick="back_to_seasons_From_two" />	
 	
@@ -208,7 +192,6 @@
     android:layout_width="120dp"
     android:layout_height="40dp"
     android:text="یخبندان سوم"
-    android:layout_alignParentEnd="true"
     android:layout_below="@+id/sTwoEtwo"    
     android:onClick="Season_Two_E3" />	
 	
@@ -223,7 +206,7 @@
     android:layout_width="120dp"
     android:layout_height="40dp"
     android:text="بیابان دوم"
-    android:layout_alignParentEnd="true"
+    android:layout_centerVertical="true"	    
     android:onClick="Season_Three_E2" />
 	
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
@@ -231,7 +214,6 @@
     android:layout_width="120dp"
     android:layout_height="40dp"
     android:text="بیابان اول"
-    android:layout_alignParentEnd="true"	    
     android:layout_above="@id/sThreeEtwo"    
     android:onClick="Season_Three_E1" />     
 
@@ -240,7 +222,6 @@
     android:layout_width="80dp"
     android:layout_height="40dp"
     android:text="بازگشت"
-    android:layout_alignParentEnd="true"	    
     android:layout_above="@id/sThreeEone"    
     android:onClick="back_to_seasons_From_three" />	
 	
@@ -249,7 +230,6 @@
     android:layout_width="120dp"
     android:layout_height="40dp"
     android:text="بیابان سوم"
-    android:layout_alignParentEnd="true"
     android:layout_below="@+id/sThreeEtwo"    
     android:onClick="Season_Three_E3" />	
 	
@@ -264,7 +244,7 @@
     android:layout_width="120dp"
     android:layout_height="40dp"
     android:text="اقیانوس دوم"
-    android:layout_alignParentEnd="true"
+    android:layout_centerVertical="true"	    	    
     android:onClick="Season_Four_E2" />
 	
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
@@ -272,7 +252,6 @@
     android:layout_width="120dp"
     android:layout_height="40dp"
     android:text="اقیانوس اول"
-    android:layout_alignParentEnd="true"	    
     android:layout_above="@id/sFourEtwo"    
     android:onClick="Season_Four_E1" />     
 
@@ -281,7 +260,6 @@
     android:layout_width="80dp"
     android:layout_height="40dp"
     android:text="بازگشت"
-    android:layout_alignParentEnd="true"	    
     android:layout_above="@id/sFourEone"    
     android:onClick="back_to_seasons_From_four" />	
 	
@@ -290,7 +268,6 @@
     android:layout_width="120dp"
     android:layout_height="40dp"
     android:text="اقیانوس سوم"
-    android:layout_alignParentEnd="true"
     android:layout_below="@+id/sFourEtwo"    
     android:onClick="Season_Four_E3" />	
 	
