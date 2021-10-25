@@ -15,11 +15,13 @@ jobs:
        - name: Checkout submodules
          run: git submodule update --init --recursive
 
-       - uses: joschi/setup-jdk@v2
+       - name: Setup Java 11
+         uses: actions/setup-java@v2
          with:
-          java-version: '11' # The OpenJDK version to make available on the path
-          architecture: 'x64' # defaults to 'x64'
-         
+           distribution: adopt-hotspot
+           java-version: 11
+           cache: gradle
+        
        - name: Build Release APK
          run: |
           chmod +x ./gradlew
