@@ -197,6 +197,10 @@ showSeasonsFour();
 public void back_to_seasons_From_one(View v) {	    
 clearSeasonsOne();
 //here between should be an animation that change Season one background to Seasons menu	
+//for now
+ImageView allback_images = (ImageView) findViewById(R.id.allback_images); 	
+ImageViewAnimatedChange(MainActivity.this,allback_images,R.drawable.image);
+//for now	
 showSeasonsMenu();
 }
     
@@ -233,6 +237,10 @@ public void Season_One_E3(View v) {
 public void back_to_seasons_From_two(View v) {	    	    
 clearSeasonsTwo();
 //here between should be an animation that change Season two background to Seasons menu	
+//for now
+ImageView allback_images = (ImageView) findViewById(R.id.allback_images); 	
+ImageViewAnimatedChange(MainActivity.this,allback_images,R.drawable.image);
+//for now		
 showSeasonsMenu();
 }
     
@@ -268,6 +276,10 @@ public void Season_Two_E3(View v) {
 public void back_to_seasons_From_three(View v) {	    	    
 clearSeasonsThree();
 //here between should be an animation that change Season three background to Seasons menu	
+//for now
+ImageView allback_images = (ImageView) findViewById(R.id.allback_images); 	
+ImageViewAnimatedChange(MainActivity.this,allback_images,R.drawable.image);
+//for now		
 showSeasonsMenu();
 }
     
@@ -303,6 +315,10 @@ public void Season_Three_E3(View v) {
 public void back_to_seasons_From_four(View v) {	    	    
 clearSeasonsFour();
 //here between should be an animation that change Season four background to Seasons menu	
+//for now
+ImageView allback_images = (ImageView) findViewById(R.id.allback_images); 	
+ImageViewAnimatedChange(MainActivity.this,allback_images,R.drawable.image);
+//for now		
 showSeasonsMenu();
 }
     
@@ -532,17 +548,17 @@ sFourEthree.setEnabled(true);
 }	
 public  void clearSeasonsFour(){
 Button BackToSeasonsFromFour = (Button) findViewById(R.id.BackToSeasonsFromFour);
-BackToSeasonsFromFour.setVisibility(View.VISIBLE);
-BackToSeasonsFromFour.setEnabled(true);
+BackToSeasonsFromFour.setVisibility(View.GONE);
+BackToSeasonsFromFour.setEnabled(false);
 Button sFourEone = (Button) findViewById(R.id.sFourEone);
-sFourEone.setVisibility(View.VISIBLE);
-sFourEone.setEnabled(true);	
+sFourEone.setVisibility(View.GONE);
+sFourEone.setEnabled(false);	
 Button sFourEtwo = (Button) findViewById(R.id.sFourEtwo);
-sFourEtwo.setVisibility(View.VISIBLE);
-sFourEtwo.setEnabled(true);	
+sFourEtwo.setVisibility(View.GONE);
+sFourEtwo.setEnabled(false);	
 Button sFourEthree = (Button) findViewById(R.id.sFourEthree);
-sFourEthree.setVisibility(View.VISIBLE);
-sFourEthree.setEnabled(true);				
+sFourEthree.setVisibility(View.GONE);
+sFourEthree.setEnabled(false);				
 }	
 //Season four	
 //###################################################################	functions need for better managment!
