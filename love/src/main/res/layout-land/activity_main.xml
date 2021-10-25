@@ -18,7 +18,7 @@
 	
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/comments"
-    android:layout_width="120dp"
+    android:layout_width="240dp"
     android:layout_height="40dp"
     android:text="نظر دهی"
     android:layout_centerVertical="true"	    
@@ -26,7 +26,7 @@
 	
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/game_page"
-    android:layout_width="120dp"
+    android:layout_width="240dp"
     android:layout_height="40dp"
     android:text="صفحه بازی"
     android:layout_above="@id/comments"    
@@ -34,7 +34,7 @@
     
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/training"
-    android:layout_width="120dp"
+    android:layout_width="240dp"
     android:layout_height="40dp"
     android:text="آموزشی"
     android:layout_above="@id/game_page"    
@@ -42,7 +42,7 @@
 	
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/start_the_game_button"
-    android:layout_width="120dp"
+    android:layout_width="240dp"
     android:layout_height="40dp"
     android:text="شروع بازی"
     android:layout_above="@id/training"
@@ -50,7 +50,7 @@
 	
    <Button xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/send_email"
-    android:layout_width="120dp"
+    android:layout_width="240dp"
     android:layout_height="40dp"
     android:text="ایمیل مستقیم به ما"
     android:layout_below="@+id/comments"    
@@ -58,7 +58,7 @@
     
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/group_games_page"
-    android:layout_width="120dp"
+    android:layout_width="240dp"
     android:layout_height="40dp"
     android:text="بازی های دیگر ما"
     android:layout_below="@+id/send_email"  
@@ -66,10 +66,10 @@
     
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/exit_button"
-    android:layout_width="120dp"
+    android:layout_width="240dp"
     android:layout_height="40dp"
     android:text="خروج"
-    android:layout_alignParentEnd="true"
+    android:layout_below="@+id/group_games_page"  
     android:onClick="exit_game" />
 	
     <!-- base menu-->	
@@ -80,7 +80,7 @@
    
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/sTwo"
-    android:layout_width="120dp"
+    android:layout_width="240dp"
     android:layout_height="40dp"
     android:text="فصل دوم"
     android:layout_centerVertical="true"	    	    
@@ -89,7 +89,7 @@
 	
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/sOne"
-    android:layout_width="120dp"
+    android:layout_width="240dp"
     android:layout_height="40dp"
     android:text="فصل اول"
     android:layout_above="@id/sTwo"    
@@ -98,7 +98,7 @@
 
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/BackToBase"
-    android:layout_width="80dp"
+    android:layout_width="120dp"
     android:layout_height="40dp"
     android:text="بازگشت"
     android:layout_above="@id/sOne"    
@@ -107,7 +107,7 @@
 	
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/sThree"
-    android:layout_width="120dp"
+    android:layout_width="240dp"
     android:layout_height="40dp"
     android:text="فصل سوم"
     android:layout_below="@+id/sTwo"    
@@ -116,7 +116,7 @@
     
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/sFour"
-    android:layout_width="120dp"
+    android:layout_width="240dp"
     android:layout_height="40dp"
     android:text="فصل چهارم"
     android:layout_below="@+id/sThree"    
@@ -132,7 +132,7 @@
 	
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/sOneEtwo"
-    android:layout_width="120dp"
+    android:layout_width="240dp"
     android:layout_height="40dp"
     android:text="جنگل دوم"
     android:layout_centerVertical="true"	    	    
@@ -141,7 +141,7 @@
 	
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/sOneEone"
-    android:layout_width="120dp"
+    android:layout_width="240dp"
     android:layout_height="40dp"
     android:text="جنگل اول"
     android:layout_above="@id/sOneEtwo"    
@@ -150,7 +150,7 @@
 
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/BackToSeasonsFromOne"
-    android:layout_width="80dp"
+    android:layout_width="120dp"
     android:layout_height="40dp"
     android:text="بازگشت"
     android:layout_above="@id/sOneEone"    
@@ -159,7 +159,7 @@
 	
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/sOneEthree"
-    android:layout_width="120dp"
+    android:layout_width="240dp"
     android:layout_height="40dp"
     android:text="جنگل سوم"
     android:layout_below="@+id/sOneEtwo"    
@@ -174,7 +174,7 @@
 	
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/sTwoEtwo"
-    android:layout_width="120dp"
+    android:layout_width="240dp"
     android:layout_height="40dp"
     android:text="یخبندان دوم"
     android:layout_centerVertical="true"	    	    
@@ -183,7 +183,7 @@
 	
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/sTwoEone"
-    android:layout_width="120dp"
+    android:layout_width="240dp"
     android:layout_height="40dp"
     android:text="یخبندان اول"
     android:layout_above="@id/sTwoEtwo"    
@@ -192,7 +192,7 @@
 
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/BackToSeasonsFromTwo"
-    android:layout_width="80dp"
+    android:layout_width="120dp"
     android:layout_height="40dp"
     android:text="بازگشت"
     android:layout_above="@id/sTwoEone"    
@@ -201,7 +201,7 @@
 	
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/sTwoEthree"
-    android:layout_width="120dp"
+    android:layout_width="240dp"
     android:layout_height="40dp"
     android:text="یخبندان سوم"
     android:layout_below="@+id/sTwoEtwo"    
@@ -216,7 +216,7 @@
 	
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/sThreeEtwo"
-    android:layout_width="120dp"
+    android:layout_width="240dp"
     android:layout_height="40dp"
     android:text="بیابان دوم"
     android:layout_centerVertical="true"	    
@@ -225,7 +225,7 @@
 	
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/sThreeEone"
-    android:layout_width="120dp"
+    android:layout_width="240dp"
     android:layout_height="40dp"
     android:text="بیابان اول"
     android:layout_above="@id/sThreeEtwo"    
@@ -234,7 +234,7 @@
 
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/BackToSeasonsFromThree"
-    android:layout_width="80dp"
+    android:layout_width="120dp"
     android:layout_height="40dp"
     android:text="بازگشت"
     android:layout_above="@id/sThreeEone"    
@@ -243,7 +243,7 @@
 	
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/sThreeEthree"
-    android:layout_width="120dp"
+    android:layout_width="240dp"
     android:layout_height="40dp"
     android:text="بیابان سوم"
     android:layout_below="@+id/sThreeEtwo"    
@@ -258,7 +258,7 @@
 	
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/sFourEtwo"
-    android:layout_width="120dp"
+    android:layout_width="240dp"
     android:layout_height="40dp"
     android:text="اقیانوس دوم"
     android:layout_centerVertical="true"	    	    
@@ -267,7 +267,7 @@
 	
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/sFourEone"
-    android:layout_width="120dp"
+    android:layout_width="240dp"
     android:layout_height="40dp"
     android:text="اقیانوس اول"
     android:layout_above="@id/sFourEtwo"    
@@ -276,7 +276,7 @@
 
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/BackToSeasonsFromFour"
-    android:layout_width="80dp"
+    android:layout_width="120dp"
     android:layout_height="40dp"
     android:text="بازگشت"
     android:layout_above="@id/sFourEone"    
@@ -285,7 +285,7 @@
 	
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/sFourEthree"
-    android:layout_width="120dp"
+    android:layout_width="240dp"
     android:layout_height="40dp"
     android:text="اقیانوس سوم"
     android:layout_below="@+id/sFourEtwo"    
