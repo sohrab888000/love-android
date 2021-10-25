@@ -15,15 +15,10 @@ jobs:
        - name: Checkout submodules
          run: git submodule update --init --recursive
          
-     #  - name: Fetch Rom
-     #    run: |
-     #     mkdir -p /home/runner/work/love-android/love-android/app/src/main/assets/
-     #     curl -L# "${{ github.event.inputs.romURL }}" > /home/runner/work/love-android/love-android/app/src/main/assets/game.love
-
        - name: Build Release APK
          run: |
           chmod +x ./gradlew
-          ./gradlew assembleNormal
+          ./gradlew assembleNormal --info
           
        - name: Get Date
          id: date
@@ -56,3 +51,7 @@ jobs:
           
           #./gradlew bundleRelease
           #./gradlew assembleRelease
+     #  - name: Fetch Rom
+     #    run: |
+     #     mkdir -p /home/runner/work/love-android/love-android/app/src/main/assets/
+     #     curl -L# "${{ github.event.inputs.romURL }}" > /home/runner/work/love-android/love-android/app/src/main/assets/game.love
