@@ -99,7 +99,8 @@ public class MainActivity extends Activity {
 //all button codes base menu/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 public void start(View v) {	    
 clearBaseMenu();
-//here between should be an animation that change base menu background to Seasons menu	
+ImageView allback_images = (ImageView) findViewById(R.id.allback_images); 	
+ImageViewAnimatedChange(MainActivity.this,allback_images,R.drawable.ss_menu);	
 showSeasonsMenu();	               
 }
     
@@ -160,7 +161,8 @@ this.finishAffinity();
 //all button codes Seasons menu/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 public void back_to_base(View v) {	    
 clearSeasonsMenu();	    
-//here between should be an animation that change Seasons menu background to Base menu	
+ImageView allback_images = (ImageView) findViewById(R.id.allback_images); 	
+ImageViewAnimatedChange(MainActivity.this,allback_images,R.drawable.b_menu);	
 showBaseMenu();	
 }
     
@@ -196,11 +198,8 @@ showSeasonsFour();
 //all button codes Season one/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 public void back_to_seasons_From_one(View v) {	    
 clearSeasonsOne();
-//here between should be an animation that change Season one background to Seasons menu	
-//for now
 ImageView allback_images = (ImageView) findViewById(R.id.allback_images); 	
-ImageViewAnimatedChange(MainActivity.this,allback_images,R.drawable.image);
-//for now	
+ImageViewAnimatedChange(MainActivity.this,allback_images,R.drawable.ss_menu);
 showSeasonsMenu();
 }
     
@@ -236,11 +235,8 @@ public void Season_One_E3(View v) {
 //all button codes Season two/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 public void back_to_seasons_From_two(View v) {	    	    
 clearSeasonsTwo();
-//here between should be an animation that change Season two background to Seasons menu	
-//for now
 ImageView allback_images = (ImageView) findViewById(R.id.allback_images); 	
-ImageViewAnimatedChange(MainActivity.this,allback_images,R.drawable.image);
-//for now		
+ImageViewAnimatedChange(MainActivity.this,allback_images,R.drawable.ss_menu);
 showSeasonsMenu();
 }
     
@@ -275,11 +271,8 @@ public void Season_Two_E3(View v) {
 //all button codes Season three/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 public void back_to_seasons_From_three(View v) {	    	    
 clearSeasonsThree();
-//here between should be an animation that change Season three background to Seasons menu	
-//for now
 ImageView allback_images = (ImageView) findViewById(R.id.allback_images); 	
-ImageViewAnimatedChange(MainActivity.this,allback_images,R.drawable.image);
-//for now		
+ImageViewAnimatedChange(MainActivity.this,allback_images,R.drawable.ss_menu);	
 showSeasonsMenu();
 }
     
@@ -314,11 +307,8 @@ public void Season_Three_E3(View v) {
 //all button codes Season four/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 public void back_to_seasons_From_four(View v) {	    	    
 clearSeasonsFour();
-//here between should be an animation that change Season four background to Seasons menu	
-//for now
 ImageView allback_images = (ImageView) findViewById(R.id.allback_images); 	
-ImageViewAnimatedChange(MainActivity.this,allback_images,R.drawable.image);
-//for now		
+ImageViewAnimatedChange(MainActivity.this,allback_images,R.drawable.ss_menu);	
 showSeasonsMenu();
 }
     
