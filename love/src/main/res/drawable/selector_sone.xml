@@ -3,12 +3,12 @@
     <item
         android:state_focused="true"
         android:state_pressed="true"
-        android:drawable="@drawable/seasonOne_pressed" />
+        android:drawable="@drawable/seasonone_pressed" />
 
     <item
         android:state_focused="false"
         android:state_pressed="true"
-        android:drawable="@drawable/seasonOne_pressed" />
+        android:drawable="@drawable/seasonone_pressed" />
 
-    <item android:drawable="@drawable/seasonOne" />
+    <item android:drawable="@drawable/seasonone" />
 </selector>
