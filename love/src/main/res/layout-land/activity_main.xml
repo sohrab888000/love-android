@@ -92,7 +92,7 @@
     android:text="فصل دوم"
     android:layout_centerVertical="true"	    	    
     android:onClick="Season_TWO"
-    android:background="@drawable/selector_sTwo"	    
+    android:background="@drawable/selector_stwo"	    
     android:visibility="gone"/>
 	
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
@@ -102,7 +102,7 @@
     android:text="فصل اول"
     android:layout_above="@id/sTwo"    
     android:onClick="Season_ONE" 
-    android:background="@drawable/selector_sOne"	        	    
+    android:background="@drawable/selector_sone"	        	    
     android:visibility="gone"/>
 
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
@@ -123,7 +123,7 @@
     android:text="فصل سوم"
     android:layout_below="@+id/sTwo"    
     android:onClick="Season_THREE" 
-    android:background="@drawable/selector_sThree"	        	    	    	    
+    android:background="@drawable/selector_sthree"	        	    	    	    
     android:visibility="gone"/>
     
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
@@ -133,7 +133,7 @@
     android:text="فصل چهارم"
     android:layout_below="@+id/sThree"    
     android:onClick="Season_FOUR"
-    android:background="@drawable/selector_sFour"	        	    	    	    	    
+    android:background="@drawable/selector_sfour"	        	    	    	    	    
     android:visibility="gone"/>
 	
    <!-- Seasons menu-->	 
@@ -150,7 +150,7 @@
     android:text="جنگل دوم"
     android:layout_centerVertical="true"	    	    
     android:onClick="Season_One_E2"
-    android:background="@drawable/selector_sOne"	        	    	    
+    android:background="@drawable/selector_sone"	        	    	    
     android:visibility="gone"/>
 	
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
@@ -160,7 +160,7 @@
     android:text="جنگل اول"
     android:layout_above="@id/sOneEtwo"    
     android:onClick="Season_One_E1" 
-    android:background="@drawable/selector_sOne"	        	    	    	    
+    android:background="@drawable/selector_sone"	        	    	    	    
     android:visibility="gone"/>
 
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
@@ -181,7 +181,7 @@
     android:text="جنگل سوم"
     android:layout_below="@+id/sOneEtwo"    
     android:onClick="Season_One_E3"
-    android:background="@drawable/selector_sOne"	        	    	    	    
+    android:background="@drawable/selector_sone"	        	    	    	    
     android:visibility="gone"/>
 	
    <!-- Seasons one-->	
@@ -197,7 +197,7 @@
     android:text="یخبندان دوم"
     android:layout_centerVertical="true"	    	    
     android:onClick="Season_Two_E2" 
-    android:background="@drawable/selector_sTwo"	        	    	    	    	    
+    android:background="@drawable/selector_stwo"	        	    	    	    	    
     android:visibility="gone"/>
 	
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
@@ -207,7 +207,7 @@
     android:text="یخبندان اول"
     android:layout_above="@id/sTwoEtwo"    
     android:onClick="Season_Two_E1" 
-    android:background="@drawable/selector_sTwo"	        	    	    	    	    	    
+    android:background="@drawable/selector_stwo"	        	    	    	    	    	    
     android:visibility="gone"/>
 
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
@@ -228,7 +228,7 @@
     android:text="یخبندان سوم"
     android:layout_below="@+id/sTwoEtwo"    
     android:onClick="Season_Two_E3" 
-    android:background="@drawable/selector_sTwo"	        	    	    	    	    	    
+    android:background="@drawable/selector_stwo"	        	    	    	    	    	    
     android:visibility="gone"/>
 	
    <!-- Seasons two-->		
@@ -244,7 +244,7 @@
     android:text="بیابان دوم"
     android:layout_centerVertical="true"	    
     android:onClick="Season_Three_E2" 
-    android:background="@drawable/selector_sThree"	        	    	    	    	    	    	    	    
+    android:background="@drawable/selector_sthree"	        	    	    	    	    	    	    	    
     android:visibility="gone"/>
 	
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
@@ -254,7 +254,7 @@
     android:text="بیابان اول"
     android:layout_above="@id/sThreeEtwo"    
     android:onClick="Season_Three_E1"
-    android:background="@drawable/selector_sThree"	        	    	    	    	    	    	    	    	    
+    android:background="@drawable/selector_sthree"	        	    	    	    	    	    	    	    	    
     android:visibility="gone"/>
 
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
@@ -275,7 +275,7 @@
     android:text="بیابان سوم"
     android:layout_below="@+id/sThreeEtwo"    
     android:onClick="Season_Three_E3"
-    android:background="@drawable/selector_sThree"	        	    	    	    	    	    	    	    	    
+    android:background="@drawable/selector_sthree"	        	    	    	    	    	    	    	    	    
     android:visibility="gone"/>
 	
    <!-- Seasons three-->		
@@ -291,7 +291,7 @@
     android:text="اقیانوس دوم"
     android:layout_centerVertical="true"	    	    
     android:onClick="Season_Four_E2" 
-    android:background="@drawable/selector_sFour"	        	    	    	    	    	    	    	    	    
+    android:background="@drawable/selector_sfour"	        	    	    	    	    	    	    	    	    
     android:visibility="gone"/>
 	
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
@@ -301,7 +301,7 @@
     android:text="اقیانوس اول"
     android:layout_above="@id/sFourEtwo"    
     android:onClick="Season_Four_E1"
-    android:background="@drawable/selector_sFour"	        	    	    	    	    	    	    	    	    	    
+    android:background="@drawable/selector_sfour"	        	    	    	    	    	    	    	    	    	    
     android:visibility="gone"/>
 
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
@@ -322,7 +322,7 @@
     android:text="اقیانوس سوم"
     android:layout_below="@+id/sFourEtwo"    
     android:onClick="Season_Four_E3" 
-    android:background="@drawable/selector_sFour"	        	    	    	    	    	    	    	    	    	    
+    android:background="@drawable/selector_sfour"	        	    	    	    	    	    	    	    	    	    
     android:visibility="gone"/>
 	
    <!-- Seasons four-->	
