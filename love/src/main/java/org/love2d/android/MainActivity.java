@@ -207,9 +207,9 @@ public void Season_One_E1(View v) {
 /*
 1.write 1 into files/save/chooser.txt
 2.start gameActivity    
-//Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
-//startActivity(Myintent);  
-*/ 	 
+*/ 	
+Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
+startActivity(Myintent);   
 }		
 	
 public void Season_One_E2(View v) {	
