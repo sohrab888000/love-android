@@ -37,9 +37,20 @@
 		  <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+	  
+	          <activity android:name="org.love2d.android.SplashActivity"
+		android:label="قهرمان سایه ای"
+		android:screenOrientation="landscape" 
+                android:theme="@style/AppTheme" >
+		  <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>  
+	  
+	  
     
       <activity
         android:name="org.love2d.android.GameActivity"
