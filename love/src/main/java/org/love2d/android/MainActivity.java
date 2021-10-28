@@ -557,6 +557,49 @@ sFourEthree.setEnabled(false);
 //**********************^^^^^^^^^^^^^^^^^^^^^^^^^^****************************^^^^^^^^^^^^^^^^^^^^^^******************
 	
 	
+//###################################################################	functions for unlocking episodes and seasons
+	
+public boolean episode_isLocked(String FileName){
+String storagePath  = "";
+if (this.getExternalFilesDir(null).getAbsolutePath() != null)
+storagePath = this.getExternalFilesDir(null).getAbsolutePath();
+else
+storagePath = this.getFilesDir().getAbsolutePath();	
+File file = new File(storagePath+File.separator+"save"+File.separator+FileName);
+if(file.exists()){      
+try {
+BufferedReader brTest = new BufferedReader(new FileReader(file));
+String text = brTest.readLine();
+if(text.equals("0"))  
+return false 
+else
+return true  //season   
+}catch (IOException e) {//| FileNotFoundException
+             System.out.println("Can't write"); // Or something more intellegent
+}	
+}else{//if file does'nt exists
+	
+try {
+FileOutputStream stream = new FileOutputStream(storagePath+File.separator+"save"+File.separator+FileName);
+try {
+    stream.write("0".getBytes());
+    stream.close();
+}catch (IOException e) {
+System.out.println("Can't write"); // Or something more intellegent
+}		
+} catch (FileNotFoundException e) {
+System.out.println("Can't find"); // Or something more intellegent
+}	
+	return false	
+}		
+}
+	
+//###################################################################	functions for unlocking episodes and seasons
+	
+	
+//**********************^^^^^^^^^^^^^^^^^^^^^^^^^^****************************^^^^^^^^^^^^^^^^^^^^^^******************
+	
+	
 //###################################################################	functions need for Animations!
 public static void ImageViewAnimatedChange(final Context c,final ImageView v ,final int resId) {
     final Animation anim_out = AnimationUtils.loadAnimation(c, android.R.anim.fade_out); 
