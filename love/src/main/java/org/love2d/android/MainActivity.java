@@ -180,25 +180,44 @@ showSeasonsOne();
 }		
 	
 public void Season_TWO(View v) {	
+if (episode_isLocked("season_two_e1")){
+Toast.makeText(getActivity(), "لطفا ابتدا فصل 1 را تمام کنید!",
+Toast.LENGTH_SHORT).show();
+}
+else{	
 clearSeasonsMenu();
 ImageView allback_images = (ImageView) findViewById(R.id.allback_images); 	
 ImageViewAnimatedChange(MainActivity.this,allback_images,R.drawable.s_two);
 showSeasonsTwo();
+}
 }	
 		
 public void Season_THREE(View v) {
+if (episode_isLocked("season_three_e1")){
+Toast.makeText(getActivity(), "لطفا ابتدا فصل 2 را تمام کنید!",
+Toast.LENGTH_SHORT).show();
+}
+else{	
 clearSeasonsMenu();
 ImageView allback_images = (ImageView) findViewById(R.id.allback_images); 	
 ImageViewAnimatedChange(MainActivity.this,allback_images,R.drawable.s_three);
 showSeasonsThree();
 }
-
+}
+	
 public void Season_FOUR(View v) {
+if (episode_isLocked("season_four_e1")){
+Toast.makeText(getActivity(), "لطفا ابتدا فصل 3 را تمام کنید!",
+Toast.LENGTH_SHORT).show();
+}
+else{	
 clearSeasonsMenu();
 ImageView allback_images = (ImageView) findViewById(R.id.allback_images); 	
 ImageViewAnimatedChange(MainActivity.this,allback_images,R.drawable.s_four);
 showSeasonsFour();
 }
+}
+	
 //all button codes Seasons menu/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //***********************************^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^**********************************	
 //all button codes Season one/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
