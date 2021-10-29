@@ -232,9 +232,7 @@ showSeasonsMenu();
 }
     
 public void Season_One_E1(View v) {	
-Write_to_chooser_file("1=s1e1");
-Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
-startActivity(Myintent);   
+new gotoLevel(MainActivity.this,"1=s1e1");  
 }
 	
 public void Season_One_E2(View v) {	
@@ -243,9 +241,7 @@ Toast.makeText(MainActivity.this, "لطفا ابتدا جنگل اول را تم
 Toast.LENGTH_SHORT).show();
 }
 else{	
-Write_to_chooser_file("1=s1e2");	
-Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
-startActivity(Myintent);   
+new gotoLevel(MainActivity.this,"1=s1e2");  
 }
 }	
 		
@@ -255,9 +251,7 @@ Toast.makeText(MainActivity.this, "لطفا ابتدا جنگل دوم را تم
 Toast.LENGTH_SHORT).show();
 }
 else{	
-Write_to_chooser_file("1=s1e3");	
-Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
-startActivity(Myintent);   
+new gotoLevel(MainActivity.this,"1=s1e3");
 }
 }
 
@@ -277,9 +271,7 @@ Toast.makeText(MainActivity.this, "لطفا ابتدا جنگل سوم را تم
 Toast.LENGTH_SHORT).show();
 }
 else{	
-Write_to_chooser_file("1=s2e1");	
-Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
-startActivity(Myintent);   
+new gotoLevel(MainActivity.this,"1=s2e1"); 
 } 
 }		
 	
@@ -289,9 +281,7 @@ Toast.makeText(MainActivity.this, "لطفا ابتدا یخبندان اول ر�
 Toast.LENGTH_SHORT).show();
 }
 else{	
-Write_to_chooser_file("1=s2e2");	
-Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
-startActivity(Myintent);   
+new gotoLevel(MainActivity.this,"1=s2e2");  
 } 
 }	
 		
@@ -301,9 +291,7 @@ Toast.makeText(MainActivity.this, "لطفا ابتدا یخبندان دوم ر�
 Toast.LENGTH_SHORT).show();
 }
 else{	
-Write_to_chooser_file("1=s2e3");	
-Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
-startActivity(Myintent);   
+new gotoLevel(MainActivity.this,"1=s2e3"); 
 } 
 }
 //all button codes Season two/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -322,9 +310,7 @@ Toast.makeText(MainActivity.this, "لطفا ابتدا یخبندان سوم ر�
 Toast.LENGTH_SHORT).show();
 }
 else{	
-Write_to_chooser_file("1=s3e1");	
-Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
-startActivity(Myintent);   
+new gotoLevel(MainActivity.this,"1=s3e1"); 
 } 	 
 }		
 	
@@ -334,9 +320,7 @@ Toast.makeText(MainActivity.this, "لطفا ابتدا بیابان اول را 
 Toast.LENGTH_SHORT).show();
 }
 else{	
-Write_to_chooser_file("1=s3e2");	
-Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
-startActivity(Myintent);   
+new gotoLevel(MainActivity.this,"1=s3e2");	
 } 	
 }	
 		
@@ -346,9 +330,7 @@ Toast.makeText(MainActivity.this, "لطفا ابتدا بیابان دوم را 
 Toast.LENGTH_SHORT).show();
 }
 else{	
-Write_to_chooser_file("1=s3e3");	
-Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
-startActivity(Myintent);   
+new gotoLevel(MainActivity.this,"1=s3e3");  
 } 
 }
 //all button codes Season three/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -367,9 +349,7 @@ Toast.makeText(MainActivity.this, "لطفا ابتدا بیابان سوم را 
 Toast.LENGTH_SHORT).show();
 }
 else{	
-Write_to_chooser_file("1=s4e1");	
-Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
-startActivity(Myintent);   
+new gotoLevel(MainActivity.this,"1=s4e1");
 } 	 
 }		
 	
@@ -379,9 +359,7 @@ Toast.makeText(MainActivity.this, "لطفا ابتدا اقیانوس اول ر�
 Toast.LENGTH_SHORT).show();
 }
 else{	
-Write_to_chooser_file("1=s4e2");	
-Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
-startActivity(Myintent);   
+new gotoLevel(MainActivity.this,"1=s4e2"); 
 } 
 }	
 		
@@ -391,9 +369,7 @@ Toast.makeText(MainActivity.this, "لطفا ابتدا اقیانوس دوم ر�
 Toast.LENGTH_SHORT).show();
 }
 else{	
-Write_to_chooser_file("1=s4e3");	
-Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
-startActivity(Myintent);   
+new gotoLevel(MainActivity.this,"1=s4e3"); 
 } 
 }
 //all button codes Season three/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -619,7 +595,7 @@ sFourEthree.setEnabled(false);
 
 //this function is called in onCreate and onResume for seasons and episodes lock update	
 public void init_seasons_state(){	
-File directory = new File(storagePath+File.separator+"save"+File.separator+"archive");	
+File directory = new File(storagePath+File.separator+"save"+File.separator+"archive"+File.separator+"save");	
 directory.mkdirs();	
 //----------------------------------------------------------------init seasons existance vars for better coding	
 boolean season_one_e1 = episode_isNotLocked("season_one_e1.txt");
@@ -721,25 +697,6 @@ return false;
 	
 }
 
-//this function is call for writing in chooser file when selecting an episode
-public void Write_to_chooser_file(String select){
-if (this.getExternalFilesDir(null).getAbsolutePath() != null)
-storagePath = this.getExternalFilesDir(null).getAbsolutePath();
-else
-storagePath = this.getFilesDir().getAbsolutePath();
-try {
-FileOutputStream stream = new FileOutputStream(storagePath+File.separator+"save"+File.separator+"archive"+File.separator+"chooser.txt");
-try {
-    stream.write(select.getBytes());
-    stream.close();
-}catch (IOException e) {
-System.out.println("Can't write"); // Or something more intellegent
-}		
-} catch (FileNotFoundException e) {
-System.out.println("Can't find"); // Or something more intellegent
-}	
-}	
-	
 //###################################################################	functions for unlocking episodes and seasons
 	
 	
