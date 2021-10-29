@@ -180,7 +180,7 @@ showSeasonsOne();
 }		
 	
 public void Season_TWO(View v) {	
-if (episode_isLocked("season_two_e1")){
+if (!(episode_isNotLocked("season_two_e1.txt"))){
 Toast.makeText(getActivity(), "لطفا ابتدا فصل 1 را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
@@ -193,7 +193,7 @@ showSeasonsTwo();
 }	
 		
 public void Season_THREE(View v) {
-if (episode_isLocked("season_three_e1")){
+if (!(episode_isNotLocked("season_three_e1.txt"))){
 Toast.makeText(getActivity(), "لطفا ابتدا فصل 2 را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
@@ -206,7 +206,7 @@ showSeasonsThree();
 }
 	
 public void Season_FOUR(View v) {
-if (episode_isLocked("season_four_e1")){
+if (!(episode_isNotLocked("season_four_e1.txt"))){
 Toast.makeText(getActivity(), "لطفا ابتدا فصل 3 را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
@@ -229,30 +229,31 @@ showSeasonsMenu();
 }
     
 public void Season_One_E1(View v) {	
-/*
-1.write 1 into files/save/chooser.txt
-2.start gameActivity    
-*/ 	
+//first right s1e1 to file chooser then
 Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
 startActivity(Myintent);   
-}		
+}
 	
 public void Season_One_E2(View v) {	
-/*
-1.write 2 into files/save/chooser.txt
-2.start gameActivity    
-//Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
-//startActivity(Myintent);  
-*/ 
+if (!(episode_isNotLocked("season_one_e1.txt"))){
+Toast.makeText(getActivity(), "لطفا ابتدا جنگل اول را تمام کنید!",
+Toast.LENGTH_SHORT).show();
+}
+else{	//first right s1e2 to file chooser then
+Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
+startActivity(Myintent);   
+}
 }	
 		
 public void Season_One_E3(View v) {
-/*
-1.write 3 into files/save/chooser.txt
-2.start gameActivity    
-//Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
-//startActivity(Myintent);  
-*/ 
+if (!(episode_isNotLocked("season_one_e2.txt"))){
+Toast.makeText(getActivity(), "لطفا ابتدا جنگل دوم را تمام کنید!",
+Toast.LENGTH_SHORT).show();
+}
+else{	//first right s1e3 to file chooser then
+Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
+startActivity(Myintent);   
+}
 }
 
 //all button codes Season one/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -266,30 +267,36 @@ showSeasonsMenu();
 }
     
 public void Season_Two_E1(View v) {	
-/*
-1.write 4 into files/save/chooser.txt
-2.start gameActivity    
-//Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
-//startActivity(Myintent);  
-*/ 	 
+if (!(episode_isNotLocked("season_one_e3.txt"))){
+Toast.makeText(getActivity(), "لطفا ابتدا جنگل سوم را تمام کنید!",
+Toast.LENGTH_SHORT).show();
+}
+else{	//first right s2e1 to file chooser then
+Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
+startActivity(Myintent);   
+} 
 }		
 	
 public void Season_Two_E2(View v) {	
-/*
-1.write 5 into files/save/chooser.txt
-2.start gameActivity    
-//Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
-//startActivity(Myintent);  
-*/ 
+if (!(episode_isNotLocked("season_two_e1.txt"))){
+Toast.makeText(getActivity(), "لطفا ابتدا یخبندان اول را تمام کنید!",
+Toast.LENGTH_SHORT).show();
+}
+else{	//first right s2e2 to file chooser then
+Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
+startActivity(Myintent);   
+} 
 }	
 		
 public void Season_Two_E3(View v) {
-/*
-1.write 6 into files/save/chooser.txt
-2.start gameActivity    
-//Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
-//startActivity(Myintent);  
-*/ 
+if (!(episode_isNotLocked("season_two_e2.txt"))){
+Toast.makeText(getActivity(), "لطفا ابتدا یخبندان دوم را تمام کنید!",
+Toast.LENGTH_SHORT).show();
+}
+else{	//first right s2e3 to file chooser then
+Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
+startActivity(Myintent);   
+} 
 }
 //all button codes Season two/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //***********************************^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^**********************************	
@@ -302,30 +309,36 @@ showSeasonsMenu();
 }
     
 public void Season_Three_E1(View v) {	
-/*
-1.write 7 into files/save/chooser.txt
-2.start gameActivity    
-//Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
-//startActivity(Myintent);  
-*/ 	 
+if (!(episode_isNotLocked("season_two_e3.txt"))){
+Toast.makeText(getActivity(), "لطفا ابتدا یخبندان سوم را تمام کنید!",
+Toast.LENGTH_SHORT).show();
+}
+else{	//first right s3e1 to file chooser then
+Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
+startActivity(Myintent);   
+} 	 
 }		
 	
 public void Season_Three_E2(View v) {	
-/*
-1.write 8 into files/save/chooser.txt
-2.start gameActivity    
-//Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
-//startActivity(Myintent);  
-*/ 
+if (!(episode_isNotLocked("season_three_e1.txt"))){
+Toast.makeText(getActivity(), "لطفا ابتدا بیابان اول را تمام کنید!",
+Toast.LENGTH_SHORT).show();
+}
+else{	//first right s3e2 to file chooser then
+Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
+startActivity(Myintent);   
+} 	
 }	
 		
 public void Season_Three_E3(View v) {
-/*
-1.write 9 into files/save/chooser.txt
-2.start gameActivity    
-//Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
-//startActivity(Myintent);  
-*/ 
+if (!(episode_isNotLocked("season_three_e2.txt"))){
+Toast.makeText(getActivity(), "لطفا ابتدا بیابان دوم را تمام کنید!",
+Toast.LENGTH_SHORT).show();
+}
+else{	//first right s3e3 to file chooser then
+Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
+startActivity(Myintent);   
+} 
 }
 //all button codes Season three/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //***********************************^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^**********************************		
@@ -338,30 +351,36 @@ showSeasonsMenu();
 }
     
 public void Season_Four_E1(View v) {	
-/*
-1.write 10 into files/save/chooser.txt
-2.start gameActivity    
-//Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
-//startActivity(Myintent);  
-*/ 	 
+if (!(episode_isNotLocked("season_three_e3.txt"))){
+Toast.makeText(getActivity(), "لطفا ابتدا بیابان سوم را تمام کنید!",
+Toast.LENGTH_SHORT).show();
+}
+else{	//first right s4e1 to file chooser then
+Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
+startActivity(Myintent);   
+} 	 
 }		
 	
 public void Season_Four_E2(View v) {	
-/*
-1.write 11 into files/save/chooser.txt
-2.start gameActivity    
-//Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
-//startActivity(Myintent);  
-*/ 
+if (!(episode_isNotLocked("season_four_e1.txt"))){
+Toast.makeText(getActivity(), "لطفا ابتدا اقیانوس اول را تمام کنید!",
+Toast.LENGTH_SHORT).show();
+}
+else{	//first right s4e2 to file chooser then
+Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
+startActivity(Myintent);   
+} 
 }	
 		
 public void Season_Four_E3(View v) {
-/*
-1.write 12 into files/save/chooser.txt
-2.start gameActivity    
-//Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
-//startActivity(Myintent);  
-*/ 
+if (!(episode_isNotLocked("season_four_e2.txt"))){
+Toast.makeText(getActivity(), "لطفا ابتدا اقیانوس دوم را تمام کنید!",
+Toast.LENGTH_SHORT).show();
+}
+else{	//first right s4e3 to file chooser then
+Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
+startActivity(Myintent);   
+} 
 }
 //all button codes Season three/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //***********************************^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^**********************************	
@@ -587,18 +606,18 @@ sFourEthree.setEnabled(false);
 	
 public void init_seasons_state(){	
 //----------------------------------------------------------------init seasons existance vars for better coding	
-boolean season_one_e1 = episode_isLocked("season_one_e1.txt");
-boolean season_one_e2 = episode_isLocked("season_one_e2.txt");
-boolean season_one_e3 = episode_isLocked("season_one_e3.txt");
-boolean season_two_e1 = episode_isLocked("season_two_e1.txt");
-boolean season_two_e2 = episode_isLocked("season_two_e2.txt");
-boolean season_two_e3 = episode_isLocked("season_two_e3.txt");
-boolean season_three_e1 = episode_isLocked("season_three_e1.txt");
-boolean season_three_e2 = episode_isLocked("season_three_e2.txt");
-boolean season_three_e3 = episode_isLocked("season_three_e3.txt");
-boolean season_four_e1 = episode_isLocked("season_four_e1.txt");
-boolean season_four_e2 = episode_isLocked("season_four_e2.txt");
-boolean season_four_e3 = episode_isLocked("season_four_e3.txt");	
+boolean season_one_e1 = episode_isNotLocked("season_one_e1.txt");
+boolean season_one_e2 = episode_isNotLocked("season_one_e2.txt");
+boolean season_one_e3 = episode_isNotLocked("season_one_e3.txt");
+boolean season_two_e1 = episode_isNotLocked("season_two_e1.txt");
+boolean season_two_e2 = episode_isNotLocked("season_two_e2.txt");
+boolean season_two_e3 = episode_isNotLocked("season_two_e3.txt");
+boolean season_three_e1 = episode_isNotLocked("season_three_e1.txt");
+boolean season_three_e2 = episode_isNotLocked("season_three_e2.txt");
+boolean season_three_e3 = episode_isNotLocked("season_three_e3.txt");
+boolean season_four_e1 = episode_isNotLocked("season_four_e1.txt");
+boolean season_four_e2 = episode_isNotLocked("season_four_e2.txt");
+boolean season_four_e3 = episode_isNotLocked("season_four_e3.txt");	
 //----------------------------------------------------------------init button vars for better coding
 //Button sOne = (Button) findViewById(R.id.sOne);    never is locked
 Button sTwo = (Button) findViewById(R.id.sTwo);	
@@ -651,7 +670,7 @@ sFourEthree.setCompoundDrawablesWithIntrinsicBounds(null, null, null, null);
 	
 }
 	
-public boolean episode_isLocked(String FileName){
+public boolean episode_isNotLocked(String FileName){
 String storagePath  = "";
 if (this.getExternalFilesDir(null).getAbsolutePath() != null)
 storagePath = this.getExternalFilesDir(null).getAbsolutePath();
@@ -681,7 +700,7 @@ System.out.println("Can't write"); // Or something more intellegent
 } catch (FileNotFoundException e) {
 System.out.println("Can't find"); // Or something more intellegent
 }	
-	return false;	
+	return false; //season is locked
 }		
 }
 
