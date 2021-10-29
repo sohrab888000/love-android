@@ -226,7 +226,7 @@ showSeasonsMenu();
 }
     
 public void Season_One_E1(View v) {	
-Write_to_chooser_file("s1e1");
+Write_to_chooser_file("1=s1e1");
 Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
 startActivity(Myintent);   
 }
@@ -237,7 +237,7 @@ Toast.makeText(MainActivity.this, "لطفا ابتدا جنگل اول را تم
 Toast.LENGTH_SHORT).show();
 }
 else{	
-Write_to_chooser_file("s1e2");	
+Write_to_chooser_file("1=s1e2");	
 Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
 startActivity(Myintent);   
 }
@@ -249,7 +249,7 @@ Toast.makeText(MainActivity.this, "لطفا ابتدا جنگل دوم را تم
 Toast.LENGTH_SHORT).show();
 }
 else{	
-Write_to_chooser_file("s1e3");	
+Write_to_chooser_file("1=s1e3");	
 Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
 startActivity(Myintent);   
 }
@@ -271,7 +271,7 @@ Toast.makeText(MainActivity.this, "لطفا ابتدا جنگل سوم را تم
 Toast.LENGTH_SHORT).show();
 }
 else{	
-Write_to_chooser_file("s2e1");	
+Write_to_chooser_file("1=s2e1");	
 Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
 startActivity(Myintent);   
 } 
@@ -283,7 +283,7 @@ Toast.makeText(MainActivity.this, "لطفا ابتدا یخبندان اول ر�
 Toast.LENGTH_SHORT).show();
 }
 else{	
-Write_to_chooser_file("s2e2");	
+Write_to_chooser_file("1=s2e2");	
 Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
 startActivity(Myintent);   
 } 
@@ -295,7 +295,7 @@ Toast.makeText(MainActivity.this, "لطفا ابتدا یخبندان دوم ر�
 Toast.LENGTH_SHORT).show();
 }
 else{	
-Write_to_chooser_file("s2e3");	
+Write_to_chooser_file("1=s2e3");	
 Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
 startActivity(Myintent);   
 } 
@@ -316,7 +316,7 @@ Toast.makeText(MainActivity.this, "لطفا ابتدا یخبندان سوم ر�
 Toast.LENGTH_SHORT).show();
 }
 else{	
-Write_to_chooser_file("s3e1");	
+Write_to_chooser_file("1=s3e1");	
 Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
 startActivity(Myintent);   
 } 	 
@@ -328,7 +328,7 @@ Toast.makeText(MainActivity.this, "لطفا ابتدا بیابان اول را 
 Toast.LENGTH_SHORT).show();
 }
 else{	
-Write_to_chooser_file("s3e2");	
+Write_to_chooser_file("1=s3e2");	
 Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
 startActivity(Myintent);   
 } 	
@@ -340,7 +340,7 @@ Toast.makeText(MainActivity.this, "لطفا ابتدا بیابان دوم را 
 Toast.LENGTH_SHORT).show();
 }
 else{	
-Write_to_chooser_file("s3e3");	
+Write_to_chooser_file("1=s3e3");	
 Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
 startActivity(Myintent);   
 } 
@@ -361,7 +361,7 @@ Toast.makeText(MainActivity.this, "لطفا ابتدا بیابان سوم را 
 Toast.LENGTH_SHORT).show();
 }
 else{	
-Write_to_chooser_file("s4e1");	
+Write_to_chooser_file("1=s4e1");	
 Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
 startActivity(Myintent);   
 } 	 
@@ -373,7 +373,7 @@ Toast.makeText(MainActivity.this, "لطفا ابتدا اقیانوس اول ر�
 Toast.LENGTH_SHORT).show();
 }
 else{	
-Write_to_chooser_file("s4e2");	
+Write_to_chooser_file("1=s4e2");	
 Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
 startActivity(Myintent);   
 } 
@@ -385,7 +385,7 @@ Toast.makeText(MainActivity.this, "لطفا ابتدا اقیانوس دوم ر�
 Toast.LENGTH_SHORT).show();
 }
 else{	
-Write_to_chooser_file("s4e3");	
+Write_to_chooser_file("1=s4e3");	
 Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
 startActivity(Myintent);   
 } 
