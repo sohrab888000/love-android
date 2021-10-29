@@ -117,9 +117,7 @@ showSeasonsMenu();
 }
     
 public void trainSome(View v) {	
-Write_to_chooser_file("train");
-Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
-startActivity(Myintent);   	
+new gotoLevel(MainActivity.this,"1=train"); 	
 }		
 	
 public void goToPage(View v) {	
@@ -595,6 +593,11 @@ sFourEthree.setEnabled(false);
 
 //this function is called in onCreate and onResume for seasons and episodes lock update	
 public void init_seasons_state(){	
+String storagePath  = "";
+if (this.getExternalFilesDir(null).getAbsolutePath() != null)
+storagePath = this.getExternalFilesDir(null).getAbsolutePath();
+else
+storagePath = this.getFilesDir().getAbsolutePath();	
 File directory = new File(storagePath+File.separator+"save"+File.separator+"archive"+File.separator+"save");	
 directory.mkdirs();	
 //----------------------------------------------------------------init seasons existance vars for better coding	
