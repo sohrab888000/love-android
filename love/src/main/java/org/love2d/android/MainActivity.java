@@ -708,6 +708,9 @@ System.out.println("Can't find"); // Or something more intellegent
 }	
 	return false; //season is locked
 }		
+	
+return false;
+	
 }
 
 //this function is call for writing in chooser file when selecting an episode
