@@ -117,7 +117,7 @@ showSeasonsMenu();
 }
     
 public void trainSome(View v) {	
-new gotoLevel(MainActivity.this,"1=train"); 	
+new gotoLevel(MainActivity.this,"1=train").execute(); 	
 }		
 	
 public void goToPage(View v) {	
@@ -230,7 +230,7 @@ showSeasonsMenu();
 }
     
 public void Season_One_E1(View v) {	
-new gotoLevel(MainActivity.this,"1=s1e1");  
+new gotoLevel(MainActivity.this,"1=s1e1").execute();  
 }
 	
 public void Season_One_E2(View v) {	
@@ -239,7 +239,7 @@ Toast.makeText(MainActivity.this, "لطفا ابتدا جنگل اول را تم
 Toast.LENGTH_SHORT).show();
 }
 else{	
-new gotoLevel(MainActivity.this,"1=s1e2");  
+new gotoLevel(MainActivity.this,"1=s1e2").execute();  
 }
 }	
 		
@@ -249,7 +249,7 @@ Toast.makeText(MainActivity.this, "لطفا ابتدا جنگل دوم را تم
 Toast.LENGTH_SHORT).show();
 }
 else{	
-new gotoLevel(MainActivity.this,"1=s1e3");
+new gotoLevel(MainActivity.this,"1=s1e3").execute();
 }
 }
 
@@ -269,7 +269,7 @@ Toast.makeText(MainActivity.this, "لطفا ابتدا جنگل سوم را تم
 Toast.LENGTH_SHORT).show();
 }
 else{	
-new gotoLevel(MainActivity.this,"1=s2e1"); 
+new gotoLevel(MainActivity.this,"1=s2e1").execute(); 
 } 
 }		
 	
@@ -279,7 +279,7 @@ Toast.makeText(MainActivity.this, "لطفا ابتدا یخبندان اول ر�
 Toast.LENGTH_SHORT).show();
 }
 else{	
-new gotoLevel(MainActivity.this,"1=s2e2");  
+new gotoLevel(MainActivity.this,"1=s2e2").execute();  
 } 
 }	
 		
@@ -289,7 +289,7 @@ Toast.makeText(MainActivity.this, "لطفا ابتدا یخبندان دوم ر�
 Toast.LENGTH_SHORT).show();
 }
 else{	
-new gotoLevel(MainActivity.this,"1=s2e3"); 
+new gotoLevel(MainActivity.this,"1=s2e3").execute(); 
 } 
 }
 //all button codes Season two/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -308,7 +308,7 @@ Toast.makeText(MainActivity.this, "لطفا ابتدا یخبندان سوم ر�
 Toast.LENGTH_SHORT).show();
 }
 else{	
-new gotoLevel(MainActivity.this,"1=s3e1"); 
+new gotoLevel(MainActivity.this,"1=s3e1").execute(); 
 } 	 
 }		
 	
@@ -318,7 +318,7 @@ Toast.makeText(MainActivity.this, "لطفا ابتدا بیابان اول را 
 Toast.LENGTH_SHORT).show();
 }
 else{	
-new gotoLevel(MainActivity.this,"1=s3e2");	
+new gotoLevel(MainActivity.this,"1=s3e2").execute();	
 } 	
 }	
 		
@@ -328,7 +328,7 @@ Toast.makeText(MainActivity.this, "لطفا ابتدا بیابان دوم را 
 Toast.LENGTH_SHORT).show();
 }
 else{	
-new gotoLevel(MainActivity.this,"1=s3e3");  
+new gotoLevel(MainActivity.this,"1=s3e3").execute();  
 } 
 }
 //all button codes Season three/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -347,7 +347,7 @@ Toast.makeText(MainActivity.this, "لطفا ابتدا بیابان سوم را 
 Toast.LENGTH_SHORT).show();
 }
 else{	
-new gotoLevel(MainActivity.this,"1=s4e1");
+new gotoLevel(MainActivity.this,"1=s4e1").execute();
 } 	 
 }		
 	
@@ -357,7 +357,7 @@ Toast.makeText(MainActivity.this, "لطفا ابتدا اقیانوس اول ر�
 Toast.LENGTH_SHORT).show();
 }
 else{	
-new gotoLevel(MainActivity.this,"1=s4e2"); 
+new gotoLevel(MainActivity.this,"1=s4e2").execute(); 
 } 
 }	
 		
@@ -367,7 +367,7 @@ Toast.makeText(MainActivity.this, "لطفا ابتدا اقیانوس دوم ر�
 Toast.LENGTH_SHORT).show();
 }
 else{	
-new gotoLevel(MainActivity.this,"1=s4e3"); 
+new gotoLevel(MainActivity.this,"1=s4e3").execute(); 
 } 
 }
 //all button codes Season three/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
