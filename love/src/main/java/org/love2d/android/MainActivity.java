@@ -696,7 +696,7 @@ return true; //season is not locked
 }	
 }else{//if file does'nt exists
 try {
-FileOutputStream stream = new FileOutputStream(storagePath+File.separator+"save"+File.separator+"archive"+File.separator+"save"+File.separator+FileName);
+FileOutputStream stream = new FileOutputStream(storagePath+File.separator+"save"+File.separator+"archive"+File.separator+FileName);
 try {
     stream.write("0".getBytes());
     stream.close();
@@ -719,7 +719,7 @@ String storagePath  = "";
 if (this.getExternalFilesDir(null).getAbsolutePath() != null)
 storagePath = this.getExternalFilesDir(null).getAbsolutePath();	
 try {
-FileOutputStream stream = new FileOutputStream(storagePath+File.separator+"save"+File.separator+"archive"+File.separator+"save"+File.separator+"chooser.txt");
+FileOutputStream stream = new FileOutputStream(storagePath+File.separator+"save"+File.separator+"archive"+File.separator+"chooser.txt");
 try {
     stream.write(select.getBytes());
     stream.close();
