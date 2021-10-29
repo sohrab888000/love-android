@@ -101,6 +101,12 @@ public class MainActivity extends Activity {
                 init_seasons_state();
         }
 	
+	@Override
+        protected void onStart(){
+        super.onStart();
+        init_seasons_state(); 
+        }
+	
 	
 //all button codes base menu/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 public void start(View v) {	    
