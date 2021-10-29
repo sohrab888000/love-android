@@ -92,8 +92,14 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		//clear all menues except base menu
+		init_seasons_state();
 	}
+	
+        @Override
+        public void onResume(){
+                super.onResume();
+                init_seasons_state();
+        }
 	
 	
 //all button codes base menu/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -558,6 +564,73 @@ sFourEthree.setEnabled(false);
 	
 	
 //###################################################################	functions for unlocking episodes and seasons
+
+	
+public void init_seasons_state(){	
+//----------------------------------------------------------------init seasons existance vars for better coding	
+boolean season_one_e1 = episode_isLocked("season_one_e1.txt");
+boolean season_one_e2 = episode_isLocked("season_one_e2.txt");
+boolean season_one_e3 = episode_isLocked("season_one_e3.txt");
+boolean season_two_e1 = episode_isLocked("season_two_e1.txt");
+boolean season_two_e2 = episode_isLocked("season_two_e2.txt");
+boolean season_two_e3 = episode_isLocked("season_two_e3.txt");
+boolean season_three_e1 = episode_isLocked("season_three_e1.txt");
+boolean season_three_e2 = episode_isLocked("season_three_e2.txt");
+boolean season_three_e3 = episode_isLocked("season_three_e3.txt");
+boolean season_four_e1 = episode_isLocked("season_four_e1.txt");
+boolean season_four_e2 = episode_isLocked("season_four_e2.txt");
+boolean season_four_e3 = episode_isLocked("season_four_e3.txt");	
+//----------------------------------------------------------------init button vars for better coding
+//Button sOne = (Button) findViewById(R.id.sOne);    never is locked
+Button sTwo = (Button) findViewById(R.id.sTwo);	
+Button sThree = (Button) findViewById(R.id.sThree);		
+Button sFour = (Button) findViewById(R.id.sFour); 		
+//Button sOneEone = (Button) findViewById(R.id.sOneEone);    never is locked 
+Button sOneEtwo = (Button) findViewById(R.id.sOneEtwo);	
+Button sOneEthree = (Button) findViewById(R.id.sOneEthree);		
+Button sTwoEone = (Button) findViewById(R.id.sTwoEone);	
+Button sTwoEtwo = (Button) findViewById(R.id.sTwoEtwo);	
+Button sTwoEthree = (Button) findViewById(R.id.sTwoEthree);
+Button sThreeEone = (Button) findViewById(R.id.sThreeEone);
+Button sThreeEtwo = (Button) findViewById(R.id.sThreeEtwo);
+Button sThreeEthree = (Button) findViewById(R.id.sThreeEthree);
+Button sFourEone = (Button) findViewById(R.id.sFourEone);
+Button sFourEtwo = (Button) findViewById(R.id.sFourEtwo);
+Button sFourEthree = (Button) findViewById(R.id.sFourEthree);
+//----------------------------------------------------------------set the button image for locked or not locked	
+if(season_one_e1)
+sOneEtwo.setCompoundDrawablesWithIntrinsicBounds(null, null, null, null);	
+if(season_one_e2)
+sOneEthree.setCompoundDrawablesWithIntrinsicBounds(null, null, null, null);	
+if(season_one_e3){
+sTwo.setCompoundDrawablesWithIntrinsicBounds(null, null, null, null);	
+sTwoEone.setCompoundDrawablesWithIntrinsicBounds(null, null, null, null);	
+}	
+if(season_two_e1)
+sTwoEtwo.setCompoundDrawablesWithIntrinsicBounds(null, null, null, null);
+if(season_two_e2)
+sTwoEthree.setCompoundDrawablesWithIntrinsicBounds(null, null, null, null);	
+if(season_two_e3){
+sThree.setCompoundDrawablesWithIntrinsicBounds(null, null, null, null);	
+sThreeEone.setCompoundDrawablesWithIntrinsicBounds(null, null, null, null);	
+}
+if(season_three_e1)
+sThreeEtwo.setCompoundDrawablesWithIntrinsicBounds(null, null, null, null);
+if(season_three_e2)
+sThreeEthree.setCompoundDrawablesWithIntrinsicBounds(null, null, null, null);	
+if(season_three_e3){
+sFour.setCompoundDrawablesWithIntrinsicBounds(null, null, null, null);	
+sFourEone.setCompoundDrawablesWithIntrinsicBounds(null, null, null, null);	
+}
+if(season_four_e1)
+sFourEtwo.setCompoundDrawablesWithIntrinsicBounds(null, null, null, null);	
+if(season_four_e2)
+sFourEthree.setCompoundDrawablesWithIntrinsicBounds(null, null, null, null);	
+//if(season_four_e3) for now season_four_e3 is the last level
+
+	
+	
+}
 	
 public boolean episode_isLocked(String FileName){
 String storagePath  = "";
@@ -566,19 +639,18 @@ storagePath = this.getExternalFilesDir(null).getAbsolutePath();
 else
 storagePath = this.getFilesDir().getAbsolutePath();	
 File file = new File(storagePath+File.separator+"save"+File.separator+FileName);
-if(file.exists()){      
+if(file.exists()){//if file exists       
 try {
 BufferedReader brTest = new BufferedReader(new FileReader(file));
 String text = brTest.readLine();
 if(text.equals("0"))  
-return false 
+return false; //season is locked
 else
-return true  //season   
+return true; //season is not locked
 }catch (IOException e) {//| FileNotFoundException
              System.out.println("Can't write"); // Or something more intellegent
 }	
 }else{//if file does'nt exists
-	
 try {
 FileOutputStream stream = new FileOutputStream(storagePath+File.separator+"save"+File.separator+FileName);
 try {
@@ -590,9 +662,12 @@ System.out.println("Can't write"); // Or something more intellegent
 } catch (FileNotFoundException e) {
 System.out.println("Can't find"); // Or something more intellegent
 }	
-	return false	
+	return false;	
 }		
 }
+
+	
+	
 	
 //###################################################################	functions for unlocking episodes and seasons
 	
