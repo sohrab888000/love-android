@@ -111,12 +111,9 @@ showSeasonsMenu();
 }
     
 public void trainSome(View v) {	
-/*
-1.write 0 into files/save/chooser.txt
-2.start gameActivity    
-//Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
-//startActivity(Myintent);  
-*/  
+Write_to_chooser_file("train");
+Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
+startActivity(Myintent);   	
 }		
 	
 public void goToPage(View v) {	
@@ -229,7 +226,7 @@ showSeasonsMenu();
 }
     
 public void Season_One_E1(View v) {	
-//first right s1e1 to file chooser then
+Write_to_chooser_file("s1e1");
 Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
 startActivity(Myintent);   
 }
@@ -239,7 +236,8 @@ if (!(episode_isNotLocked("season_one_e1.txt"))){
 Toast.makeText(getActivity(), "لطفا ابتدا جنگل اول را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
-else{	//first right s1e2 to file chooser then
+else{	
+Write_to_chooser_file("s1e2");	
 Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
 startActivity(Myintent);   
 }
@@ -250,7 +248,8 @@ if (!(episode_isNotLocked("season_one_e2.txt"))){
 Toast.makeText(getActivity(), "لطفا ابتدا جنگل دوم را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
-else{	//first right s1e3 to file chooser then
+else{	
+Write_to_chooser_file("s1e3");	
 Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
 startActivity(Myintent);   
 }
@@ -271,7 +270,8 @@ if (!(episode_isNotLocked("season_one_e3.txt"))){
 Toast.makeText(getActivity(), "لطفا ابتدا جنگل سوم را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
-else{	//first right s2e1 to file chooser then
+else{	
+Write_to_chooser_file("s2e1");	
 Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
 startActivity(Myintent);   
 } 
@@ -282,7 +282,8 @@ if (!(episode_isNotLocked("season_two_e1.txt"))){
 Toast.makeText(getActivity(), "لطفا ابتدا یخبندان اول را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
-else{	//first right s2e2 to file chooser then
+else{	
+Write_to_chooser_file("s2e2");	
 Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
 startActivity(Myintent);   
 } 
@@ -293,7 +294,8 @@ if (!(episode_isNotLocked("season_two_e2.txt"))){
 Toast.makeText(getActivity(), "لطفا ابتدا یخبندان دوم را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
-else{	//first right s2e3 to file chooser then
+else{	
+Write_to_chooser_file("s2e3");	
 Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
 startActivity(Myintent);   
 } 
@@ -313,7 +315,8 @@ if (!(episode_isNotLocked("season_two_e3.txt"))){
 Toast.makeText(getActivity(), "لطفا ابتدا یخبندان سوم را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
-else{	//first right s3e1 to file chooser then
+else{	
+Write_to_chooser_file("s3e1");	
 Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
 startActivity(Myintent);   
 } 	 
@@ -324,7 +327,8 @@ if (!(episode_isNotLocked("season_three_e1.txt"))){
 Toast.makeText(getActivity(), "لطفا ابتدا بیابان اول را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
-else{	//first right s3e2 to file chooser then
+else{	
+Write_to_chooser_file("s3e2");	
 Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
 startActivity(Myintent);   
 } 	
@@ -335,7 +339,8 @@ if (!(episode_isNotLocked("season_three_e2.txt"))){
 Toast.makeText(getActivity(), "لطفا ابتدا بیابان دوم را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
-else{	//first right s3e3 to file chooser then
+else{	
+Write_to_chooser_file("s3e3");	
 Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
 startActivity(Myintent);   
 } 
@@ -355,7 +360,8 @@ if (!(episode_isNotLocked("season_three_e3.txt"))){
 Toast.makeText(getActivity(), "لطفا ابتدا بیابان سوم را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
-else{	//first right s4e1 to file chooser then
+else{	
+Write_to_chooser_file("s4e1");	
 Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
 startActivity(Myintent);   
 } 	 
@@ -366,7 +372,8 @@ if (!(episode_isNotLocked("season_four_e1.txt"))){
 Toast.makeText(getActivity(), "لطفا ابتدا اقیانوس اول را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
-else{	//first right s4e2 to file chooser then
+else{	
+Write_to_chooser_file("s4e2");	
 Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
 startActivity(Myintent);   
 } 
@@ -377,7 +384,8 @@ if (!(episode_isNotLocked("season_four_e2.txt"))){
 Toast.makeText(getActivity(), "لطفا ابتدا اقیانوس دوم را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
-else{	//first right s4e3 to file chooser then
+else{	
+Write_to_chooser_file("s4e3");	
 Intent Myintent = new Intent(MainActivity.this, GameActivity.class);
 startActivity(Myintent);   
 } 
