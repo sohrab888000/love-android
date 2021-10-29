@@ -619,6 +619,8 @@ sFourEthree.setEnabled(false);
 
 //this function is called in onCreate and onResume for seasons and episodes lock update	
 public void init_seasons_state(){	
+File directory = new File(storagePath+File.separator+"save"+File.separator+"archive");	
+directory.mkdirs();	
 //----------------------------------------------------------------init seasons existance vars for better coding	
 boolean season_one_e1 = episode_isNotLocked("season_one_e1.txt");
 boolean season_one_e2 = episode_isNotLocked("season_one_e2.txt");
@@ -688,7 +690,7 @@ if (this.getExternalFilesDir(null).getAbsolutePath() != null)
 storagePath = this.getExternalFilesDir(null).getAbsolutePath();
 else
 storagePath = this.getFilesDir().getAbsolutePath();	
-File file = new File(storagePath+File.separator+"save"+File.separator+FileName);
+File file = new File(storagePath+File.separator+"save"+File.separator+"archive"+File.separator+FileName);
 if(file.exists()){//if file exists       
 try {
 BufferedReader brTest = new BufferedReader(new FileReader(file));
@@ -721,9 +723,10 @@ return false;
 
 //this function is call for writing in chooser file when selecting an episode
 public void Write_to_chooser_file(String select){
-String storagePath  = "";
 if (this.getExternalFilesDir(null).getAbsolutePath() != null)
-storagePath = this.getExternalFilesDir(null).getAbsolutePath();	
+storagePath = this.getExternalFilesDir(null).getAbsolutePath();
+else
+storagePath = this.getFilesDir().getAbsolutePath();
 try {
 FileOutputStream stream = new FileOutputStream(storagePath+File.separator+"save"+File.separator+"archive"+File.separator+"chooser.txt");
 try {
