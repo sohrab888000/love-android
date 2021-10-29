@@ -59,7 +59,7 @@ public class gotoLevel extends AsyncTask<Void, Integer, Void> {
 	ProgressDialog myProgressDialog;
   Context ctx;
 
-	public gotoLevel(String level,Context ctx) {
+	public gotoLevel(Context ctx,String level) {
 		super();
 		this.level = level;     
 		this.ctx = ctx; 
