@@ -1,4 +1,4 @@
-package package org.love2d.android;
+package org.love2d.android;
 
 import java.io.BufferedOutputStream;
 import java.io.File;
