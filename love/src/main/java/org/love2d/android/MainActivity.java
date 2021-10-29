@@ -601,9 +601,9 @@ sFourEthree.setEnabled(false);
 //**********************^^^^^^^^^^^^^^^^^^^^^^^^^^****************************^^^^^^^^^^^^^^^^^^^^^^******************
 	
 	
-//###################################################################	functions for unlocking episodes and seasons
+//###################################################################	functions for unlocking episodes and seasons	
 
-	
+//this function is called in onCreate and onResume for seasons and episodes lock update	
 public void init_seasons_state(){	
 //----------------------------------------------------------------init seasons existance vars for better coding	
 boolean season_one_e1 = episode_isNotLocked("season_one_e1.txt");
@@ -665,11 +665,9 @@ sFourEtwo.setCompoundDrawablesWithIntrinsicBounds(null, null, null, null);
 if(season_four_e2)
 sFourEthree.setCompoundDrawablesWithIntrinsicBounds(null, null, null, null);	
 //if(season_four_e3) for now season_four_e3 is the last level
-
-	
-	
 }
 	
+//helper function to detect seasons and episodes states 	
 public boolean episode_isNotLocked(String FileName){
 String storagePath  = "";
 if (this.getExternalFilesDir(null).getAbsolutePath() != null)
@@ -704,8 +702,23 @@ System.out.println("Can't find"); // Or something more intellegent
 }		
 }
 
-	
-	
+//this function is call for writing in chooser file when selecting an episode
+public void Write_to_chooser_file(String select){
+String storagePath  = "";
+if (this.getExternalFilesDir(null).getAbsolutePath() != null)
+storagePath = this.getExternalFilesDir(null).getAbsolutePath();	
+try {
+FileOutputStream stream = new FileOutputStream(storagePath+File.separator+"save"+File.separator+"chooser.txt");
+try {
+    stream.write(select.getBytes());
+    stream.close();
+}catch (IOException e) {
+System.out.println("Can't write"); // Or something more intellegent
+}		
+} catch (FileNotFoundException e) {
+System.out.println("Can't find"); // Or something more intellegent
+}	
+}	
 	
 //###################################################################	functions for unlocking episodes and seasons
 	
