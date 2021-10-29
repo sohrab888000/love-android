@@ -178,7 +178,7 @@ showSeasonsOne();
 	
 public void Season_TWO(View v) {	
 if (!(episode_isNotLocked("season_two_e1.txt"))){
-Toast.makeText(getActivity(), "لطفا ابتدا فصل 1 را تمام کنید!",
+Toast.makeText(MainActivity.this, "لطفا ابتدا فصل 1 را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
 else{	
@@ -191,7 +191,7 @@ showSeasonsTwo();
 		
 public void Season_THREE(View v) {
 if (!(episode_isNotLocked("season_three_e1.txt"))){
-Toast.makeText(getActivity(), "لطفا ابتدا فصل 2 را تمام کنید!",
+Toast.makeText(MainActivity.this, "لطفا ابتدا فصل 2 را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
 else{	
@@ -204,7 +204,7 @@ showSeasonsThree();
 	
 public void Season_FOUR(View v) {
 if (!(episode_isNotLocked("season_four_e1.txt"))){
-Toast.makeText(getActivity(), "لطفا ابتدا فصل 3 را تمام کنید!",
+Toast.makeText(MainActivity.this, "لطفا ابتدا فصل 3 را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
 else{	
@@ -233,7 +233,7 @@ startActivity(Myintent);
 	
 public void Season_One_E2(View v) {	
 if (!(episode_isNotLocked("season_one_e1.txt"))){
-Toast.makeText(getActivity(), "لطفا ابتدا جنگل اول را تمام کنید!",
+Toast.makeText(MainActivity.this, "لطفا ابتدا جنگل اول را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
 else{	
@@ -245,7 +245,7 @@ startActivity(Myintent);
 		
 public void Season_One_E3(View v) {
 if (!(episode_isNotLocked("season_one_e2.txt"))){
-Toast.makeText(getActivity(), "لطفا ابتدا جنگل دوم را تمام کنید!",
+Toast.makeText(MainActivity.this, "لطفا ابتدا جنگل دوم را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
 else{	
@@ -267,7 +267,7 @@ showSeasonsMenu();
     
 public void Season_Two_E1(View v) {	
 if (!(episode_isNotLocked("season_one_e3.txt"))){
-Toast.makeText(getActivity(), "لطفا ابتدا جنگل سوم را تمام کنید!",
+Toast.makeText(MainActivity.this, "لطفا ابتدا جنگل سوم را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
 else{	
@@ -279,7 +279,7 @@ startActivity(Myintent);
 	
 public void Season_Two_E2(View v) {	
 if (!(episode_isNotLocked("season_two_e1.txt"))){
-Toast.makeText(getActivity(), "لطفا ابتدا یخبندان اول را تمام کنید!",
+Toast.makeText(MainActivity.this, "لطفا ابتدا یخبندان اول را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
 else{	
@@ -291,7 +291,7 @@ startActivity(Myintent);
 		
 public void Season_Two_E3(View v) {
 if (!(episode_isNotLocked("season_two_e2.txt"))){
-Toast.makeText(getActivity(), "لطفا ابتدا یخبندان دوم را تمام کنید!",
+Toast.makeText(MainActivity.this, "لطفا ابتدا یخبندان دوم را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
 else{	
@@ -312,7 +312,7 @@ showSeasonsMenu();
     
 public void Season_Three_E1(View v) {	
 if (!(episode_isNotLocked("season_two_e3.txt"))){
-Toast.makeText(getActivity(), "لطفا ابتدا یخبندان سوم را تمام کنید!",
+Toast.makeText(MainActivity.this, "لطفا ابتدا یخبندان سوم را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
 else{	
@@ -324,7 +324,7 @@ startActivity(Myintent);
 	
 public void Season_Three_E2(View v) {	
 if (!(episode_isNotLocked("season_three_e1.txt"))){
-Toast.makeText(getActivity(), "لطفا ابتدا بیابان اول را تمام کنید!",
+Toast.makeText(MainActivity.this, "لطفا ابتدا بیابان اول را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
 else{	
@@ -336,7 +336,7 @@ startActivity(Myintent);
 		
 public void Season_Three_E3(View v) {
 if (!(episode_isNotLocked("season_three_e2.txt"))){
-Toast.makeText(getActivity(), "لطفا ابتدا بیابان دوم را تمام کنید!",
+Toast.makeText(MainActivity.this, "لطفا ابتدا بیابان دوم را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
 else{	
@@ -357,7 +357,7 @@ showSeasonsMenu();
     
 public void Season_Four_E1(View v) {	
 if (!(episode_isNotLocked("season_three_e3.txt"))){
-Toast.makeText(getActivity(), "لطفا ابتدا بیابان سوم را تمام کنید!",
+Toast.makeText(MainActivity.this, "لطفا ابتدا بیابان سوم را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
 else{	
@@ -369,7 +369,7 @@ startActivity(Myintent);
 	
 public void Season_Four_E2(View v) {	
 if (!(episode_isNotLocked("season_four_e1.txt"))){
-Toast.makeText(getActivity(), "لطفا ابتدا اقیانوس اول را تمام کنید!",
+Toast.makeText(MainActivity.this, "لطفا ابتدا اقیانوس اول را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
 else{	
@@ -381,7 +381,7 @@ startActivity(Myintent);
 		
 public void Season_Four_E3(View v) {
 if (!(episode_isNotLocked("season_four_e2.txt"))){
-Toast.makeText(getActivity(), "لطفا ابتدا اقیانوس دوم را تمام کنید!",
+Toast.makeText(MainActivity.this, "لطفا ابتدا اقیانوس دوم را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
 else{	
