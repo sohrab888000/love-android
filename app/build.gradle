@@ -5,7 +5,7 @@ android {
     buildToolsVersion '30.0.2'
     ndkVersion '21.3.6528147'
     defaultConfig {
-        applicationId 'org.love2d.android'
+        applicationId 'com.undeniables.ShadowHero'
         versionCode 29
         versionName '11.3a'
         minSdkVersion 14
