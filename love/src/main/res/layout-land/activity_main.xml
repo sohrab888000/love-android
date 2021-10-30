@@ -93,7 +93,7 @@
     android:layout_centerVertical="true"	    	    
     android:onClick="Season_TWO"
     android:background="@drawable/selector_stwo"	
-    android:drawableEnd="@drawable/lock"	    
+    android:drawableEnd="@android:drawable/ic_lock_lock"	    
     android:visibility="gone"/>
 	
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
@@ -125,7 +125,7 @@
     android:layout_below="@+id/sTwo"    
     android:onClick="Season_THREE" 
     android:background="@drawable/selector_sthree"	
-    android:drawableEnd="@drawable/lock"	    
+    android:drawableEnd="@android:drawable/ic_lock_lock"	    
     android:visibility="gone"/>
     
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
@@ -136,7 +136,7 @@
     android:layout_below="@+id/sThree"    
     android:onClick="Season_FOUR"
     android:background="@drawable/selector_sfour"	 
-    android:drawableEnd="@drawable/lock"	    
+    android:drawableEnd="@android:drawable/ic_lock_lock"	    
     android:visibility="gone"/>
 	
    <!-- Seasons menu-->	 
@@ -154,7 +154,7 @@
     android:layout_centerVertical="true"	    	    
     android:onClick="Season_One_E2"
     android:background="@drawable/selector_sone"
-    android:drawableEnd="@drawable/lock"	    
+    android:drawableEnd="@android:drawable/ic_lock_lock"	    
     android:visibility="gone"/>
 	
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
@@ -186,7 +186,7 @@
     android:layout_below="@+id/sOneEtwo"    
     android:onClick="Season_One_E3"
     android:background="@drawable/selector_sone"	   
-    android:drawableEnd="@drawable/lock"	    
+    android:drawableEnd="@android:drawable/ic_lock_lock"	    
     android:visibility="gone"/>
 	
    <!-- Seasons one-->	
@@ -203,7 +203,7 @@
     android:layout_centerVertical="true"	    	    
     android:onClick="Season_Two_E2" 
     android:background="@drawable/selector_stwo"	    
-    android:drawableEnd="@drawable/lock"    
+    android:drawableEnd="@android:drawable/ic_lock_lock"    
     android:visibility="gone"/>
 	
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
@@ -214,7 +214,7 @@
     android:layout_above="@id/sTwoEtwo"    
     android:onClick="Season_Two_E1" 
     android:background="@drawable/selector_stwo"	    
-    android:drawableEnd="@drawable/lock"	    
+    android:drawableEnd="@android:drawable/ic_lock_lock"	    
     android:visibility="gone"/>
 
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
@@ -236,7 +236,7 @@
     android:layout_below="@+id/sTwoEtwo"    
     android:onClick="Season_Two_E3" 
     android:background="@drawable/selector_stwo"	     
-    android:drawableEnd="@drawable/lock"	    
+    android:drawableEnd="@android:drawable/ic_lock_lock"	    
     android:visibility="gone"/>
 	
    <!-- Seasons two-->		
@@ -253,7 +253,7 @@
     android:layout_centerVertical="true"	    
     android:onClick="Season_Three_E2" 
     android:background="@drawable/selector_sthree"	     
-    android:drawableEnd="@drawable/lock"	    
+    android:drawableEnd="@android:drawable/ic_lock_lock"	    
     android:visibility="gone"/>
 	
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
@@ -264,7 +264,7 @@
     android:layout_above="@id/sThreeEtwo"    
     android:onClick="Season_Three_E1"
     android:background="@drawable/selector_sthree"	       
-    android:drawableEnd="@drawable/lock"	    
+    android:drawableEnd="@android:drawable/ic_lock_lock"	    
     android:visibility="gone"/>
 
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
@@ -286,7 +286,7 @@
     android:layout_below="@+id/sThreeEtwo"    
     android:onClick="Season_Three_E3"
     android:background="@drawable/selector_sthree"	    
-    android:drawableEnd="@drawable/lock"	    
+    android:drawableEnd="@android:drawable/ic_lock_lock"	    
     android:visibility="gone"/>
 	
    <!-- Seasons three-->		
@@ -303,7 +303,7 @@
     android:layout_centerVertical="true"	    	    
     android:onClick="Season_Four_E2" 
     android:background="@drawable/selector_sfour"	 
-    android:drawableEnd="@drawable/lock"	    
+    android:drawableEnd="@android:drawable/ic_lock_lock"	    
     android:visibility="gone"/>
 	
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
@@ -314,7 +314,7 @@
     android:layout_above="@id/sFourEtwo"    
     android:onClick="Season_Four_E1"
     android:background="@drawable/selector_sfour"	   
-    android:drawableEnd="@drawable/lock"	    
+    android:drawableEnd="@android:drawable/ic_lock_lock"	    
     android:visibility="gone"/>
 
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
@@ -336,11 +336,357 @@
     android:layout_below="@+id/sFourEtwo"    
     android:onClick="Season_Four_E3" 
     android:background="@drawable/selector_sfour"	
-    android:drawableEnd="@drawable/lock"	    
+    android:drawableEnd="@android:drawable/ic_lock_lock"	    
     android:visibility="gone"/>
 	
    <!-- Seasons four-->	
 	
 
 	
+</RelativeLayout>
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/relative"
+    android:descendantFocusability="blocksDescendants">
+    
+ <ImageView 
+    android:id="@+id/allback_images"    
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/b_menu" />
+    
+    
+    <!-- base menu-->   
+    
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/comments"
+    android:layout_width="200dp"
+    android:layout_height="35dp"
+    android:text="نظر دهی"
+    android:layout_centerVertical="true"
+    android:background="@drawable/selector_base"        
+    android:onClick="commenting" />
+    
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/game_page"
+    android:layout_width="200dp"
+    android:layout_height="35dp"
+    android:text="صفحه بازی"
+    android:layout_above="@id/comments"    
+    android:background="@drawable/selector_base"        
+    android:onClick="goToPage" /> 
+    
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/training"
+    android:layout_width="200dp"
+    android:layout_height="35dp"
+    android:text="آموزشی"
+    android:layout_above="@id/game_page"
+    android:background="@drawable/selector_base"        
+    android:onClick="trainSome" />  
+    
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/start_the_game_button"
+    android:layout_width="200dp"
+    android:layout_height="35dp"
+    android:text="شروع بازی"
+    android:layout_above="@id/training"
+    android:background="@drawable/selector_base"        
+    android:onClick="start" />      
+    
+   <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/send_email"
+    android:layout_width="200dp"
+    android:layout_height="35dp"
+    android:text="ایمیل مستقیم به ما"
+    android:layout_below="@+id/comments"    
+    android:background="@drawable/selector_base"       
+    android:onClick="sendingEmail" />
+    
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/group_games_page"
+    android:layout_width="200dp"
+    android:layout_height="35dp"
+    android:text="بازی های دیگر ما"
+    android:layout_below="@+id/send_email"  
+    android:background="@drawable/selector_base"        
+    android:onClick="goToGamesPage" />
+    
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/exit_button"
+    android:layout_width="200dp"
+    android:layout_height="35dp"
+    android:text="خروج"
+    android:layout_below="@+id/group_games_page"  
+    android:background="@drawable/selector_base"        
+    android:onClick="exit_game" />
+    
+    <!-- base menu-->   
+    
+    <!-- ######################################################-->      
+    
+   <!-- Seasons menu-->  
+   
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sTwo"
+    android:layout_width="240dp"
+    android:layout_height="40dp"
+    android:text="فصل دوم"
+    android:layout_centerVertical="true"                
+    android:onClick="Season_TWO"
+    android:background="@drawable/selector_stwo"    
+    android:drawableEnd="@android:drawable/ic_lock_lock"        
+    android:visibility="gone"/>
+    
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sOne"
+    android:layout_width="240dp"
+    android:layout_height="40dp"
+    android:text="فصل اول"
+    android:layout_above="@id/sTwo"    
+    android:onClick="Season_ONE" 
+    android:background="@drawable/selector_sone"                    
+    android:visibility="gone"/>
+
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/BackToBase"
+    android:layout_width="120dp"
+    android:layout_height="40dp"
+    android:text="بازگشت"
+    android:textColor="#FFFFFF"     
+    android:layout_above="@id/sOne"    
+    android:onClick="back_to_base" 
+    android:background="@drawable/selector_back"                            
+    android:visibility="gone"/>
+    
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sThree"
+    android:layout_width="240dp"
+    android:layout_height="40dp"
+    android:text="فصل سوم"
+    android:layout_below="@+id/sTwo"    
+    android:onClick="Season_THREE" 
+    android:background="@drawable/selector_sthree"  
+    android:drawableEnd="@android:drawable/ic_lock_lock"        
+    android:visibility="gone"/>
+    
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sFour"
+    android:layout_width="240dp"
+    android:layout_height="40dp"
+    android:text="فصل چهارم"
+    android:layout_below="@+id/sThree"    
+    android:onClick="Season_FOUR"
+    android:background="@drawable/selector_sfour"    
+    android:drawableEnd="@android:drawable/ic_lock_lock"        
+    android:visibility="gone"/>
+    
+   <!-- Seasons menu-->  
+    
+    
+    <!-- ######################################################-->      
+    
+   <!-- Seasons one-->  
+    
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sOneEtwo"
+    android:layout_width="240dp"
+    android:layout_height="40dp"
+    android:text="جنگل دوم"
+    android:layout_centerVertical="true"                
+    android:onClick="Season_One_E2"
+    android:background="@drawable/selector_sone"
+    android:drawableEnd="@android:drawable/ic_lock_lock"        
+    android:visibility="gone"/>
+    
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sOneEone"
+    android:layout_width="240dp"
+    android:layout_height="40dp"
+    android:text="جنگل اول"
+    android:layout_above="@id/sOneEtwo"    
+    android:onClick="Season_One_E1" 
+    android:background="@drawable/selector_sone"                                    
+    android:visibility="gone"/>
+
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/BackToSeasonsFromOne"
+    android:layout_width="120dp"
+    android:layout_height="40dp"
+    android:textColor="#FFFFFF"     
+    android:text="بازگشت"
+    android:layout_above="@id/sOneEone"    
+    android:onClick="back_to_seasons_From_one" 
+    android:background="@drawable/selector_back"                                    
+    android:visibility="gone"/>
+    
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sOneEthree"
+    android:layout_width="240dp"
+    android:layout_height="40dp"
+    android:text="جنگل سوم"
+    android:layout_below="@+id/sOneEtwo"    
+    android:onClick="Season_One_E3"
+    android:background="@drawable/selector_sone"       
+    android:drawableEnd="@android:drawable/ic_lock_lock"        
+    android:visibility="gone"/>
+    
+   <!-- Seasons one-->  
+    
+    <!-- ######################################################-->      
+    
+   <!-- Seasons two-->  
+    
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sTwoEtwo"
+    android:layout_width="240dp"
+    android:layout_height="40dp"
+    android:text="یخبندان دوم"
+    android:layout_centerVertical="true"                
+    android:onClick="Season_Two_E2" 
+    android:background="@drawable/selector_stwo"        
+    android:drawableEnd="@android:drawable/ic_lock_lock"    
+    android:visibility="gone"/>
+    
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sTwoEone"
+    android:layout_width="240dp"
+    android:layout_height="40dp"
+    android:text="یخبندان اول"
+    android:layout_above="@id/sTwoEtwo"    
+    android:onClick="Season_Two_E1" 
+    android:background="@drawable/selector_stwo"        
+    android:drawableEnd="@android:drawable/ic_lock_lock"        
+    android:visibility="gone"/>
+
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/BackToSeasonsFromTwo"
+    android:layout_width="120dp"
+    android:layout_height="40dp"
+    android:textColor="#FFFFFF"     
+    android:text="بازگشت"
+    android:layout_above="@id/sTwoEone"    
+    android:onClick="back_to_seasons_From_two" 
+    android:background="@drawable/selector_back"            
+    android:visibility="gone"/>
+    
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sTwoEthree"
+    android:layout_width="240dp"
+    android:layout_height="40dp"
+    android:text="یخبندان سوم"
+    android:layout_below="@+id/sTwoEtwo"    
+    android:onClick="Season_Two_E3" 
+    android:background="@drawable/selector_stwo"         
+    android:drawableEnd="@android:drawable/ic_lock_lock"        
+    android:visibility="gone"/>
+    
+   <!-- Seasons two-->      
+    
+    <!-- ######################################################-->      
+    
+   <!-- Seasons three-->    
+    
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sThreeEtwo"
+    android:layout_width="240dp"
+    android:layout_height="40dp"
+    android:text="بیابان دوم"
+    android:layout_centerVertical="true"        
+    android:onClick="Season_Three_E2" 
+    android:background="@drawable/selector_sthree"       
+    android:drawableEnd="@android:drawable/ic_lock_lock"        
+    android:visibility="gone"/>
+    
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sThreeEone"
+    android:layout_width="240dp"
+    android:layout_height="40dp"
+    android:text="بیابان اول"
+    android:layout_above="@id/sThreeEtwo"    
+    android:onClick="Season_Three_E1"
+    android:background="@drawable/selector_sthree"         
+    android:drawableEnd="@android:drawable/ic_lock_lock"        
+    android:visibility="gone"/>
+
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/BackToSeasonsFromThree"
+    android:layout_width="120dp"
+    android:layout_height="40dp"
+    android:text="بازگشت"
+    android:textColor="#FFFFFF"     
+    android:layout_above="@id/sThreeEone"    
+    android:onClick="back_to_seasons_From_three"
+    android:background="@drawable/selector_back"                                                            
+    android:visibility="gone"/>
+    
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sThreeEthree"
+    android:layout_width="240dp"
+    android:layout_height="40dp"
+    android:text="بیابان سوم"
+    android:layout_below="@+id/sThreeEtwo"    
+    android:onClick="Season_Three_E3"
+    android:background="@drawable/selector_sthree"      
+    android:drawableEnd="@android:drawable/ic_lock_lock"        
+    android:visibility="gone"/>
+    
+   <!-- Seasons three-->        
+    
+    <!-- ######################################################-->      
+    
+   <!-- Seasons four--> 
+    
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sFourEtwo"
+    android:layout_width="240dp"
+    android:layout_height="40dp"
+    android:text="اقیانوس دوم"
+    android:layout_centerVertical="true"                
+    android:onClick="Season_Four_E2" 
+    android:background="@drawable/selector_sfour"    
+    android:drawableEnd="@android:drawable/ic_lock_lock"        
+    android:visibility="gone"/>
+    
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sFourEone"
+    android:layout_width="240dp"
+    android:layout_height="40dp"
+    android:text="اقیانوس اول"
+    android:layout_above="@id/sFourEtwo"    
+    android:onClick="Season_Four_E1"
+    android:background="@drawable/selector_sfour"      
+    android:drawableEnd="@android:drawable/ic_lock_lock"        
+    android:visibility="gone"/>
+
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/BackToSeasonsFromFour"
+    android:layout_width="120dp"
+    android:layout_height="40dp"
+    android:textColor="#FFFFFF"     
+    android:text="بازگشت"
+    android:layout_above="@id/sFourEone"    
+    android:onClick="back_to_seasons_From_four"
+    android:background="@drawable/selector_back"                                                                                    
+    android:visibility="gone"/>
+    
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sFourEthree"
+    android:layout_width="240dp"
+    android:layout_height="40dp"
+    android:text="اقیانوس سوم"
+    android:layout_below="@+id/sFourEtwo"    
+    android:onClick="Season_Four_E3" 
+    android:background="@drawable/selector_sfour"   
+    android:drawableEnd="@android:drawable/ic_lock_lock"        
+    android:visibility="gone"/>
+    
+   <!-- Seasons four--> 
+    
+
+    
 </RelativeLayout>
