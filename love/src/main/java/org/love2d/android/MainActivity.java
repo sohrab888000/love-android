@@ -88,6 +88,8 @@ import android.media.MediaPlayer;
  */
 public class MainActivity extends Activity {
 
+	
+	MediaPlayer mediaPlayer = MediaPlayer.create(context, R.raw.menu);
 		
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -100,7 +102,6 @@ public class MainActivity extends Activity {
         public void onResume(){
                 super.onResume();
                 init_seasons_state();
-		MediaPlayer mediaPlayer = MediaPlayer.create(context, R.raw.menu);
 		mediaPlayer.setLooping(true);
                 mediaPlayer.start(); 
         }
