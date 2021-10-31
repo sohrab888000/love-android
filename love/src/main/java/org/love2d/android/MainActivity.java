@@ -273,7 +273,7 @@ showSeasonsFour();
 //***********************************^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^**********************************	
 //all button codes Season one/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 public void back_to_seasons_From_one(View v) {	    
-mediaPlayer_click.stop();	
+mediaPlayer_click.seekTo(0);	
 mediaPlayer_click.start();	
 clearSeasonsOne();
 ImageView allback_images = (ImageView) findViewById(R.id.allback_images); 	
@@ -282,7 +282,7 @@ showSeasonsMenu();
 }
     
 public void Season_One_E1(View v) {	
-mediaPlayer_click.stop();	
+mediaPlayer_click.seekTo(0);	
 mediaPlayer_click.start();	
 mediaPlayer_menu.pause();	
 new gotoLevel(MainActivity.this,"1=s1e1").execute();  
@@ -290,13 +290,13 @@ new gotoLevel(MainActivity.this,"1=s1e1").execute();
 	
 public void Season_One_E2(View v) {	
 if (!(episode_isNotLocked("season_one_e1.txt"))){
-mediaPlayer_lock.stop();
+mediaPlayer_lock.seekTo(0);
 mediaPlayer_lock.start();	
 Toast.makeText(MainActivity.this, "لطفا ابتدا جنگل اول را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
 else{	
-mediaPlayer_click.stop();	
+mediaPlayer_click.seekTo(0);	
 mediaPlayer_click.start();	
 mediaPlayer_menu.pause();	
 new gotoLevel(MainActivity.this,"1=s1e2").execute();  
@@ -305,13 +305,13 @@ new gotoLevel(MainActivity.this,"1=s1e2").execute();
 		
 public void Season_One_E3(View v) {
 if (!(episode_isNotLocked("season_one_e2.txt"))){
-mediaPlayer_lock.stop();
+mediaPlayer_lock.seekTo(0);
 mediaPlayer_lock.start();	
 Toast.makeText(MainActivity.this, "لطفا ابتدا جنگل دوم را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
 else{	
-mediaPlayer_click.stop();	
+mediaPlayer_click.seekTo(0);	
 mediaPlayer_click.start();	
 mediaPlayer_menu.pause();	
 new gotoLevel(MainActivity.this,"1=s1e3").execute();
@@ -322,7 +322,7 @@ new gotoLevel(MainActivity.this,"1=s1e3").execute();
 //***********************************^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^**********************************	
 //all button codes Season two/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 public void back_to_seasons_From_two(View v) {	 
-mediaPlayer_click.stop();	
+mediaPlayer_click.seekTo(0);	
 mediaPlayer_click.start();	
 clearSeasonsTwo();
 ImageView allback_images = (ImageView) findViewById(R.id.allback_images); 	
@@ -332,13 +332,13 @@ showSeasonsMenu();
     
 public void Season_Two_E1(View v) {	
 if (!(episode_isNotLocked("season_one_e3.txt"))){
-mediaPlayer_lock.stop();
+mediaPlayer_lock.seekTo(0);
 mediaPlayer_lock.start();	
 Toast.makeText(MainActivity.this, "لطفا ابتدا جنگل سوم را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
 else{	
-mediaPlayer_click.stop();	
+mediaPlayer_click.seekTo(0);	
 mediaPlayer_click.start();	
 mediaPlayer_menu.pause();	
 new gotoLevel(MainActivity.this,"1=s2e1").execute(); 
@@ -347,13 +347,13 @@ new gotoLevel(MainActivity.this,"1=s2e1").execute();
 	
 public void Season_Two_E2(View v) {	
 if (!(episode_isNotLocked("season_two_e1.txt"))){
-mediaPlayer_lock.stop();
+mediaPlayer_lock.seekTo(0);
 mediaPlayer_lock.start();	
 Toast.makeText(MainActivity.this, "لطفا ابتدا یخبندان اول را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
 else{	
-mediaPlayer_click.stop();	
+mediaPlayer_click.seekTo(0);	
 mediaPlayer_click.start();	
 mediaPlayer_menu.pause();	
 new gotoLevel(MainActivity.this,"1=s2e2").execute();  
@@ -362,13 +362,13 @@ new gotoLevel(MainActivity.this,"1=s2e2").execute();
 		
 public void Season_Two_E3(View v) {
 if (!(episode_isNotLocked("season_two_e2.txt"))){
-mediaPlayer_lock.stop();
+mediaPlayer_lock.seekTo(0);
 mediaPlayer_lock.start();	
 Toast.makeText(MainActivity.this, "لطفا ابتدا یخبندان دوم را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
 else{	
-mediaPlayer_click.stop();	
+mediaPlayer_click.seekTo(0);	
 mediaPlayer_click.start();	
 mediaPlayer_menu.pause();	
 new gotoLevel(MainActivity.this,"1=s2e3").execute(); 
@@ -378,7 +378,7 @@ new gotoLevel(MainActivity.this,"1=s2e3").execute();
 //***********************************^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^**********************************	
 //all button codes Season three/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 public void back_to_seasons_From_three(View v) {	 
-mediaPlayer_click.stop();	
+mediaPlayer_click.seekTo(0);	
 mediaPlayer_click.start();		
 clearSeasonsThree();
 ImageView allback_images = (ImageView) findViewById(R.id.allback_images); 	
@@ -388,13 +388,13 @@ showSeasonsMenu();
     
 public void Season_Three_E1(View v) {	
 if (!(episode_isNotLocked("season_two_e3.txt"))){
-mediaPlayer_lock.stop();
+mediaPlayer_lock.seekTo(0);
 mediaPlayer_lock.start();	
 Toast.makeText(MainActivity.this, "لطفا ابتدا یخبندان سوم را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
 else{	
-mediaPlayer_click.stop();	
+mediaPlayer_click.seekTo(0);	
 mediaPlayer_click.start();	
 mediaPlayer_menu.pause();	
 new gotoLevel(MainActivity.this,"1=s3e1").execute(); 
@@ -403,13 +403,13 @@ new gotoLevel(MainActivity.this,"1=s3e1").execute();
 	
 public void Season_Three_E2(View v) {	
 if (!(episode_isNotLocked("season_three_e1.txt"))){
-mediaPlayer_lock.stop();
+mediaPlayer_lock.seekTo(0);
 mediaPlayer_lock.start();	
 Toast.makeText(MainActivity.this, "لطفا ابتدا بیابان اول را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
 else{	
-mediaPlayer_click.stop();	
+mediaPlayer_click.seekTo(0);	
 mediaPlayer_click.start();	
 mediaPlayer_menu.pause();	
 new gotoLevel(MainActivity.this,"1=s3e2").execute();	
@@ -418,13 +418,13 @@ new gotoLevel(MainActivity.this,"1=s3e2").execute();
 		
 public void Season_Three_E3(View v) {
 if (!(episode_isNotLocked("season_three_e2.txt"))){
-mediaPlayer_lock.stop();
+mediaPlayer_lock.seekTo(0);
 mediaPlayer_lock.start();	
 Toast.makeText(MainActivity.this, "لطفا ابتدا بیابان دوم را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
 else{	
-mediaPlayer_click.stop();	
+mediaPlayer_click.seekTo(0);	
 mediaPlayer_click.start();	
 mediaPlayer_menu.pause();	
 new gotoLevel(MainActivity.this,"1=s3e3").execute();  
@@ -434,7 +434,7 @@ new gotoLevel(MainActivity.this,"1=s3e3").execute();
 //***********************************^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^**********************************		
 //all button codes Season four/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 public void back_to_seasons_From_four(View v) {	    
-mediaPlayer_click.stop();	
+mediaPlayer_click.seekTo(0);	
 mediaPlayer_click.start();	
 clearSeasonsFour();
 ImageView allback_images = (ImageView) findViewById(R.id.allback_images); 	
@@ -444,13 +444,13 @@ showSeasonsMenu();
     
 public void Season_Four_E1(View v) {	
 if (!(episode_isNotLocked("season_three_e3.txt"))){
-mediaPlayer_lock.stop();
+mediaPlayer_lock.seekTo(0);
 mediaPlayer_lock.start();	
 Toast.makeText(MainActivity.this, "لطفا ابتدا بیابان سوم را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
 else{	
-mediaPlayer_click.stop();	
+mediaPlayer_click.seekTo(0);	
 mediaPlayer_click.start();	
 mediaPlayer_menu.pause();	
 new gotoLevel(MainActivity.this,"1=s4e1").execute();
@@ -459,13 +459,13 @@ new gotoLevel(MainActivity.this,"1=s4e1").execute();
 	
 public void Season_Four_E2(View v) {	
 if (!(episode_isNotLocked("season_four_e1.txt"))){
-mediaPlayer_lock.stop();
+mediaPlayer_lock.seekTo(0);
 mediaPlayer_lock.start();	
 Toast.makeText(MainActivity.this, "لطفا ابتدا اقیانوس اول را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
 else{	
-mediaPlayer_click.stop();	
+mediaPlayer_click.seekTo(0);
 mediaPlayer_click.start();	
 mediaPlayer_menu.pause();	
 new gotoLevel(MainActivity.this,"1=s4e2").execute(); 
@@ -474,13 +474,13 @@ new gotoLevel(MainActivity.this,"1=s4e2").execute();
 		
 public void Season_Four_E3(View v) {
 if (!(episode_isNotLocked("season_four_e2.txt"))){
-mediaPlayer_lock.stop();
+mediaPlayer_lock.seekTo(0);
 mediaPlayer_lock.start();	
 Toast.makeText(MainActivity.this, "لطفا ابتدا اقیانوس دوم را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
 else{	
-mediaPlayer_click.stop();	
+mediaPlayer_click.seekTo(0);	
 mediaPlayer_click.start();	
 mediaPlayer_menu.pause();	
 new gotoLevel(MainActivity.this,"1=s4e3").execute(); 
