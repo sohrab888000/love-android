@@ -80,6 +80,7 @@ import android.graphics.BitmapFactory;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.Animation.AnimationListener;
+import android.media.MediaPlayer;  
 //
 /*
  * This class will respond to android.intent.action.CREATE_SHORTCUT intent from launcher homescreen.
@@ -99,12 +100,15 @@ public class MainActivity extends Activity {
         public void onResume(){
                 super.onResume();
                 init_seasons_state();
+		MediaPlayer mediaPlayer = MediaPlayer.create(context, R.raw.menu);
+		mediaPlayer.setLooping(true);
+                mediaPlayer.start(); 
         }
 	
 	@Override
         protected void onStart(){
         super.onStart();
-        init_seasons_state(); 
+        init_seasons_state(); 	
         }
 	
 	
@@ -347,6 +351,7 @@ Toast.makeText(MainActivity.this, "لطفا ابتدا بیابان سوم را 
 Toast.LENGTH_SHORT).show();
 }
 else{	
+mediaPlayer.stop();	
 new gotoLevel(MainActivity.this,"1=s4e1").execute();
 } 	 
 }		
