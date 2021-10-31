@@ -99,6 +99,7 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		mediaPlayer_menu = MediaPlayer.create(MainActivity.this, R.raw.menu);
+		mediaPlayer_menu.setLooping(true);
 	        mediaPlayer_click = MediaPlayer.create(MainActivity.this, R.raw.click);
 	        mediaPlayer_lock = MediaPlayer.create(MainActivity.this, R.raw.lock);
 		init_seasons_state();
@@ -110,8 +111,11 @@ public class MainActivity extends Activity {
         public void onResume(){
                 super.onResume();
                 init_seasons_state();
-		mediaPlayer_menu.setLooping(true);
-                mediaPlayer_menu.start(); 
+		if(!mediaPlayer_menu.isPlaying()) {
+                mediaPlayer_menu.seekTo(0);
+                mediaPlayer_menu.start();
+                }
+
         }
 	
 	@Override
@@ -125,7 +129,7 @@ public class MainActivity extends Activity {
 	
 //all button codes base menu/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 public void start(View v) {	
-mediaPlayer_click.stop();	
+mediaPlayer_click.seekTo(0);	
 mediaPlayer_click.start();	
 clearBaseMenu();
 ImageView allback_images = (ImageView) findViewById(R.id.allback_images); 	
@@ -134,14 +138,14 @@ showSeasonsMenu();
 }
     
 public void trainSome(View v) {	
-mediaPlayer_click.stop();	
+mediaPlayer_click.seekTo(0);	
 mediaPlayer_click.start();	
 mediaPlayer_menu.pause();	
 new gotoLevel(MainActivity.this,"1=train").execute(); 	
 }		
 	
 public void goToPage(View v) {	
-mediaPlayer_click.stop();	
+mediaPlayer_click.seekTo(0);	
 mediaPlayer_click.start();	
 /*bazar*/
 /*	
@@ -153,7 +157,7 @@ startActivity(intent);
 }	
 		
 public void commenting(View v) {
-mediaPlayer_click.stop();	
+mediaPlayer_click.seekTo(0);	
 mediaPlayer_click.start();	
 /*bazar*/
 /*
@@ -165,7 +169,7 @@ startActivity(intent);
 }
 
 public void sendingEmail(View v) {
-mediaPlayer_click.stop();	
+mediaPlayer_click.seekTo(0);	
 mediaPlayer_click.start();	
 /*bazar*/
 String url = "mailto: 00sohrabiranpak00@gmail.com";		
@@ -177,7 +181,7 @@ startActivity(intent);
 }
 	
 public void goToGamesPage(View v) {	
-mediaPlayer_click.stop();	
+mediaPlayer_click.seekTo(0);	
 mediaPlayer_click.start();	
 /*bazar*/
 /*	
@@ -189,7 +193,7 @@ startActivity(intent);
 }
 	
 public void exit_game(View v) {
-mediaPlayer_click.stop();	
+mediaPlayer_click.seekTo(0);	
 mediaPlayer_click.start();	
 this.finishAffinity();	
 }
@@ -197,7 +201,7 @@ this.finishAffinity();
 //***********************************^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^**********************************	
 //all button codes Seasons menu/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 public void back_to_base(View v) {	    
-mediaPlayer_click.stop();	
+mediaPlayer_click.seekTo(0);	
 mediaPlayer_click.start();	
 clearSeasonsMenu();	    
 ImageView allback_images = (ImageView) findViewById(R.id.allback_images); 	
@@ -206,7 +210,7 @@ showBaseMenu();
 }
     
 public void Season_ONE(View v) {	
-mediaPlayer_click.stop();	
+mediaPlayer_click.seekTo(0);	
 mediaPlayer_click.start();	
 clearSeasonsMenu();
 ImageView allback_images = (ImageView) findViewById(R.id.allback_images); 	
@@ -216,12 +220,13 @@ showSeasonsOne();
 	
 public void Season_TWO(View v) {	
 if (!(episode_isNotLocked("season_two_e1.txt"))){
+mediaPlayer_lock.seekTo(0);
 mediaPlayer_lock.start();	
 Toast.makeText(MainActivity.this, "لطفا ابتدا فصل 1 را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
 else{	
-mediaPlayer_click.stop();	
+mediaPlayer_click.seekTo(0);	
 mediaPlayer_click.start();	
 clearSeasonsMenu();
 ImageView allback_images = (ImageView) findViewById(R.id.allback_images); 	
@@ -232,12 +237,13 @@ showSeasonsTwo();
 		
 public void Season_THREE(View v) {
 if (!(episode_isNotLocked("season_three_e1.txt"))){
+mediaPlayer_lock.seekTo(0);
 mediaPlayer_lock.start();	
 Toast.makeText(MainActivity.this, "لطفا ابتدا فصل 2 را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
 else{	
-mediaPlayer_click.stop();	
+mediaPlayer_click.seekTo(0);	
 mediaPlayer_click.start();	
 clearSeasonsMenu();
 ImageView allback_images = (ImageView) findViewById(R.id.allback_images); 	
@@ -248,12 +254,13 @@ showSeasonsThree();
 	
 public void Season_FOUR(View v) {
 if (!(episode_isNotLocked("season_four_e1.txt"))){
+mediaPlayer_lock.seekTo(0);
 mediaPlayer_lock.start();	
 Toast.makeText(MainActivity.this, "لطفا ابتدا فصل 3 را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
 else{	
-mediaPlayer_click.stop();	
+mediaPlayer_click.seekTo(0);	
 mediaPlayer_click.start();
 clearSeasonsMenu();
 ImageView allback_images = (ImageView) findViewById(R.id.allback_images); 	
