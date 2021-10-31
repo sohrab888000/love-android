@@ -89,14 +89,17 @@ import android.media.MediaPlayer;
 public class MainActivity extends Activity {
 
 	
-	MediaPlayer mediaPlayer_menu = MediaPlayer.create(MainActivity.this, R.raw.menu);
-	MediaPlayer mediaPlayer_click = MediaPlayer.create(MainActivity.this, R.raw.click);
-	MediaPlayer mediaPlayer_lock = MediaPlayer.create(MainActivity.this, R.raw.lock);
+	public MediaPlayer mediaPlayer_menu;
+	public MediaPlayer mediaPlayer_click;
+	public MediaPlayer mediaPlayer_lock;
 		
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		mediaPlayer_menu = MediaPlayer.create(MainActivity.this, R.raw.menu);
+	        mediaPlayer_click = MediaPlayer.create(MainActivity.this, R.raw.click);
+	        mediaPlayer_lock = MediaPlayer.create(MainActivity.this, R.raw.lock);
 		init_seasons_state();
 	}
 	
