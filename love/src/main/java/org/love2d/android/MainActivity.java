@@ -87,12 +87,13 @@ import android.media.MediaPlayer;
  * Register this class in AndroidManifest.xml.
  */
 public class MainActivity extends Activity {
+	
 
 	
-	public MediaPlayer mediaPlayer_menu;
-	public MediaPlayer mediaPlayer_click;
-	public MediaPlayer mediaPlayer_lock;
-		
+	MediaPlayer mediaPlayer_menu;
+	MediaPlayer mediaPlayer_click;
+	MediaPlayer mediaPlayer_lock;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -101,6 +102,8 @@ public class MainActivity extends Activity {
 	        mediaPlayer_click = MediaPlayer.create(MainActivity.this, R.raw.click);
 	        mediaPlayer_lock = MediaPlayer.create(MainActivity.this, R.raw.lock);
 		init_seasons_state();
+		//mediaPlayer_menu.setLooping(true);
+                //mediaPlayer_menu.start(); 
 	}
 	
         @Override
@@ -115,11 +118,14 @@ public class MainActivity extends Activity {
         protected void onStart(){
         super.onStart();
         init_seasons_state(); 	
+	//mediaPlayer_menu.setLooping(true);
+        //mediaPlayer_menu.start(); 	
         }
 	
 	
 //all button codes base menu/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-public void start(View v) {	    
+public void start(View v) {	
+mediaPlayer_click.stop();	
 mediaPlayer_click.start();	
 clearBaseMenu();
 ImageView allback_images = (ImageView) findViewById(R.id.allback_images); 	
@@ -128,12 +134,14 @@ showSeasonsMenu();
 }
     
 public void trainSome(View v) {	
+mediaPlayer_click.stop();	
 mediaPlayer_click.start();	
-mediaPlayer_menu.stop();	
+mediaPlayer_menu.pause();	
 new gotoLevel(MainActivity.this,"1=train").execute(); 	
 }		
 	
 public void goToPage(View v) {	
+mediaPlayer_click.stop();	
 mediaPlayer_click.start();	
 /*bazar*/
 /*	
@@ -145,6 +153,7 @@ startActivity(intent);
 }	
 		
 public void commenting(View v) {
+mediaPlayer_click.stop();	
 mediaPlayer_click.start();	
 /*bazar*/
 /*
@@ -156,6 +165,7 @@ startActivity(intent);
 }
 
 public void sendingEmail(View v) {
+mediaPlayer_click.stop();	
 mediaPlayer_click.start();	
 /*bazar*/
 String url = "mailto: 00sohrabiranpak00@gmail.com";		
@@ -167,6 +177,7 @@ startActivity(intent);
 }
 	
 public void goToGamesPage(View v) {	
+mediaPlayer_click.stop();	
 mediaPlayer_click.start();	
 /*bazar*/
 /*	
@@ -178,6 +189,7 @@ startActivity(intent);
 }
 	
 public void exit_game(View v) {
+mediaPlayer_click.stop();	
 mediaPlayer_click.start();	
 this.finishAffinity();	
 }
@@ -185,6 +197,7 @@ this.finishAffinity();
 //***********************************^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^**********************************	
 //all button codes Seasons menu/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 public void back_to_base(View v) {	    
+mediaPlayer_click.stop();	
 mediaPlayer_click.start();	
 clearSeasonsMenu();	    
 ImageView allback_images = (ImageView) findViewById(R.id.allback_images); 	
@@ -193,6 +206,7 @@ showBaseMenu();
 }
     
 public void Season_ONE(View v) {	
+mediaPlayer_click.stop();	
 mediaPlayer_click.start();	
 clearSeasonsMenu();
 ImageView allback_images = (ImageView) findViewById(R.id.allback_images); 	
@@ -207,6 +221,7 @@ Toast.makeText(MainActivity.this, "لطفا ابتدا فصل 1 را تمام ک
 Toast.LENGTH_SHORT).show();
 }
 else{	
+mediaPlayer_click.stop();	
 mediaPlayer_click.start();	
 clearSeasonsMenu();
 ImageView allback_images = (ImageView) findViewById(R.id.allback_images); 	
@@ -222,6 +237,7 @@ Toast.makeText(MainActivity.this, "لطفا ابتدا فصل 2 را تمام ک
 Toast.LENGTH_SHORT).show();
 }
 else{	
+mediaPlayer_click.stop();	
 mediaPlayer_click.start();	
 clearSeasonsMenu();
 ImageView allback_images = (ImageView) findViewById(R.id.allback_images); 	
@@ -237,7 +253,8 @@ Toast.makeText(MainActivity.this, "لطفا ابتدا فصل 3 را تمام ک
 Toast.LENGTH_SHORT).show();
 }
 else{	
-mediaPlayer_click.start();	
+mediaPlayer_click.stop();	
+mediaPlayer_click.start();
 clearSeasonsMenu();
 ImageView allback_images = (ImageView) findViewById(R.id.allback_images); 	
 ImageViewAnimatedChange(MainActivity.this,allback_images,R.drawable.s_four);
@@ -249,6 +266,7 @@ showSeasonsFour();
 //***********************************^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^**********************************	
 //all button codes Season one/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 public void back_to_seasons_From_one(View v) {	    
+mediaPlayer_click.stop();	
 mediaPlayer_click.start();	
 clearSeasonsOne();
 ImageView allback_images = (ImageView) findViewById(R.id.allback_images); 	
@@ -257,33 +275,38 @@ showSeasonsMenu();
 }
     
 public void Season_One_E1(View v) {	
+mediaPlayer_click.stop();	
 mediaPlayer_click.start();	
-mediaPlayer_menu.stop();	
+mediaPlayer_menu.pause();	
 new gotoLevel(MainActivity.this,"1=s1e1").execute();  
 }
 	
 public void Season_One_E2(View v) {	
 if (!(episode_isNotLocked("season_one_e1.txt"))){
+mediaPlayer_lock.stop();
 mediaPlayer_lock.start();	
 Toast.makeText(MainActivity.this, "لطفا ابتدا جنگل اول را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
 else{	
+mediaPlayer_click.stop();	
 mediaPlayer_click.start();	
-mediaPlayer_menu.stop();	
+mediaPlayer_menu.pause();	
 new gotoLevel(MainActivity.this,"1=s1e2").execute();  
 }
 }	
 		
 public void Season_One_E3(View v) {
 if (!(episode_isNotLocked("season_one_e2.txt"))){
+mediaPlayer_lock.stop();
 mediaPlayer_lock.start();	
 Toast.makeText(MainActivity.this, "لطفا ابتدا جنگل دوم را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
 else{	
+mediaPlayer_click.stop();	
 mediaPlayer_click.start();	
-mediaPlayer_menu.stop();	
+mediaPlayer_menu.pause();	
 new gotoLevel(MainActivity.this,"1=s1e3").execute();
 }
 }
@@ -292,6 +315,7 @@ new gotoLevel(MainActivity.this,"1=s1e3").execute();
 //***********************************^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^**********************************	
 //all button codes Season two/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 public void back_to_seasons_From_two(View v) {	 
+mediaPlayer_click.stop();	
 mediaPlayer_click.start();	
 clearSeasonsTwo();
 ImageView allback_images = (ImageView) findViewById(R.id.allback_images); 	
@@ -301,39 +325,45 @@ showSeasonsMenu();
     
 public void Season_Two_E1(View v) {	
 if (!(episode_isNotLocked("season_one_e3.txt"))){
+mediaPlayer_lock.stop();
 mediaPlayer_lock.start();	
 Toast.makeText(MainActivity.this, "لطفا ابتدا جنگل سوم را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
 else{	
+mediaPlayer_click.stop();	
 mediaPlayer_click.start();	
-mediaPlayer_menu.stop();	
+mediaPlayer_menu.pause();	
 new gotoLevel(MainActivity.this,"1=s2e1").execute(); 
 } 
 }		
 	
 public void Season_Two_E2(View v) {	
 if (!(episode_isNotLocked("season_two_e1.txt"))){
+mediaPlayer_lock.stop();
 mediaPlayer_lock.start();	
 Toast.makeText(MainActivity.this, "لطفا ابتدا یخبندان اول را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
 else{	
+mediaPlayer_click.stop();	
 mediaPlayer_click.start();	
-mediaPlayer_menu.stop();	
+mediaPlayer_menu.pause();	
 new gotoLevel(MainActivity.this,"1=s2e2").execute();  
 } 
 }	
 		
 public void Season_Two_E3(View v) {
 if (!(episode_isNotLocked("season_two_e2.txt"))){
+mediaPlayer_lock.stop();
 mediaPlayer_lock.start();	
 Toast.makeText(MainActivity.this, "لطفا ابتدا یخبندان دوم را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
 else{	
+mediaPlayer_click.stop();	
 mediaPlayer_click.start();	
-mediaPlayer_menu.stop();	
+mediaPlayer_menu.pause();	
 new gotoLevel(MainActivity.this,"1=s2e3").execute(); 
 } 
 }
@@ -341,7 +371,8 @@ new gotoLevel(MainActivity.this,"1=s2e3").execute();
 //***********************************^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^**********************************	
 //all button codes Season three/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 public void back_to_seasons_From_three(View v) {	 
-mediaPlayer_click.start();	
+mediaPlayer_click.stop();	
+mediaPlayer_click.start();		
 clearSeasonsThree();
 ImageView allback_images = (ImageView) findViewById(R.id.allback_images); 	
 ImageViewAnimatedChange(MainActivity.this,allback_images,R.drawable.ss_menu);	
@@ -350,39 +381,45 @@ showSeasonsMenu();
     
 public void Season_Three_E1(View v) {	
 if (!(episode_isNotLocked("season_two_e3.txt"))){
+mediaPlayer_lock.stop();
 mediaPlayer_lock.start();	
 Toast.makeText(MainActivity.this, "لطفا ابتدا یخبندان سوم را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
 else{	
+mediaPlayer_click.stop();	
 mediaPlayer_click.start();	
-mediaPlayer_menu.stop();	
+mediaPlayer_menu.pause();	
 new gotoLevel(MainActivity.this,"1=s3e1").execute(); 
 } 	 
 }		
 	
 public void Season_Three_E2(View v) {	
 if (!(episode_isNotLocked("season_three_e1.txt"))){
+mediaPlayer_lock.stop();
 mediaPlayer_lock.start();	
 Toast.makeText(MainActivity.this, "لطفا ابتدا بیابان اول را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
 else{	
+mediaPlayer_click.stop();	
 mediaPlayer_click.start();	
-mediaPlayer_menu.stop();	
+mediaPlayer_menu.pause();	
 new gotoLevel(MainActivity.this,"1=s3e2").execute();	
 } 	
 }	
 		
 public void Season_Three_E3(View v) {
 if (!(episode_isNotLocked("season_three_e2.txt"))){
+mediaPlayer_lock.stop();
 mediaPlayer_lock.start();	
 Toast.makeText(MainActivity.this, "لطفا ابتدا بیابان دوم را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
 else{	
+mediaPlayer_click.stop();	
 mediaPlayer_click.start();	
-mediaPlayer_menu.stop();	
+mediaPlayer_menu.pause();	
 new gotoLevel(MainActivity.this,"1=s3e3").execute();  
 } 
 }
@@ -390,6 +427,7 @@ new gotoLevel(MainActivity.this,"1=s3e3").execute();
 //***********************************^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^**********************************		
 //all button codes Season four/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 public void back_to_seasons_From_four(View v) {	    
+mediaPlayer_click.stop();	
 mediaPlayer_click.start();	
 clearSeasonsFour();
 ImageView allback_images = (ImageView) findViewById(R.id.allback_images); 	
@@ -399,39 +437,45 @@ showSeasonsMenu();
     
 public void Season_Four_E1(View v) {	
 if (!(episode_isNotLocked("season_three_e3.txt"))){
+mediaPlayer_lock.stop();
 mediaPlayer_lock.start();	
 Toast.makeText(MainActivity.this, "لطفا ابتدا بیابان سوم را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
 else{	
+mediaPlayer_click.stop();	
 mediaPlayer_click.start();	
-mediaPlayer_menu.stop();	
+mediaPlayer_menu.pause();	
 new gotoLevel(MainActivity.this,"1=s4e1").execute();
 } 	 
 }		
 	
 public void Season_Four_E2(View v) {	
 if (!(episode_isNotLocked("season_four_e1.txt"))){
+mediaPlayer_lock.stop();
 mediaPlayer_lock.start();	
 Toast.makeText(MainActivity.this, "لطفا ابتدا اقیانوس اول را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
 else{	
+mediaPlayer_click.stop();	
 mediaPlayer_click.start();	
-mediaPlayer_menu.stop();	
+mediaPlayer_menu.pause();	
 new gotoLevel(MainActivity.this,"1=s4e2").execute(); 
 } 
 }	
 		
 public void Season_Four_E3(View v) {
 if (!(episode_isNotLocked("season_four_e2.txt"))){
+mediaPlayer_lock.stop();
 mediaPlayer_lock.start();	
 Toast.makeText(MainActivity.this, "لطفا ابتدا اقیانوس دوم را تمام کنید!",
 Toast.LENGTH_SHORT).show();
 }
 else{	
+mediaPlayer_click.stop();	
 mediaPlayer_click.start();	
-mediaPlayer_menu.stop();	
+mediaPlayer_menu.pause();	
 new gotoLevel(MainActivity.this,"1=s4e3").execute(); 
 } 
 }
