@@ -103,8 +103,6 @@ public class MainActivity extends Activity {
 	        mediaPlayer_click = MediaPlayer.create(MainActivity.this, R.raw.click);
 	        mediaPlayer_lock = MediaPlayer.create(MainActivity.this, R.raw.lock);
 		init_seasons_state();
-		//mediaPlayer_menu.setLooping(true);
-                //mediaPlayer_menu.start(); 
 	}
 	
         @Override
@@ -122,8 +120,6 @@ public class MainActivity extends Activity {
         protected void onStart(){
         super.onStart();
         init_seasons_state(); 	
-	//mediaPlayer_menu.setLooping(true);
-        //mediaPlayer_menu.start(); 	
         }
 	
 	
