@@ -127,6 +127,12 @@ public class MainActivity extends Activity {
         }
 	
 	
+	protected void onPause(){//for pausing the song when app pause
+        super.onPause();
+	mediaPlayer_menu.pause();//   ^^^	   
+	}
+	
+	
 //all button codes base menu/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 public void start(View v) {	
 mediaPlayer_click.seekTo(0);	
