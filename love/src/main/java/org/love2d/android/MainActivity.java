@@ -238,6 +238,11 @@ showSeasonsTwo();
 }	
 		
 public void Season_THREE(View v) {
+mediaPlayer_lock.seekTo(0);
+mediaPlayer_lock.start();	
+Toast.makeText(MainActivity.this, "این قسمت در بروز رسانی بعدی قابل بازی هست",
+Toast.LENGTH_SHORT).show();	
+/*	
 if (!(episode_isNotLocked("season_three_e1.txt"))){
 mediaPlayer_lock.seekTo(0);
 mediaPlayer_lock.start();	
@@ -252,9 +257,15 @@ ImageView allback_images = (ImageView) findViewById(R.id.allback_images);
 ImageViewAnimatedChange(MainActivity.this,allback_images,R.drawable.s_three);
 showSeasonsThree();
 }
+*/
 }
 	
 public void Season_FOUR(View v) {
+mediaPlayer_lock.seekTo(0);
+mediaPlayer_lock.start();	
+Toast.makeText(MainActivity.this, "این قسمت در بروز رسانی بعدی قابل بازی هست",
+Toast.LENGTH_SHORT).show();	
+/*	
 if (!(episode_isNotLocked("season_four_e1.txt"))){
 mediaPlayer_lock.seekTo(0);
 mediaPlayer_lock.start();	
@@ -269,6 +280,7 @@ ImageView allback_images = (ImageView) findViewById(R.id.allback_images);
 ImageViewAnimatedChange(MainActivity.this,allback_images,R.drawable.s_four);
 showSeasonsFour();
 }
+*/
 }
 	
 //all button codes Seasons menu/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
