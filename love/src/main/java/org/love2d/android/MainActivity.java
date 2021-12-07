@@ -867,15 +867,11 @@ sFourEthree.setCompoundDrawablesWithIntrinsicBounds(null, null, null, null);
 //-------season one
 int stars = 0;	
 Button sOneEoneStars = (Button) findViewById(R.id.sOneEoneStars);
-stars = setStarsAndScores("s1e1_save.txt",sOneEoneStars);	
-if (stars == 1)
-sOneEoneStars.setCompoundDrawablesWithIntrinsicBounds(null, R.drawable.star_one , null, null);	
-	
 Button sOneEtwoStars = (Button) findViewById(R.id.sOneEtwoStars);	
 Button sOneEthreeStars = (Button) findViewById(R.id.sOneEthreeStars);		
 setStarsAndScores("s1e2_save.txt",sOneEtwoStars);	
 setStarsAndScores("s1e3_save.txt",sOneEthreeStars);	
-	
+stars = setStarsAndScores("s1e1_save.txt",sOneEoneStars);			
 /*
 //-------season two
 Button sTwoEone = (Button) findViewById(R.id.sTwoEone);	
@@ -970,7 +966,7 @@ public static void ImageViewAnimatedChange(final Context c,final ImageView v ,fi
 //###################################################################	functions need for Animations!
 	
 //###################################################################functions for helping showing scoores 
-public int setStarsAndScores(String FileName,Button b){	
+public void setStarsAndScores(String FileName,Button b){	
 String storagePath  = "";
 int stars = 0;	
 double time = 0;
@@ -1004,11 +1000,27 @@ s = time - ( (m * 60) + (h * 3600) );
 }		
 String	texttt = Double.toString(h) + ":" + Double.toString(m) + ":" + Double.toString(s); 
 b.setText(texttt);
+Drawable image;	
+if (stars == 1)
+image = context.getResources().getDrawable( R.drawable.star_one );
+else if (stars == 2)
+image = context.getResources().getDrawable( R.drawable.star_two );	
+else if (stars == 2)
+image = context.getResources().getDrawable( R.drawable.star_three );	
+	
+int h = image.getIntrinsicHeight(); 
+int w = image.getIntrinsicWidth();   
+image.setBounds( 0, 0, w, h );
+b.setCompoundDrawables( null, image, null, null );	
 }else{//file does'nt exist
 String	texttt = "00" + ":" + "00" + ":" + "00"; 
 b.setText(texttt);
+Drawable image = context.getResources().getDrawable( R.drawable.star_zero );	
+int h = image.getIntrinsicHeight(); 
+int w = image.getIntrinsicWidth();   
+image.setBounds( 0, 0, w, h );
+b.setCompoundDrawables( null, image, null, null );		
 }
-return stars;	
 }
 //###################################################################functions for helping showing scoores 
 	
