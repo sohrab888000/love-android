@@ -865,21 +865,21 @@ sFourEthree.setCompoundDrawablesWithIntrinsicBounds(null, null, null, null);
 	
 //###init scoore and stars :
 //-------season one
-setStarsAndScores("s1e1_save.txt",(Button) findViewById(R.id.sOneEoneStars)):	
-setStarsAndScores("s1e2_save.txt",(Button) findViewById(R.id.sOneEtwoStars)):	
-setStarsAndScores("s1e3_save.txt",(Button) findViewById(R.id.sOneEthreeStars)):	
+setStarsAndScores("s1e1_save.txt",(Button) findViewById(R.id.sOneEoneStars));	
+setStarsAndScores("s1e2_save.txt",(Button) findViewById(R.id.sOneEtwoStars));	
+setStarsAndScores("s1e3_save.txt",(Button) findViewById(R.id.sOneEthreeStars));	
 //-------season two
-setStarsAndScores("s2e1_save.txt",(Button) findViewById(R.id.sTwoEoneStars)):	
-setStarsAndScores("s2e2_save.txt",(Button) findViewById(R.id.sTwoEtwoStars)):	
-setStarsAndScores("s2e3_save.txt",(Button) findViewById(R.id.sTwoEthreeStars)):	
+setStarsAndScores("s2e1_save.txt",(Button) findViewById(R.id.sTwoEoneStars));	
+setStarsAndScores("s2e2_save.txt",(Button) findViewById(R.id.sTwoEtwoStars));	
+setStarsAndScores("s2e3_save.txt",(Button) findViewById(R.id.sTwoEthreeStars));	
 //-------season three
-setStarsAndScores("s3e1_save.txt",(Button) findViewById(R.id.sThreeEoneStars)):	
-setStarsAndScores("s3e2_save.txt",(Button) findViewById(R.id.sThreeEtwoStars)):	
-setStarsAndScores("s3e3_save.txt",(Button) findViewById(R.id.sThreeEthreeStars)):	
+setStarsAndScores("s3e1_save.txt",(Button) findViewById(R.id.sThreeEoneStars));	
+setStarsAndScores("s3e2_save.txt",(Button) findViewById(R.id.sThreeEtwoStars));	
+setStarsAndScores("s3e3_save.txt",(Button) findViewById(R.id.sThreeEthreeStars));	
 //-------season four
-setStarsAndScores("s4e1_save.txt",(Button) findViewById(R.id.sFourEoneStars)):	
-setStarsAndScores("s4e2_save.txt",(Button) findViewById(R.id.sFourEtwoStars)):	
-setStarsAndScores("s4e3_save.txt",(Button) findViewById(R.id.sFourEthreeStars)):	
+setStarsAndScores("s4e1_save.txt",(Button) findViewById(R.id.sFourEoneStars));	
+setStarsAndScores("s4e2_save.txt",(Button) findViewById(R.id.sFourEtwoStars));	
+setStarsAndScores("s4e3_save.txt",(Button) findViewById(R.id.sFourEthreeStars));	
 	
 }
 	
@@ -971,12 +971,12 @@ String line = reader.readLine(); //score
 line = reader.readLine(); //stars	
 String substr = " ";	
 if (line != null){
-substr = mysourcestring.substring(2));	
+substr = mysourcestring.substring(2);	
 stars = Integer.parseInt(substr);	
 }	
 line = reader.readLine(); //time	
 if (line != null){
-substr = mysourcestring.substring(2));	
+substr = mysourcestring.substring(2);	
 time = Long.parseLong(substr);
 h = Math.floor(time/3600);
 m = Math.floor( (time - (h * 3600))/60 );
