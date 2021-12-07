@@ -125,7 +125,7 @@
     android:layout_below="@+id/sTwo"    
     android:onClick="Season_THREE" 
     android:background="@drawable/selector_sthree"  
-    android:drawableEnd="@android:drawable/ic_lock_lock"        
+    android:drawableEnd="@android:drawable/btn_star"        
     android:visibility="gone"/>
     
     <Button xmlns:android="http://schemas.android.com/apk/res/android"
@@ -136,7 +136,7 @@
     android:layout_below="@+id/sThree"    
     android:onClick="Season_FOUR"
     android:background="@drawable/selector_sfour"    
-    android:drawableEnd="@android:drawable/ic_lock_lock"        
+    android:drawableEnd="@android:drawable/btn_star"        
     android:visibility="gone"/>
     
    <!-- Seasons menu-->  
