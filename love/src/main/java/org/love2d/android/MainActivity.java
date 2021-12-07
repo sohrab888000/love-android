@@ -603,7 +603,16 @@ sOneEtwo.setVisibility(View.VISIBLE);
 sOneEtwo.setEnabled(true);	
 Button sOneEthree = (Button) findViewById(R.id.sOneEthree);
 sOneEthree.setVisibility(View.VISIBLE);
-sOneEthree.setEnabled(true);				
+sOneEthree.setEnabled(true);			
+Button sOneEoneStars = (Button) findViewById(R.id.sOneEoneStars);
+sOneEoneStars.setVisibility(View.VISIBLE);
+sOneEoneStars.setEnabled(true);	
+Button sOneEtwoStars = (Button) findViewById(R.id.sOneEtwoStars);
+sOneEtwoStars.setVisibility(View.VISIBLE);
+sOneEtwoStars.setEnabled(true);	
+Button sOneEthreeStars = (Button) findViewById(R.id.sOneEthreeStars);
+sOneEthreeStars.setVisibility(View.VISIBLE);
+sOneEthreeStars.setEnabled(true);			
 }		
 public  void clearSeasonsOne(){
 Button BackToSeasonsFromOne = (Button) findViewById(R.id.BackToSeasonsFromOne);
@@ -618,6 +627,15 @@ sOneEtwo.setEnabled(false);
 Button sOneEthree = (Button) findViewById(R.id.sOneEthree);
 sOneEthree.setVisibility(View.GONE);
 sOneEthree.setEnabled(false);				
+Button sOneEoneStars = (Button) findViewById(R.id.sOneEoneStars);
+sOneEoneStars.setVisibility(View.GONE);
+sOneEoneStars.setEnabled(false);	
+Button sOneEtwoStars = (Button) findViewById(R.id.sOneEtwoStars);
+sOneEtwoStars.setVisibility(View.GONE);
+sOneEtwoStars.setEnabled(false);	
+Button sOneEthreeStars = (Button) findViewById(R.id.sOneEthreeStars);
+sOneEthreeStars.setVisibility(View.GONE);
+sOneEthreeStars.setEnabled(false);				
 }	
 //Season one
 //#############################
@@ -635,6 +653,15 @@ sTwoEtwo.setEnabled(true);
 Button sTwoEthree = (Button) findViewById(R.id.sTwoEthree);
 sTwoEthree.setVisibility(View.VISIBLE);
 sTwoEthree.setEnabled(true);				
+Button sTwoEoneStars = (Button) findViewById(R.id.sTwoEoneStars);
+sTwoEoneStars.setVisibility(View.VISIBLE);
+sTwoEoneStars.setEnabled(true);	
+Button sTwoEtwoStars = (Button) findViewById(R.id.sTwoEtwoStars);
+sTwoEtwoStars.setVisibility(View.VISIBLE);
+sTwoEtwoStars.setEnabled(true);	
+Button sTwoEthreeStars = (Button) findViewById(R.id.sTwoEthreeStars);
+sTwoEthreeStars.setVisibility(View.VISIBLE);
+sTwoEthreeStars.setEnabled(true);				
 }		
 public  void clearSeasonsTwo(){
 Button BackToSeasonsFromTwo = (Button) findViewById(R.id.BackToSeasonsFromTwo);
@@ -649,6 +676,15 @@ sTwoEtwo.setEnabled(false);
 Button sTwoEthree = (Button) findViewById(R.id.sTwoEthree);
 sTwoEthree.setVisibility(View.GONE);
 sTwoEthree.setEnabled(false);				
+Button sTwoEoneStars = (Button) findViewById(R.id.sTwoEoneStars);
+sTwoEoneStars.setVisibility(View.GONE);
+sTwoEoneStars.setEnabled(false);	
+Button sTwoEtwoStars = (Button) findViewById(R.id.sTwoEtwoStars);
+sTwoEtwoStars.setVisibility(View.GONE);
+sTwoEtwoStars.setEnabled(false);	
+Button sTwoEthreeStars = (Button) findViewById(R.id.sTwoEthreeStars);
+sTwoEthreeStars.setVisibility(View.GONE);
+sTwoEthreeStars.setEnabled(false);				
 }	
 //Season two
 //##########################
@@ -666,6 +702,15 @@ sThreeEtwo.setEnabled(true);
 Button sThreeEthree = (Button) findViewById(R.id.sThreeEthree);
 sThreeEthree.setVisibility(View.VISIBLE);
 sThreeEthree.setEnabled(true);				
+Button sThreeEoneStars = (Button) findViewById(R.id.sThreeEoneStars);
+sThreeEoneStars.setVisibility(View.VISIBLE);
+sThreeEoneStars.setEnabled(true);	
+Button sThreeEtwoStars = (Button) findViewById(R.id.sThreeEtwoStars);
+sThreeEtwoStars.setVisibility(View.VISIBLE);
+sThreeEtwoStars.setEnabled(true);	
+Button sThreeEthreeStars = (Button) findViewById(R.id.sThreeEthreeStars);
+sThreeEthreeStars.setVisibility(View.VISIBLE);
+sThreeEthreeStars.setEnabled(true);				
 }
 public  void clearSeasonsThree(){
 Button BackToSeasonsFromThree = (Button) findViewById(R.id.BackToSeasonsFromThree);
@@ -680,6 +725,15 @@ sThreeEtwo.setEnabled(false);
 Button sThreeEthree = (Button) findViewById(R.id.sThreeEthree);
 sThreeEthree.setVisibility(View.GONE);
 sThreeEthree.setEnabled(false);				
+Button sThreeEoneStars = (Button) findViewById(R.id.sThreeEoneStars);
+sThreeEoneStars.setVisibility(View.GONE);
+sThreeEoneStars.setEnabled(false);	
+Button sThreeEtwoStars = (Button) findViewById(R.id.sThreeEtwoStars);
+sThreeEtwoStars.setVisibility(View.GONE);
+sThreeEtwoStars.setEnabled(false);	
+Button sThreeEthreeStars = (Button) findViewById(R.id.sThreeEthreeStars);
+sThreeEthreeStars.setVisibility(View.GONE);
+sThreeEthreeStars.setEnabled(false);				
 }
 //Season three 
 //##################################
@@ -697,6 +751,15 @@ sFourEtwo.setEnabled(true);
 Button sFourEthree = (Button) findViewById(R.id.sFourEthree);
 sFourEthree.setVisibility(View.VISIBLE);
 sFourEthree.setEnabled(true);				
+Button sFourEoneStars = (Button) findViewById(R.id.sFourEoneStars);
+sFourEoneStars.setVisibility(View.VISIBLE);
+sFourEoneStars.setEnabled(true);	
+Button sFourEtwoStars = (Button) findViewById(R.id.sFourEtwoStars);
+sFourEtwoStars.setVisibility(View.VISIBLE);
+sFourEtwoStars.setEnabled(true);	
+Button sFourEthreeStars = (Button) findViewById(R.id.sFourEthreeStars);
+sFourEthreeStars.setVisibility(View.VISIBLE);
+sFourEthreeStars.setEnabled(true);				
 }	
 public  void clearSeasonsFour(){
 Button BackToSeasonsFromFour = (Button) findViewById(R.id.BackToSeasonsFromFour);
@@ -711,6 +774,15 @@ sFourEtwo.setEnabled(false);
 Button sFourEthree = (Button) findViewById(R.id.sFourEthree);
 sFourEthree.setVisibility(View.GONE);
 sFourEthree.setEnabled(false);				
+Button sFourEoneStars = (Button) findViewById(R.id.sFourEoneStars);
+sFourEoneStars.setVisibility(View.GONE);
+sFourEoneStars.setEnabled(false);	
+Button sFourEtwoStars = (Button) findViewById(R.id.sFourEtwoStars);
+sFourEtwoStars.setVisibility(View.GONE);
+sFourEtwoStars.setEnabled(false);	
+Button sFourEthreeStars = (Button) findViewById(R.id.sFourEthreeStars);
+sFourEthreeStars.setVisibility(View.GONE);
+sFourEthreeStars.setEnabled(false);				
 }	
 //Season four	
 //###################################################################	functions need for better managment!
@@ -790,6 +862,25 @@ sFourEtwo.setCompoundDrawablesWithIntrinsicBounds(null, null, null, null);
 if(season_four_e2)
 sFourEthree.setCompoundDrawablesWithIntrinsicBounds(null, null, null, null);	
 //if(season_four_e3) for now season_four_e3 is the last level
+	
+//###init scoore and stars :
+//-------season one
+setStarsAndScores("s1e1_save.txt",(Button) findViewById(R.id.sOneEoneStars)):	
+setStarsAndScores("s1e2_save.txt",(Button) findViewById(R.id.sOneEtwoStars)):	
+setStarsAndScores("s1e3_save.txt",(Button) findViewById(R.id.sOneEthreeStars)):	
+//-------season two
+setStarsAndScores("s2e1_save.txt",(Button) findViewById(R.id.sTwoEoneStars)):	
+setStarsAndScores("s2e2_save.txt",(Button) findViewById(R.id.sTwoEtwoStars)):	
+setStarsAndScores("s2e3_save.txt",(Button) findViewById(R.id.sTwoEthreeStars)):	
+//-------season three
+setStarsAndScores("s3e1_save.txt",(Button) findViewById(R.id.sThreeEoneStars)):	
+setStarsAndScores("s3e2_save.txt",(Button) findViewById(R.id.sThreeEtwoStars)):	
+setStarsAndScores("s3e3_save.txt",(Button) findViewById(R.id.sThreeEthreeStars)):	
+//-------season four
+setStarsAndScores("s4e1_save.txt",(Button) findViewById(R.id.sFourEoneStars)):	
+setStarsAndScores("s4e2_save.txt",(Button) findViewById(R.id.sFourEtwoStars)):	
+setStarsAndScores("s4e3_save.txt",(Button) findViewById(R.id.sFourEthreeStars)):	
+	
 }
 	
 //helper function to detect seasons and episodes states 	
@@ -860,6 +951,54 @@ public static void ImageViewAnimatedChange(final Context c,final ImageView v ,fi
 }		
 //###################################################################	functions need for Animations!
 	
-
-
+//###################################################################functions for helping showing scoores 
+public void setStarsAndScores(String FileName,Button b){	
+String storagePath  = "";
+int stars = 0;	
+double time = 0;
+double s = 0;
+double m = 0;
+double h = 0;	
+if (this.getExternalFilesDir(null).getAbsolutePath() != null)
+storagePath = this.getExternalFilesDir(null).getAbsolutePath();
+else
+storagePath = this.getFilesDir().getAbsolutePath();	
+File file = new File(storagePath+File.separator+"save"+File.separator+"archive"+File.separator+FileName);	
+if(file.exists()){	
+is = new FileInputStream(file);
+reader = new BufferedReader(new InputStreamReader(is));
+String line = reader.readLine(); //score
+line = reader.readLine(); //stars	
+String substr = " ";	
+if (line != null){
+substr = mysourcestring.substring(2));	
+stars = Integer.parseInt(substr);	
+}	
+line = reader.readLine(); //time	
+if (line != null){
+substr = mysourcestring.substring(2));	
+time = Long.parseLong(substr);
+h = Math.floor(time/3600);
+m = Math.floor( (time - (h * 3600))/60 );
+s = time - ( (m * 60) + (h * 3600) );	
+}		
+String	texttt = Integer.toString(h) + ":" + Integer.toString(m) + ":" + Integer.toString(s); 
+b.setText(texttt);
+	
+if(stars == 1)	
+b.setCompoundDrawablesWithIntrinsicBounds(null, R.drawable.star_one, null, null);		
+else if(stars == 2)
+b.setCompoundDrawablesWithIntrinsicBounds(null, R.drawable.star_two, null, null);		
+else if(stars == 3)
+b.setCompoundDrawablesWithIntrinsicBounds(null, R.drawable.star_three, null, null);		
+	
+}else{//file does'nt exist
+String	texttt = "00" + ":" + "00" + ":" + "00"; 
+b.setText(texttt);
+b.setCompoundDrawablesWithIntrinsicBounds(null, R.drawable.star_zero, null, null);			
+}	
+}
+//###################################################################functions for helping showing scoores 
+	
+	
 }
