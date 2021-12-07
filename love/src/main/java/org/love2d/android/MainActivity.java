@@ -1002,23 +1002,23 @@ String	texttt = Double.toString(h) + ":" + Double.toString(m) + ":" + Double.toS
 b.setText(texttt);
 Drawable image;	
 if (stars == 1)
-image = context.getResources().getDrawable( R.drawable.star_one );
+image = this.getResources().getDrawable( R.drawable.star_one );
 else if (stars == 2)
-image = context.getResources().getDrawable( R.drawable.star_two );	
+image = this.getResources().getDrawable( R.drawable.star_two );	
 else if (stars == 2)
-image = context.getResources().getDrawable( R.drawable.star_three );	
+image = this.getResources().getDrawable( R.drawable.star_three );	
 	
-int h = image.getIntrinsicHeight(); 
-int w = image.getIntrinsicWidth();   
-image.setBounds( 0, 0, w, h );
+int hi = image.getIntrinsicHeight(); 
+int wi = image.getIntrinsicWidth();   
+image.setBounds( 0, 0, wi, hi );
 b.setCompoundDrawables( null, image, null, null );	
 }else{//file does'nt exist
 String	texttt = "00" + ":" + "00" + ":" + "00"; 
 b.setText(texttt);
-Drawable image = context.getResources().getDrawable( R.drawable.star_zero );	
-int h = image.getIntrinsicHeight(); 
-int w = image.getIntrinsicWidth();   
-image.setBounds( 0, 0, w, h );
+Drawable image = this.getResources().getDrawable( R.drawable.star_zero );	
+int hi = image.getIntrinsicHeight(); 
+int wi = image.getIntrinsicWidth();   
+image.setBounds( 0, 0, wi, hi );
 b.setCompoundDrawables( null, image, null, null );		
 }
 }
