@@ -368,6 +368,47 @@
     android:drawableEnd="@android:drawable/ic_lock_lock"        
     android:visibility="gone"/>
     
+    
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sThreeEoneStars"
+    android:layout_width="240dp"
+    android:layout_height="40dp"
+    android:text="00.00.00"
+    android:textColor="@color/Myblack"
+    android:textStyle="bold"      
+    android:layout_centerVertical="true"
+    android:layout_toRightOf="@+id/sThreeEone"            
+    android:background="@color/white"
+    android:drawableTop="@android:drawable/star_zero"        
+    android:visibility="gone"/>
+    
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sThreeEtwoStars"
+    android:layout_width="240dp"
+    android:layout_height="40dp"
+    android:text="00.00.00"
+    android:textColor="@color/Myblack"
+    android:textStyle="bold"        
+    android:layout_below="@+id/sThreeEoneStars"
+    android:layout_toRightOf="@+id/sThreeEtwo"            
+    android:background="@color/white"
+    android:drawableTop="@android:drawable/star_zero"        
+    android:visibility="gone"/>
+    
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sThreeEthreeStars"
+    android:layout_width="240dp"
+    android:layout_height="40dp"
+    android:text="00.00.00"
+    android:textColor="@color/Myblack"
+    android:textStyle="bold"        
+    android:layout_below="@+id/sThreeEtwoStars"
+    android:layout_toRightOf="@+id/sThreeEthree"            
+    android:background="@color/white"
+    android:drawableTop="@android:drawable/star_zero"        
+    android:visibility="gone"/>
+   
+    
    <!-- Seasons three-->        
     
     <!-- ######################################################-->      
@@ -417,6 +458,47 @@
     android:background="@drawable/selector_sfour"   
     android:drawableEnd="@android:drawable/ic_lock_lock"        
     android:visibility="gone"/>
+    
+    
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sFourEoneStars"
+    android:layout_width="240dp"
+    android:layout_height="40dp"
+    android:text="00.00.00"
+    android:textColor="@color/Myblack"
+    android:textStyle="bold"      
+    android:layout_centerVertical="true"
+    android:layout_toRightOf="@+id/sFourEone"            
+    android:background="@color/white"
+    android:drawableTop="@android:drawable/star_zero"        
+    android:visibility="gone"/>
+    
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sFourEtwoStars"
+    android:layout_width="240dp"
+    android:layout_height="40dp"
+    android:text="00.00.00"
+    android:textColor="@color/Myblack"
+    android:textStyle="bold"        
+    android:layout_below="@+id/sFourEoneStars"
+    android:layout_toRightOf="@+id/sFourEtwo"            
+    android:background="@color/white"
+    android:drawableTop="@android:drawable/star_zero"        
+    android:visibility="gone"/>
+    
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sFourEthreeStars"
+    android:layout_width="240dp"
+    android:layout_height="40dp"
+    android:text="00.00.00"
+    android:textColor="@color/Myblack"
+    android:textStyle="bold"        
+    android:layout_below="@+id/sFourEtwoStars"
+    android:layout_toRightOf="@+id/sFourEthree"            
+    android:background="@color/white"
+    android:drawableTop="@android:drawable/star_zero"        
+    android:visibility="gone"/>
+    
     
    <!-- Seasons four--> 
     
