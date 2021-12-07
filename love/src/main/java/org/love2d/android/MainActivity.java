@@ -865,36 +865,21 @@ sFourEthree.setCompoundDrawablesWithIntrinsicBounds(null, null, null, null);
 	
 //###init scoore and stars :
 //-------season one
-int stars = 0;	
-Button sOneEoneStars = (Button) findViewById(R.id.sOneEoneStars);
-Button sOneEtwoStars = (Button) findViewById(R.id.sOneEtwoStars);	
-Button sOneEthreeStars = (Button) findViewById(R.id.sOneEthreeStars);		
-setStarsAndScores("s1e2_save.txt",sOneEtwoStars);	
-setStarsAndScores("s1e3_save.txt",sOneEthreeStars);	
-stars = setStarsAndScores("s1e1_save.txt",sOneEoneStars);			
-/*
+setStarsAndScores("s1e1_save.txt",(Button) findViewById(R.id.sOneEoneStars));				
+setStarsAndScores("s1e2_save.txt",(Button) findViewById(R.id.sOneEtwoStars));	
+setStarsAndScores("s1e3_save.txt",(Button) findViewById(R.id.sOneEthreeStars));	
 //-------season two
-Button sTwoEone = (Button) findViewById(R.id.sTwoEone);	
-Button sTwoEtwo = (Button) findViewById(R.id.sTwoEtwo);	
-Button sTwoEthree = (Button) findViewById(R.id.sTwoEthree);
 setStarsAndScores("s2e1_save.txt",(Button) findViewById(R.id.sTwoEoneStars));	
 setStarsAndScores("s2e2_save.txt",(Button) findViewById(R.id.sTwoEtwoStars));	
 setStarsAndScores("s2e3_save.txt",(Button) findViewById(R.id.sTwoEthreeStars));	
 //-------season three
-Button sThreeEone = (Button) findViewById(R.id.sThreeEone);
-Button sThreeEtwo = (Button) findViewById(R.id.sThreeEtwo);
-Button sThreeEthree = (Button) findViewById(R.id.sThreeEthree);
 setStarsAndScores("s3e1_save.txt",(Button) findViewById(R.id.sThreeEoneStars));	
 setStarsAndScores("s3e2_save.txt",(Button) findViewById(R.id.sThreeEtwoStars));	
 setStarsAndScores("s3e3_save.txt",(Button) findViewById(R.id.sThreeEthreeStars));	
 //-------season four
-Button sFourEone = (Button) findViewById(R.id.sFourEone);
-Button sFourEtwo = (Button) findViewById(R.id.sFourEtwo);
-Button sFourEthree = (Button) findViewById(R.id.sFourEthree);	
 setStarsAndScores("s4e1_save.txt",(Button) findViewById(R.id.sFourEoneStars));	
 setStarsAndScores("s4e2_save.txt",(Button) findViewById(R.id.sFourEtwoStars));	
 setStarsAndScores("s4e3_save.txt",(Button) findViewById(R.id.sFourEthreeStars));	
-*/	
 }
 	
 //helper function to detect seasons and episodes states 	
