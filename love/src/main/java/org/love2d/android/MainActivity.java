@@ -952,6 +952,7 @@ public static void ImageViewAnimatedChange(final Context c,final ImageView v ,fi
 	
 //###################################################################functions for helping showing scoores 
 public void setStarsAndScores(String FileName,Button b){	
+try{		
 String storagePath  = "";
 int stars = 0;	
 double time = 0;
@@ -985,7 +986,7 @@ s = time - ( (m * 60) + (h * 3600) );
 }		
 String	texttt = Double.toString(h) + ":" + Double.toString(m) + ":" + Double.toString(s); 
 b.setText(texttt);
-Drawable image;	
+Drawable image = this.getResources().getDrawable( R.drawable.star_zero );
 if (stars == 1)
 image = this.getResources().getDrawable( R.drawable.star_one );
 else if (stars == 2)
@@ -1006,6 +1007,9 @@ int wi = image.getIntrinsicWidth();
 image.setBounds( 0, 0, wi, hi );
 b.setCompoundDrawables( null, image, null, null );		
 }
+}catch(IOException ioe){
+    ioe.printStackTrace();
+}	
 }
 //###################################################################functions for helping showing scoores 
 	
