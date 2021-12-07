@@ -865,22 +865,35 @@ sFourEthree.setCompoundDrawablesWithIntrinsicBounds(null, null, null, null);
 	
 //###init scoore and stars :
 //-------season one
-setStarsAndScores("s1e1_save.txt",(Button) findViewById(R.id.sOneEoneStars));	
-setStarsAndScores("s1e2_save.txt",(Button) findViewById(R.id.sOneEtwoStars));	
-setStarsAndScores("s1e3_save.txt",(Button) findViewById(R.id.sOneEthreeStars));	
+Button sOneEoneStars = (Button) findViewById(R.id.sOneEoneStars);
+Button sOneEtwoStars = (Button) findViewById(R.id.sOneEtwoStars);	
+Button sOneEthreeStars = (Button) findViewById(R.id.sOneEthreeStars);		
+setStarsAndScores("s1e1_save.txt",sOneEoneStars);	
+setStarsAndScores("s1e2_save.txt",sOneEtwoStars);	
+setStarsAndScores("s1e3_save.txt",sOneEthreeStars);	
+/*
 //-------season two
+Button sTwoEone = (Button) findViewById(R.id.sTwoEone);	
+Button sTwoEtwo = (Button) findViewById(R.id.sTwoEtwo);	
+Button sTwoEthree = (Button) findViewById(R.id.sTwoEthree);
 setStarsAndScores("s2e1_save.txt",(Button) findViewById(R.id.sTwoEoneStars));	
 setStarsAndScores("s2e2_save.txt",(Button) findViewById(R.id.sTwoEtwoStars));	
 setStarsAndScores("s2e3_save.txt",(Button) findViewById(R.id.sTwoEthreeStars));	
 //-------season three
+Button sThreeEone = (Button) findViewById(R.id.sThreeEone);
+Button sThreeEtwo = (Button) findViewById(R.id.sThreeEtwo);
+Button sThreeEthree = (Button) findViewById(R.id.sThreeEthree);
 setStarsAndScores("s3e1_save.txt",(Button) findViewById(R.id.sThreeEoneStars));	
 setStarsAndScores("s3e2_save.txt",(Button) findViewById(R.id.sThreeEtwoStars));	
 setStarsAndScores("s3e3_save.txt",(Button) findViewById(R.id.sThreeEthreeStars));	
 //-------season four
+Button sFourEone = (Button) findViewById(R.id.sFourEone);
+Button sFourEtwo = (Button) findViewById(R.id.sFourEtwo);
+Button sFourEthree = (Button) findViewById(R.id.sFourEthree);	
 setStarsAndScores("s4e1_save.txt",(Button) findViewById(R.id.sFourEoneStars));	
 setStarsAndScores("s4e2_save.txt",(Button) findViewById(R.id.sFourEtwoStars));	
 setStarsAndScores("s4e3_save.txt",(Button) findViewById(R.id.sFourEthreeStars));	
-	
+*/	
 }
 	
 //helper function to detect seasons and episodes states 	
@@ -959,6 +972,8 @@ double time = 0;
 double s = 0;
 double m = 0;
 double h = 0;	
+FileInputStream is;
+BufferedReader reader;	
 if (this.getExternalFilesDir(null).getAbsolutePath() != null)
 storagePath = this.getExternalFilesDir(null).getAbsolutePath();
 else
@@ -971,18 +986,18 @@ String line = reader.readLine(); //score
 line = reader.readLine(); //stars	
 String substr = " ";	
 if (line != null){
-substr = mysourcestring.substring(2);	
+substr = line.substring(2);	
 stars = Integer.parseInt(substr);	
 }	
 line = reader.readLine(); //time	
 if (line != null){
-substr = mysourcestring.substring(2);	
+substr = line.substring(2);	
 time = Long.parseLong(substr);
 h = Math.floor(time/3600);
 m = Math.floor( (time - (h * 3600))/60 );
 s = time - ( (m * 60) + (h * 3600) );	
 }		
-String	texttt = Integer.toString(h) + ":" + Integer.toString(m) + ":" + Integer.toString(s); 
+String	texttt = Double.toString(h) + ":" + Double.toString(m) + ":" + Double.toString(s); 
 b.setText(texttt);
 	
 if(stars == 1)	
@@ -991,7 +1006,6 @@ else if(stars == 2)
 b.setCompoundDrawablesWithIntrinsicBounds(null, R.drawable.star_two, null, null);		
 else if(stars == 3)
 b.setCompoundDrawablesWithIntrinsicBounds(null, R.drawable.star_three, null, null);		
-	
 }else{//file does'nt exist
 String	texttt = "00" + ":" + "00" + ":" + "00"; 
 b.setText(texttt);
