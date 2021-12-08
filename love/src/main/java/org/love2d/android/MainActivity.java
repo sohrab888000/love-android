@@ -997,7 +997,7 @@ image = this.getResources().getDrawable( R.drawable.star_three );
 int hi = image.getIntrinsicHeight(); 
 int wi = image.getIntrinsicWidth();   
 image.setBounds( 0, 0, wi, hi );
-b.setCompoundDrawables( null, image, null, null );	
+b.setCompoundDrawables( image, null, null, null );	
 }else{//file does'nt exist
 String	texttt = "00" + ":" + "00" + ":" + "00"; 
 b.setText(texttt);
@@ -1005,7 +1005,7 @@ Drawable image = this.getResources().getDrawable( R.drawable.star_zero );
 int hi = image.getIntrinsicHeight(); 
 int wi = image.getIntrinsicWidth();   
 image.setBounds( 0, 0, wi, hi );
-b.setCompoundDrawables( null, image, null, null );		
+b.setCompoundDrawables( image, null, null, null );		
 }
 }catch(IOException ioe){
     ioe.printStackTrace();
