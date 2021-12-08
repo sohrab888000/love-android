@@ -1048,7 +1048,7 @@ if (stars == 1)
 image = this.getResources().getDrawable( R.drawable.star_one );
 else if (stars == 2)
 image = this.getResources().getDrawable( R.drawable.star_two );	
-else if (stars == 2)
+else if (stars == 3)
 image = this.getResources().getDrawable( R.drawable.star_three );	
 	
 int hi = image.getIntrinsicHeight(); 
