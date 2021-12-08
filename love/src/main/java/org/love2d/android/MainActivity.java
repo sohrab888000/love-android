@@ -203,7 +203,10 @@ this.finishAffinity();
 //all button codes base menu/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //***********************************^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^**********************************	
 //all button codes Seasons menu/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-public void back_to_base(View v) {	    
+public void back_to_base(View v) {	
+if (toastMessage!= null) {
+    toastMessage.cancel();
+}	
 mediaPlayer_click.seekTo(0);	
 mediaPlayer_click.start();	
 clearSeasonsMenu();	    
@@ -213,6 +216,9 @@ showBaseMenu();
 }
     
 public void Season_ONE(View v) {	
+if (toastMessage!= null) {
+    toastMessage.cancel();
+}	
 mediaPlayer_click.seekTo(0);	
 mediaPlayer_click.start();	
 clearSeasonsMenu();
@@ -233,6 +239,9 @@ Toast.LENGTH_SHORT);
 toastMessage.show();	
 }
 else{	
+if (toastMessage!= null) {
+    toastMessage.cancel();
+}	
 mediaPlayer_click.seekTo(0);	
 mediaPlayer_click.start();	
 clearSeasonsMenu();
@@ -300,6 +309,9 @@ showSeasonsFour();
 //***********************************^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^**********************************	
 //all button codes Season one/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 public void back_to_seasons_From_one(View v) {	    
+if (toastMessage!= null) {
+    toastMessage.cancel();
+}
 mediaPlayer_click.seekTo(0);	
 mediaPlayer_click.start();	
 clearSeasonsOne();
@@ -309,6 +321,9 @@ showSeasonsMenu();
 }
     
 public void Season_One_E1(View v) {	
+if (toastMessage!= null) {
+    toastMessage.cancel();
+}
 mediaPlayer_click.seekTo(0);	
 mediaPlayer_click.start();	
 mediaPlayer_menu.pause();	
@@ -327,6 +342,9 @@ Toast.LENGTH_SHORT);
 toastMessage.show();		
 }
 else{	
+if (toastMessage!= null) {
+    toastMessage.cancel();
+}
 mediaPlayer_click.seekTo(0);	
 mediaPlayer_click.start();	
 mediaPlayer_menu.pause();	
@@ -346,6 +364,9 @@ Toast.LENGTH_SHORT);
 toastMessage.show();		
 }
 else{	
+if (toastMessage!= null) {
+    toastMessage.cancel();
+}	
 mediaPlayer_click.seekTo(0);	
 mediaPlayer_click.start();	
 mediaPlayer_menu.pause();	
@@ -357,6 +378,9 @@ new gotoLevel(MainActivity.this,"1=s1e3").execute();
 //***********************************^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^**********************************	
 //all button codes Season two/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 public void back_to_seasons_From_two(View v) {	 
+if (toastMessage!= null) {
+    toastMessage.cancel();
+}	
 mediaPlayer_click.seekTo(0);	
 mediaPlayer_click.start();	
 clearSeasonsTwo();
@@ -377,6 +401,9 @@ Toast.LENGTH_SHORT);
 toastMessage.show();	
 }
 else{	
+if (toastMessage!= null) {
+    toastMessage.cancel();
+}	
 mediaPlayer_click.seekTo(0);	
 mediaPlayer_click.start();	
 mediaPlayer_menu.pause();	
@@ -395,7 +422,10 @@ toastMessage = Toast.makeText(MainActivity.this, "لطفا ابتدا یخبند
 Toast.LENGTH_SHORT);
 toastMessage.show();	
 }
-else{	
+else{
+if (toastMessage!= null) {
+    toastMessage.cancel();
+}	
 mediaPlayer_click.seekTo(0);	
 mediaPlayer_click.start();	
 mediaPlayer_menu.pause();	
@@ -415,6 +445,9 @@ Toast.LENGTH_SHORT);
 toastMessage.show();	
 }
 else{	
+if (toastMessage!= null) {
+    toastMessage.cancel();
+}	
 mediaPlayer_click.seekTo(0);	
 mediaPlayer_click.start();	
 mediaPlayer_menu.pause();	
@@ -425,6 +458,9 @@ new gotoLevel(MainActivity.this,"1=s2e3").execute();
 //***********************************^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^**********************************	
 //all button codes Season three/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 public void back_to_seasons_From_three(View v) {	 
+if (toastMessage!= null) {
+    toastMessage.cancel();
+}
 mediaPlayer_click.seekTo(0);	
 mediaPlayer_click.start();		
 clearSeasonsThree();
@@ -445,6 +481,9 @@ Toast.LENGTH_SHORT);
 toastMessage.show();	
 }
 else{	
+if (toastMessage!= null) {
+    toastMessage.cancel();
+}	
 mediaPlayer_click.seekTo(0);	
 mediaPlayer_click.start();	
 mediaPlayer_menu.pause();	
@@ -464,6 +503,9 @@ Toast.LENGTH_SHORT);
 toastMessage.show();	
 }
 else{	
+if (toastMessage!= null) {
+    toastMessage.cancel();
+}	
 mediaPlayer_click.seekTo(0);	
 mediaPlayer_click.start();	
 mediaPlayer_menu.pause();	
@@ -483,6 +525,9 @@ Toast.LENGTH_SHORT);
 toastMessage.show();	
 }
 else{	
+if (toastMessage!= null) {
+    toastMessage.cancel();
+}	
 mediaPlayer_click.seekTo(0);	
 mediaPlayer_click.start();	
 mediaPlayer_menu.pause();	
@@ -493,6 +538,9 @@ new gotoLevel(MainActivity.this,"1=s3e3").execute();
 //***********************************^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^**********************************		
 //all button codes Season four/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 public void back_to_seasons_From_four(View v) {	    
+if (toastMessage!= null) {
+    toastMessage.cancel();
+}	
 mediaPlayer_click.seekTo(0);	
 mediaPlayer_click.start();	
 clearSeasonsFour();
@@ -513,6 +561,9 @@ Toast.LENGTH_SHORT);
 toastMessage.show();
 }
 else{	
+if (toastMessage!= null) {
+    toastMessage.cancel();
+}	
 mediaPlayer_click.seekTo(0);	
 mediaPlayer_click.start();	
 mediaPlayer_menu.pause();	
@@ -532,6 +583,9 @@ Toast.LENGTH_SHORT);
 toastMessage.show();	
 }
 else{	
+if (toastMessage!= null) {
+    toastMessage.cancel();
+}	
 mediaPlayer_click.seekTo(0);
 mediaPlayer_click.start();	
 mediaPlayer_menu.pause();	
@@ -551,6 +605,9 @@ Toast.LENGTH_SHORT);
 toastMessage.show();	
 }
 else{	
+if (toastMessage!= null) {
+    toastMessage.cancel();
+}	
 mediaPlayer_click.seekTo(0);	
 mediaPlayer_click.start();	
 mediaPlayer_menu.pause();	
@@ -1041,7 +1098,10 @@ h = Math.floor(time/3600);
 m = Math.floor( (time - (h * 3600))/60 );
 s = time - ( (m * 60) + (h * 3600) );	
 }		
-String	texttt = Double.toString(h) + ":" + Double.toString(m) + ":" + Double.toString(s); 
+int i1 = (int) h;
+int i2 = (int) m;
+int i3 = (int) s;	
+String	texttt = String.valueOf(i1) + ":" + String.valueOf(i2) + ":" + String.valueOf(i3); 
 b.setText(texttt);
 Drawable image = this.getResources().getDrawable( R.drawable.star_zero );
 if (stars == 1)
