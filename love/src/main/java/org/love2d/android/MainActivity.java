@@ -89,7 +89,8 @@ import android.media.MediaPlayer;
 public class MainActivity extends Activity {
 	
 
-	
+	Toast toastMessage;//for showing message
+
 	MediaPlayer mediaPlayer_menu;
 	MediaPlayer mediaPlayer_click;
 	MediaPlayer mediaPlayer_lock;
@@ -224,8 +225,12 @@ public void Season_TWO(View v) {
 if (!(episode_isNotLocked("season_two_e1.txt"))){
 mediaPlayer_lock.seekTo(0);
 mediaPlayer_lock.start();	
-Toast.makeText(MainActivity.this, "لطفا ابتدا فصل 1 را تمام کنید!",
-Toast.LENGTH_SHORT).show();
+if (toastMessage!= null) {
+    toastMessage.cancel();
+}
+toastMessage = Toast.makeText(MainActivity.this, "لطفا ابتدا فصل 1 را تمام کنید!",
+Toast.LENGTH_SHORT);
+toastMessage.show();	
 }
 else{	
 mediaPlayer_click.seekTo(0);	
@@ -240,8 +245,12 @@ showSeasonsTwo();
 public void Season_THREE(View v) {
 mediaPlayer_lock.seekTo(0);
 mediaPlayer_lock.start();	
-Toast.makeText(MainActivity.this, "این قسمت در بروز رسانی بعدی قابل بازی هست",
-Toast.LENGTH_SHORT).show();	
+if (toastMessage!= null) {
+    toastMessage.cancel();
+}
+toastMessage = Toast.makeText(MainActivity.this, "این قسمت در بروز رسانی بعدی قابل بازی هست",
+Toast.LENGTH_SHORT);
+toastMessage.show();			
 /*	
 if (!(episode_isNotLocked("season_three_e1.txt"))){
 mediaPlayer_lock.seekTo(0);
@@ -263,8 +272,12 @@ showSeasonsThree();
 public void Season_FOUR(View v) {
 mediaPlayer_lock.seekTo(0);
 mediaPlayer_lock.start();	
-Toast.makeText(MainActivity.this, "این قسمت در بروز رسانی بعدی قابل بازی هست",
-Toast.LENGTH_SHORT).show();	
+if (toastMessage!= null) {
+    toastMessage.cancel();
+}
+toastMessage = Toast.makeText(MainActivity.this, "این قسمت در بروز رسانی بعدی قابل بازی هست",
+Toast.LENGTH_SHORT);
+toastMessage.show();		
 /*	
 if (!(episode_isNotLocked("season_four_e1.txt"))){
 mediaPlayer_lock.seekTo(0);
@@ -306,8 +319,12 @@ public void Season_One_E2(View v) {
 if (!(episode_isNotLocked("season_one_e1.txt"))){
 mediaPlayer_lock.seekTo(0);
 mediaPlayer_lock.start();	
-Toast.makeText(MainActivity.this, "لطفا ابتدا جنگل اول را تمام کنید!",
-Toast.LENGTH_SHORT).show();
+if (toastMessage!= null) {
+    toastMessage.cancel();
+}
+toastMessage = Toast.makeText(MainActivity.this, "لطفا ابتدا جنگل اول را تمام کنید!",
+Toast.LENGTH_SHORT);
+toastMessage.show();		
 }
 else{	
 mediaPlayer_click.seekTo(0);	
@@ -321,8 +338,12 @@ public void Season_One_E3(View v) {
 if (!(episode_isNotLocked("season_one_e2.txt"))){
 mediaPlayer_lock.seekTo(0);
 mediaPlayer_lock.start();	
-Toast.makeText(MainActivity.this, "لطفا ابتدا جنگل دوم را تمام کنید!",
-Toast.LENGTH_SHORT).show();
+if (toastMessage!= null) {
+    toastMessage.cancel();
+}
+toastMessage = Toast.makeText(MainActivity.this, "لطفا ابتدا جنگل دوم را تمام کنید!",
+Toast.LENGTH_SHORT);
+toastMessage.show();		
 }
 else{	
 mediaPlayer_click.seekTo(0);	
@@ -347,9 +368,13 @@ showSeasonsMenu();
 public void Season_Two_E1(View v) {	
 if (!(episode_isNotLocked("season_one_e3.txt"))){
 mediaPlayer_lock.seekTo(0);
-mediaPlayer_lock.start();	
-Toast.makeText(MainActivity.this, "لطفا ابتدا جنگل سوم را تمام کنید!",
-Toast.LENGTH_SHORT).show();
+mediaPlayer_lock.start();
+if (toastMessage!= null) {
+    toastMessage.cancel();
+}
+toastMessage = Toast.makeText(MainActivity.this, "لطفا ابتدا جنگل سوم را تمام کنید!",
+Toast.LENGTH_SHORT);
+toastMessage.show();	
 }
 else{	
 mediaPlayer_click.seekTo(0);	
@@ -362,9 +387,13 @@ new gotoLevel(MainActivity.this,"1=s2e1").execute();
 public void Season_Two_E2(View v) {	
 if (!(episode_isNotLocked("season_two_e1.txt"))){
 mediaPlayer_lock.seekTo(0);
-mediaPlayer_lock.start();	
-Toast.makeText(MainActivity.this, "لطفا ابتدا یخبندان اول را تمام کنید!",
-Toast.LENGTH_SHORT).show();
+mediaPlayer_lock.start();
+if (toastMessage!= null) {
+    toastMessage.cancel();
+}
+toastMessage = Toast.makeText(MainActivity.this, "لطفا ابتدا یخبندان اول را تمام کنید!",
+Toast.LENGTH_SHORT);
+toastMessage.show();	
 }
 else{	
 mediaPlayer_click.seekTo(0);	
@@ -377,9 +406,13 @@ new gotoLevel(MainActivity.this,"1=s2e2").execute();
 public void Season_Two_E3(View v) {
 if (!(episode_isNotLocked("season_two_e2.txt"))){
 mediaPlayer_lock.seekTo(0);
-mediaPlayer_lock.start();	
-Toast.makeText(MainActivity.this, "لطفا ابتدا یخبندان دوم را تمام کنید!",
-Toast.LENGTH_SHORT).show();
+mediaPlayer_lock.start();
+if (toastMessage!= null) {
+    toastMessage.cancel();
+}
+toastMessage = Toast.makeText(MainActivity.this, "لطفا ابتدا یخبندان دوم را تمام کنید!",
+Toast.LENGTH_SHORT);
+toastMessage.show();	
 }
 else{	
 mediaPlayer_click.seekTo(0);	
@@ -403,9 +436,13 @@ showSeasonsMenu();
 public void Season_Three_E1(View v) {	
 if (!(episode_isNotLocked("season_two_e3.txt"))){
 mediaPlayer_lock.seekTo(0);
-mediaPlayer_lock.start();	
-Toast.makeText(MainActivity.this, "لطفا ابتدا یخبندان سوم را تمام کنید!",
-Toast.LENGTH_SHORT).show();
+mediaPlayer_lock.start();
+if (toastMessage!= null) {
+    toastMessage.cancel();
+}
+toastMessage = Toast.makeText(MainActivity.this, "لطفا ابتدا یخبندان سوم را تمام کنید!",
+Toast.LENGTH_SHORT);
+toastMessage.show();	
 }
 else{	
 mediaPlayer_click.seekTo(0);	
@@ -418,9 +455,13 @@ new gotoLevel(MainActivity.this,"1=s3e1").execute();
 public void Season_Three_E2(View v) {	
 if (!(episode_isNotLocked("season_three_e1.txt"))){
 mediaPlayer_lock.seekTo(0);
-mediaPlayer_lock.start();	
-Toast.makeText(MainActivity.this, "لطفا ابتدا بیابان اول را تمام کنید!",
-Toast.LENGTH_SHORT).show();
+mediaPlayer_lock.start();
+if (toastMessage!= null) {
+    toastMessage.cancel();
+}
+toastMessage = Toast.makeText(MainActivity.this, "لطفا ابتدا بیابان اول را تمام کنید!",
+Toast.LENGTH_SHORT);
+toastMessage.show();	
 }
 else{	
 mediaPlayer_click.seekTo(0);	
@@ -433,9 +474,13 @@ new gotoLevel(MainActivity.this,"1=s3e2").execute();
 public void Season_Three_E3(View v) {
 if (!(episode_isNotLocked("season_three_e2.txt"))){
 mediaPlayer_lock.seekTo(0);
-mediaPlayer_lock.start();	
-Toast.makeText(MainActivity.this, "لطفا ابتدا بیابان دوم را تمام کنید!",
-Toast.LENGTH_SHORT).show();
+mediaPlayer_lock.start();
+if (toastMessage!= null) {
+    toastMessage.cancel();
+}
+toastMessage = Toast.makeText(MainActivity.this, "لطفا ابتدا بیابان دوم را تمام کنید!",
+Toast.LENGTH_SHORT);
+toastMessage.show();	
 }
 else{	
 mediaPlayer_click.seekTo(0);	
@@ -459,9 +504,13 @@ showSeasonsMenu();
 public void Season_Four_E1(View v) {	
 if (!(episode_isNotLocked("season_three_e3.txt"))){
 mediaPlayer_lock.seekTo(0);
-mediaPlayer_lock.start();	
-Toast.makeText(MainActivity.this, "لطفا ابتدا بیابان سوم را تمام کنید!",
-Toast.LENGTH_SHORT).show();
+mediaPlayer_lock.start();
+if (toastMessage!= null) {
+    toastMessage.cancel();
+}
+toastMessage = Toast.makeText(MainActivity.this, "لطفا ابتدا بیابان سوم را تمام کنید!",
+Toast.LENGTH_SHORT);
+toastMessage.show();
 }
 else{	
 mediaPlayer_click.seekTo(0);	
@@ -474,9 +523,13 @@ new gotoLevel(MainActivity.this,"1=s4e1").execute();
 public void Season_Four_E2(View v) {	
 if (!(episode_isNotLocked("season_four_e1.txt"))){
 mediaPlayer_lock.seekTo(0);
-mediaPlayer_lock.start();	
-Toast.makeText(MainActivity.this, "لطفا ابتدا اقیانوس اول را تمام کنید!",
-Toast.LENGTH_SHORT).show();
+mediaPlayer_lock.start();
+if (toastMessage!= null) {
+    toastMessage.cancel();
+}
+toastMessage = Toast.makeText(MainActivity.this, "لطفا ابتدا اقیانوس اول را تمام کنید!",
+Toast.LENGTH_SHORT);
+toastMessage.show();	
 }
 else{	
 mediaPlayer_click.seekTo(0);
@@ -489,9 +542,13 @@ new gotoLevel(MainActivity.this,"1=s4e2").execute();
 public void Season_Four_E3(View v) {
 if (!(episode_isNotLocked("season_four_e2.txt"))){
 mediaPlayer_lock.seekTo(0);
-mediaPlayer_lock.start();	
-Toast.makeText(MainActivity.this, "لطفا ابتدا اقیانوس دوم را تمام کنید!",
-Toast.LENGTH_SHORT).show();
+mediaPlayer_lock.start();
+if (toastMessage!= null) {
+    toastMessage.cancel();
+}
+toastMessage = Toast.makeText(MainActivity.this, "لطفا ابتدا اقیانوس دوم را تمام کنید!",
+Toast.LENGTH_SHORT);
+toastMessage.show();	
 }
 else{	
 mediaPlayer_click.seekTo(0);	
