@@ -1,4 +1,5 @@
 package org.love2d.android;
+import android.app.AlertDialog;
 import android.graphics.drawable.Drawable;
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -88,9 +89,10 @@ import android.media.MediaPlayer;
  */
 public class MainActivity extends Activity {
 	
-
+        
 	Toast toastMessage;//for showing message
-
+        private String m_Text = "";//for saving username
+	
 	MediaPlayer mediaPlayer_menu;
 	MediaPlayer mediaPlayer_click;
 	MediaPlayer mediaPlayer_lock;
@@ -103,7 +105,8 @@ public class MainActivity extends Activity {
 		mediaPlayer_menu.setLooping(true);
 	        mediaPlayer_click = MediaPlayer.create(MainActivity.this, R.raw.click);
 	        mediaPlayer_lock = MediaPlayer.create(MainActivity.this, R.raw.lock);
-		init_seasons_state();
+		init_seasons_state();				
+		wellcome_dialog();
 	}
 	
         @Override
@@ -1129,6 +1132,65 @@ b.setCompoundDrawables( image, null, null, null );
 }	
 }
 //###################################################################functions for helping showing scoores 
+//-----------------------------------------------
+//###################################################################functions for showing wellcome message with username	
+public void wellcome_dialog(){
+
+String storagePath  = "";
+if (this.getExternalFilesDir(null).getAbsolutePath() != null)
+storagePath = this.getExternalFilesDir(null).getAbsolutePath();
+else
+storagePath = this.getFilesDir().getAbsolutePath();	
+File file = new File(storagePath+File.separator+"username.txt");
+if(file.exists()){//if file exists       
+try {
+BufferedReader brTest = new BufferedReader(new FileReader(file));
+String text = brTest.readLine();
+if (toastMessage!= null) {
+    toastMessage.cancel();
+}
+toastMessage = Toast.makeText(MainActivity.this, " خوش آمدید " + text,
+Toast.LENGTH_SHORT);
+toastMessage.show();	
+	
+}catch (IOException e) {//| FileNotFoundException
+             System.out.println("Can't write"); // Or something more intellegent
+}	
+}else{//if file does'nt exists
+
+		//create username
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setTitle("نام نویسی");
+                // Set up the input
+                final EditText input = new EditText(this);
+                // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
+                input.setInputType(InputType.TYPE_CLASS_TEXT);
+                builder.setView(input);
+                // Set up the buttons
+                builder.setPositiveButton("تایید", new DialogInterface.OnClickListener() { 
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                m_Text = input.getText().toString();
+		try {
+FileOutputStream stream = new FileOutputStream(storagePath+File.separator+"username.txt");
+try {
+    stream.write(m_Text.getBytes());
+    stream.close();
+}catch (IOException e) {
+System.out.println("Can't write"); // Or something more intellegent
+}		
+} catch (FileNotFoundException e) {
+System.out.println("Can't find"); // Or something more intellegent
+}	
+                }
+                });
+                builder.show();
+			
+
+}
+	
+}//end of function	
+	
 	
 	
 }
