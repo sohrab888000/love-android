@@ -1145,11 +1145,13 @@ b.setCompoundDrawables( image, null, null, null );
 //###################################################################functions for showing wellcome message with username	
 public void wellcome_dialog(){
 
-String storagePath  = "";
+String Path  = "";
 if (this.getExternalFilesDir(null).getAbsolutePath() != null)
-storagePath = this.getExternalFilesDir(null).getAbsolutePath();
+Path = this.getExternalFilesDir(null).getAbsolutePath();
 else
-storagePath = this.getFilesDir().getAbsolutePath();	
+Path = this.getFilesDir().getAbsolutePath();	
+
+final String storagePath = Path 
 File file = new File(storagePath+File.separator+"username.txt");
 if(file.exists()){//if file exists       
 try {
