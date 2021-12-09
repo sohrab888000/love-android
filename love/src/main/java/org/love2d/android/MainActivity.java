@@ -1234,10 +1234,10 @@ try {
 BufferedReader brTest = new BufferedReader(new FileReader(file));
 String text = brTest.readLine();
 if(text.equals("1=0")){
-MuteAudio()	
+MuteAudio();	
 music_btnsetBackgroundResource(R.drawable.music_off);	
 }else{
-UnMuteAudio()
+UnMuteAudio();
 music_btn.setBackgroundResource(R.drawable.music_on);	
 }	
 	
@@ -1261,7 +1261,7 @@ try {
 BufferedReader brTest = new BufferedReader(new FileReader(file));
 String text = brTest.readLine();
 if(text.equals("1=0")){	
-UnMuteAudio()	
+UnMuteAudio();	
 music_btnsetBackgroundResource(R.drawable.music_on);
 try {
 FileOutputStream stream = new FileOutputStream(storagePath+File.separator+"save"+File.separator+"archive"+File.separator+"music_state.txt");
@@ -1276,7 +1276,7 @@ System.out.println("Can't find"); // Or something more intellegent
 }		
 	
 }else{
-MuteAudio()
+MuteAudio();
 music_btn.setBackgroundResource(R.drawable.music_off);	
 try {
 FileOutputStream stream = new FileOutputStream(storagePath+File.separator+"save"+File.separator+"archive"+File.separator+"music_state.txt");
@@ -1296,7 +1296,7 @@ System.out.println("Can't find"); // Or something more intellegent
              System.out.println("Can't write"); // Or something more intellegent
 }	
 }else{//file does not exist
-MuteAudio()
+MuteAudio();
 music_btn.setBackgroundResource(R.drawable.music_off);	
 try {
 FileOutputStream stream = new FileOutputStream(storagePath+File.separator+"save"+File.separator+"archive"+File.separator+"music_state.txt");
