@@ -1203,7 +1203,7 @@ System.out.println("Can't find"); // Or something more intellegent
 //---------------------------------
 //###################################################################functions for mute unmute sound and music
 public void MuteAudio(){
-    AudioManager mAlramMAnager = (AudioManager) aActivity.getSystemService(aContext.AUDIO_SERVICE);
+    AudioManager mAlramMAnager = (AudioManager) MainActivity.getSystemService(MainActivity.this.AUDIO_SERVICE);
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
         mAlramMAnager.adjustStreamVolume(AudioManager.STREAM_MUSIC, AudioManager.ADJUST_MUTE, 0);
     } else {
@@ -1212,7 +1212,7 @@ public void MuteAudio(){
 }
 
 public void UnMuteAudio(){
-    AudioManager mAlramMAnager = (AudioManager) aActivity.getSystemService(aContext.AUDIO_SERVICE);
+    AudioManager mAlramMAnager = (AudioManager) MainActivity.getSystemService(MainActivity.this.AUDIO_SERVICE);
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
         mAlramMAnager.adjustStreamVolume(AudioManager.STREAM_MUSIC, AudioManager.ADJUST_UNMUTE,0);
     } else {
@@ -1235,7 +1235,7 @@ BufferedReader brTest = new BufferedReader(new FileReader(file));
 String text = brTest.readLine();
 if(text.equals("1=0")){
 MuteAudio();	
-music_btnsetBackgroundResource(R.drawable.music_off);	
+music_btn.setBackgroundResource(R.drawable.music_off);	
 }else{
 UnMuteAudio();
 music_btn.setBackgroundResource(R.drawable.music_on);	
@@ -1262,7 +1262,7 @@ BufferedReader brTest = new BufferedReader(new FileReader(file));
 String text = brTest.readLine();
 if(text.equals("1=0")){	
 UnMuteAudio();	
-music_btnsetBackgroundResource(R.drawable.music_on);
+music_btn.setBackgroundResource(R.drawable.music_on);
 try {
 FileOutputStream stream = new FileOutputStream(storagePath+File.separator+"save"+File.separator+"archive"+File.separator+"music_state.txt");
 try {
