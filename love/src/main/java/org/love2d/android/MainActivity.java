@@ -108,12 +108,14 @@ public class MainActivity extends Activity {
 	        mediaPlayer_lock = MediaPlayer.create(MainActivity.this, R.raw.lock);
 		init_seasons_state();				
 		wellcome_dialog();
+		music_init_state();
 	}
 	
         @Override
         public void onResume(){
                 super.onResume();
                 init_seasons_state();
+		music_init_state();
 		if(!mediaPlayer_menu.isPlaying()) {
                 mediaPlayer_menu.seekTo(0);
                 mediaPlayer_menu.start();
@@ -125,6 +127,7 @@ public class MainActivity extends Activity {
         protected void onStart(){
         super.onStart();
         init_seasons_state(); 	
+	music_init_state();	
         }
 	
 	
@@ -618,6 +621,11 @@ mediaPlayer_menu.pause();
 new gotoLevel(MainActivity.this,"1=s4e3").execute(); 
 } 
 }
+
+public void mute_unmute(View v) {	
+function_for_music_button();
+}	
+	
 //all button codes Season three/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //***********************************^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^**********************************	
 //***********************************^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^**********************************	
@@ -1211,6 +1219,99 @@ public void UnMuteAudio(){
         mAlramMAnager.setStreamMute(AudioManager.STREAM_MUSIC, false);
     }
 }
+	
+public void music_init_state(){
+
+Button music_btn = (Button) findViewById(R.id.music_button);		
+String storagePath  = "";
+if (this.getExternalFilesDir(null).getAbsolutePath() != null)
+storagePath = this.getExternalFilesDir(null).getAbsolutePath();
+else
+storagePath = this.getFilesDir().getAbsolutePath();	
+File file = new File(storagePath+File.separator+"save"+File.separator+"archive"+File.separator+"music_state.txt");
+if(file.exists()){//if file exists       
+try {
+BufferedReader brTest = new BufferedReader(new FileReader(file));
+String text = brTest.readLine();
+if(text.equals("1=0")){
+MuteAudio()	
+music_btnsetBackgroundResource(R.drawable.music_off);	
+}else{
+UnMuteAudio()
+music_btn.setBackgroundResource(R.drawable.music_on);	
+}	
+	
+}catch (IOException e) {//| FileNotFoundException
+             System.out.println("Can't write"); // Or something more intellegent
+}	
+}
+
+}
+	
+public void function_for_music_button(){
+Button music_btn = (Button) findViewById(R.id.music_button);		
+String storagePath  = "";
+if (this.getExternalFilesDir(null).getAbsolutePath() != null)
+storagePath = this.getExternalFilesDir(null).getAbsolutePath();
+else
+storagePath = this.getFilesDir().getAbsolutePath();	
+File file = new File(storagePath+File.separator+"save"+File.separator+"archive"+File.separator+"music_state.txt");
+if(file.exists()){//if file exists       
+try {
+BufferedReader brTest = new BufferedReader(new FileReader(file));
+String text = brTest.readLine();
+if(text.equals("1=0")){	
+UnMuteAudio()	
+music_btnsetBackgroundResource(R.drawable.music_on);
+try {
+FileOutputStream stream = new FileOutputStream(storagePath+File.separator+"save"+File.separator+"archive"+File.separator+"music_state.txt");
+try {
+    stream.write("1=1".getBytes());
+    stream.close();
+}catch (IOException e) {
+System.out.println("Can't write"); // Or something more intellegent
+}		
+} catch (FileNotFoundException e) {
+System.out.println("Can't find"); // Or something more intellegent
+}		
+	
+}else{
+MuteAudio()
+music_btn.setBackgroundResource(R.drawable.music_off);	
+try {
+FileOutputStream stream = new FileOutputStream(storagePath+File.separator+"save"+File.separator+"archive"+File.separator+"music_state.txt");
+try {
+    stream.write("1=0".getBytes());
+    stream.close();
+}catch (IOException e) {
+System.out.println("Can't write"); // Or something more intellegent
+}		
+} catch (FileNotFoundException e) {
+System.out.println("Can't find"); // Or something more intellegent
+}
+	
+}	
+	
+}catch (IOException e) {//| FileNotFoundException
+             System.out.println("Can't write"); // Or something more intellegent
+}	
+}else{//file does not exist
+MuteAudio()
+music_btn.setBackgroundResource(R.drawable.music_off);	
+try {
+FileOutputStream stream = new FileOutputStream(storagePath+File.separator+"save"+File.separator+"archive"+File.separator+"music_state.txt");
+try {
+    stream.write("1=0".getBytes());
+    stream.close();
+}catch (IOException e) {
+System.out.println("Can't write"); // Or something more intellegent
+}		
+} catch (FileNotFoundException e) {
+System.out.println("Can't find"); // Or something more intellegent
+}
+	
+}		
+}	
 //###################################################################functions for mute unmute sound and music
 	
 	
