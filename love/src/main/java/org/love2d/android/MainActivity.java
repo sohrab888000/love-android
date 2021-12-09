@@ -232,7 +232,7 @@ showSeasonsOne();
 }		
 	
 public void Season_TWO(View v) {	
-if (!(episode_isNotLocked("season_two_e1.txt"))){
+if (!(episode_isNotLocked("season_one_e3.txt"))){
 mediaPlayer_lock.seekTo(0);
 mediaPlayer_lock.start();	
 if (toastMessage!= null) {
@@ -265,7 +265,7 @@ toastMessage = Toast.makeText(MainActivity.this, "این قسمت در بروز 
 Toast.LENGTH_SHORT);
 toastMessage.show();			
 /*	
-if (!(episode_isNotLocked("season_three_e1.txt"))){
+if (!(episode_isNotLocked("season_two_e3.txt"))){
 mediaPlayer_lock.seekTo(0);
 mediaPlayer_lock.start();	
 Toast.makeText(MainActivity.this, "لطفا ابتدا فصل 2 را تمام کنید!",
@@ -292,7 +292,7 @@ toastMessage = Toast.makeText(MainActivity.this, "این قسمت در بروز 
 Toast.LENGTH_SHORT);
 toastMessage.show();		
 /*	
-if (!(episode_isNotLocked("season_four_e1.txt"))){
+if (!(episode_isNotLocked("season_three_e3.txt"))){
 mediaPlayer_lock.seekTo(0);
 mediaPlayer_lock.start();	
 Toast.makeText(MainActivity.this, "لطفا ابتدا فصل 3 را تمام کنید!",
