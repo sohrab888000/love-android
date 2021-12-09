@@ -510,7 +510,7 @@
     android:text=" "
     android:layout_above="@id/start_the_game_button"    
     android:layout_toRightOf="@+id/sFourEtwoStars"                    
-    android:background="@drawable/selector_base"       
+    android:background="@drawable/music_on"       
     android:onClick="mute_unmute" />     
 <!-- music-->    
     
