@@ -1,4 +1,5 @@
 package org.love2d.android;
+import android.media.AudioManager;
 import android.app.AlertDialog;
 import android.graphics.drawable.Drawable;
 import android.Manifest;
@@ -1190,6 +1191,28 @@ System.out.println("Can't find"); // Or something more intellegent
 }
 	
 }//end of function	
+//###################################################################functions for showing wellcome message with username	
+//---------------------------------
+//###################################################################functions for mute unmute sound and music
+public void MuteAudio(){
+    AudioManager mAlramMAnager = (AudioManager) aActivity.getSystemService(aContext.AUDIO_SERVICE);
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+        mAlramMAnager.adjustStreamVolume(AudioManager.STREAM_MUSIC, AudioManager.ADJUST_MUTE, 0);
+    } else {
+        mAlramMAnager.setStreamMute(AudioManager.STREAM_MUSIC, true);
+    }
+}
+
+public void UnMuteAudio(){
+    AudioManager mAlramMAnager = (AudioManager) aActivity.getSystemService(aContext.AUDIO_SERVICE);
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+        mAlramMAnager.adjustStreamVolume(AudioManager.STREAM_MUSIC, AudioManager.ADJUST_UNMUTE,0);
+    } else {
+        mAlramMAnager.setStreamMute(AudioManager.STREAM_MUSIC, false);
+    }
+}
+//###################################################################functions for mute unmute sound and music
+	
 	
 	
 	
