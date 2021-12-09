@@ -1235,7 +1235,9 @@ if(file.exists()){//if file exists
 try {
 BufferedReader brTest = new BufferedReader(new FileReader(file));
 String text = brTest.readLine();
-if(text.equals("1=0")){
+String substr = text.substring(2);	
+int state = Integer.parseInt(substr);		
+if(state == 0){
 MuteAudio();	
 music_btn.setBackgroundResource(R.drawable.music_off);	
 }else{
@@ -1262,7 +1264,9 @@ if(file.exists()){//if file exists
 try {
 BufferedReader brTest = new BufferedReader(new FileReader(file));
 String text = brTest.readLine();
-if(text.equals("1=0")){	
+String substr = text.substring(2);	
+int state = Integer.parseInt(substr);		
+if(state == 0){	
 UnMuteAudio();	
 music_btn.setBackgroundResource(R.drawable.music_on);
 try {
