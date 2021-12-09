@@ -1151,7 +1151,7 @@ Path = this.getExternalFilesDir(null).getAbsolutePath();
 else
 Path = this.getFilesDir().getAbsolutePath();	
 
-final String storagePath = Path 
+final String storagePath = Path; 
 File file = new File(storagePath+File.separator+"username.txt");
 if(file.exists()){//if file exists       
 try {
