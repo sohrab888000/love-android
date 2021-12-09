@@ -1203,7 +1203,7 @@ System.out.println("Can't find"); // Or something more intellegent
 //---------------------------------
 //###################################################################functions for mute unmute sound and music
 public void MuteAudio(){
-    AudioManager mAlramMAnager = (AudioManager) MainActivity.getSystemService(MainActivity.this.AUDIO_SERVICE);
+    AudioManager mAlramMAnager = (AudioManager) this.getSystemService(MainActivity.this.AUDIO_SERVICE);
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
         mAlramMAnager.adjustStreamVolume(AudioManager.STREAM_MUSIC, AudioManager.ADJUST_MUTE, 0);
     } else {
@@ -1212,7 +1212,7 @@ public void MuteAudio(){
 }
 
 public void UnMuteAudio(){
-    AudioManager mAlramMAnager = (AudioManager) MainActivity.getSystemService(MainActivity.this.AUDIO_SERVICE);
+    AudioManager mAlramMAnager = (AudioManager) this.getSystemService(MainActivity.this.AUDIO_SERVICE);
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
         mAlramMAnager.adjustStreamVolume(AudioManager.STREAM_MUSIC, AudioManager.ADJUST_UNMUTE,0);
     } else {
