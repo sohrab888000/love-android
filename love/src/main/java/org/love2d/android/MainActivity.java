@@ -1173,19 +1173,25 @@ toastMessage.show();
 
 		//create username
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+	        
                 builder.setTitle("نام نویسی");
 	        builder.setCancelable(false);
 	        builder.setMessage("لطفا ابتدا نام خود را وارد کنید و سپس تایید را لمس کنید");
-                // Set up the input
                 final EditText input = new EditText(this);
-                // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
                 input.setInputType(InputType.TYPE_CLASS_TEXT);
                 builder.setView(input);
-                // Set up the buttons
-                builder.setPositiveButton("تایید", new DialogInterface.OnClickListener() { 
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                m_Text = input.getText().toString();
+
+	builder.setOnShowListener(new DialogInterface.OnShowListener() {
+
+   @Override
+    public void onShow(DialogInterface dialogInterface) {
+
+        Button button = ((AlertDialog) builder).getButton(AlertDialog.BUTTON_POSITIVE);
+        button.setOnClickListener(new View.OnClickListener() {
+
+        @Override
+        public void onClick(View view) {
+                            m_Text = input.getText().toString();
 		String test = input.getText().toString().trim();
 		if(TextUtils.isEmpty(test)) {
                         if (toastMessage!= null) {
@@ -1215,12 +1221,15 @@ if (toastMessage!= null) {
 toastMessage = Toast.makeText(MainActivity.this, " خوش آمدید " + m_Text,
 Toast.LENGTH_SHORT);
 toastMessage.show();	
-		}
-                }
-                });
-                builder.show();
 			
+            builder.dismiss();
 
+		}
+        }
+     });
+    }
+});
+builder.show();			
 }	
 }//end of function	
 //---------------------------------------------------------------------------------------------	
