@@ -92,7 +92,7 @@ public class SplashActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-	void init_wellcome_msg();    
+	init_wellcome_msg();    
         showLogo();
         goToMain();
     }
