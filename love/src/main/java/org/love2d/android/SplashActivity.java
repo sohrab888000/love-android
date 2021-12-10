@@ -92,6 +92,7 @@ public class SplashActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+	void init_wellcome_msg();    
         showLogo();
         goToMain();
     }
@@ -146,7 +147,21 @@ public static void ImageViewAnimatedChange(final Context c,final ImageView v ,fi
     v.startAnimation(anim_out);
 }		
 //###################################################################	functions need for Animations!
-  
-  
-  
+//-------------------------------------------------------------------
+//################################################################### function for init wellcome msg	
+public void init_wellcome_msg(){
+try {
+FileOutputStream stream = new FileOutputStream(storagePath+File.separator+"save"+File.separator+"archive"+File.separator+"wellcome_state.txt");
+try {
+    stream.write("0".getBytes());
+    stream.close();
+}catch (IOException e) {
+System.out.println("Can't write"); // Or something more intellegent
+}		
+} catch (FileNotFoundException e) {
+System.out.println("Can't find"); // Or something more intellegent
+}	
+}	
+//################################################################### function for init wellcome msg	
+ 
 }
