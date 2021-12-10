@@ -1,8 +1,6 @@
 package org.love2d.android;
 
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import android.text.TextUtils;
-import com.google.android.material.snackbar.Snackbar;
 import android.media.AudioManager;
 import android.app.AlertDialog;
 import android.graphics.drawable.Drawable;
@@ -1174,10 +1172,10 @@ toastMessage.show();
 }else{//if file does'nt exists
 
 		//create username
-                CoordinatorLayout layout  = findViewById(R.id.relative);
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
                 builder.setTitle("نام نویسی");
 	        builder.setCancelable(false);
+	        builder.setMessage("لطفا ابتدا نام خود را وارد کنید و سپس تایید را لمس کنید");
                 // Set up the input
                 final EditText input = new EditText(this);
                 // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
@@ -1190,9 +1188,6 @@ toastMessage.show();
                 m_Text = input.getText().toString();
 		String test = input.getText().toString().trim();
 		if(TextUtils.isEmpty(test)) {
-
-                            Snackbar snackbar = Snackbar.make(layout, "لطفا ابتدا نام خود را وارد کنید", Snackbar.LENGTH_LONG);
-                            snackbar.show();
                             return;
                         }	
 			
