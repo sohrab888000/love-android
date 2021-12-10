@@ -1,5 +1,7 @@
 package org.love2d.android;
 
+import android.view.LayoutInflater;
+import android.text.TextUtils;
 import com.google.android.material.snackbar.Snackbar;
 import android.media.AudioManager;
 import android.app.AlertDialog;
@@ -109,7 +111,7 @@ public class MainActivity extends Activity {
 	        mediaPlayer_click = MediaPlayer.create(MainActivity.this, R.raw.click);
 	        mediaPlayer_lock = MediaPlayer.create(MainActivity.this, R.raw.lock);
 		init_seasons_state();				
-		wellcome_dialog();
+		show_wellcome_message_if_should_and_change_its_state();
 		music_init_state();
 	}
 	
@@ -1172,6 +1174,8 @@ toastMessage.show();
 }else{//if file does'nt exists
 
 		//create username
+	        LayoutInflater layoutInflaterAndroid = LayoutInflater.from(context);
+                final View mView = layoutInflaterAndroid.inflate(R.layout.layout_dialog, null);
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
                 builder.setTitle("نام نویسی");
 	        builder.setCancelable(false);
@@ -1188,7 +1192,7 @@ toastMessage.show();
 		String test = input.getText().toString().trim();
 		if(TextUtils.isEmpty(test)) {
 
-                            Snackbar snackbar = Snackbar.make(MainActivity.this, "لطفاابتدا نام خود را وارد کنید", Snackbar.LENGTH_LONG);
+                            Snackbar snackbar = Snackbar.make(mView, "لطفاابتدا نام خود را وارد کنید", Snackbar.LENGTH_LONG);
                             snackbar.show();
                             return;
                         }	
