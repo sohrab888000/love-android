@@ -1,6 +1,6 @@
 package org.love2d.android;
 
-import androidx.coordinatorlayout.widget.CoordinatorLayout
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import android.text.TextUtils;
 import com.google.android.material.snackbar.Snackbar;
 import android.media.AudioManager;
