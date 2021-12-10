@@ -117,11 +117,15 @@ public class MainActivity extends Activity {
         public void onResume(){
                 super.onResume();
                 init_seasons_state();
-		music_init_state();
+		mediaPlayer_menu = MediaPlayer.create(MainActivity.this, R.raw.menu);
+		mediaPlayer_menu.setLooping(true);
+	        mediaPlayer_click = MediaPlayer.create(MainActivity.this, R.raw.click);
+	        mediaPlayer_lock = MediaPlayer.create(MainActivity.this, R.raw.lock);
 		if(!mediaPlayer_menu.isPlaying()) {
                 mediaPlayer_menu.seekTo(0);
                 mediaPlayer_menu.start();
                 }
+		music_init_state();
 
         }
 	
@@ -1278,6 +1282,14 @@ public void MuteAudio(){
 }
 
 public void UnMuteAudio(){
+    		mediaPlayer_menu = MediaPlayer.create(MainActivity.this, R.raw.menu);
+		mediaPlayer_menu.setLooping(true);
+	        mediaPlayer_click = MediaPlayer.create(MainActivity.this, R.raw.click);
+	        mediaPlayer_lock = MediaPlayer.create(MainActivity.this, R.raw.lock);
+		if(!mediaPlayer_menu.isPlaying()) {
+                mediaPlayer_menu.seekTo(0);
+                mediaPlayer_menu.start();
+                }
     AudioManager mAlramMAnager = (AudioManager) this.getSystemService(MainActivity.this.AUDIO_SERVICE);
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
         mAlramMAnager.adjustStreamVolume(AudioManager.STREAM_MUSIC, AudioManager.ADJUST_UNMUTE,0);
