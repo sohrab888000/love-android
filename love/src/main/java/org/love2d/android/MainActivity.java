@@ -1,6 +1,6 @@
 package org.love2d.android;
 
-import android.view.LayoutInflater;
+import androidx.coordinatorlayout.widget.CoordinatorLayout
 import android.text.TextUtils;
 import com.google.android.material.snackbar.Snackbar;
 import android.media.AudioManager;
@@ -1174,8 +1174,7 @@ toastMessage.show();
 }else{//if file does'nt exists
 
 		//create username
-	        LayoutInflater layoutInflaterAndroid = LayoutInflater.from(context);
-                final View mView = layoutInflaterAndroid.inflate(R.layout.layout_dialog, null);
+                CoordinatorLayout layout  = findViewById(R.id.relative);
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
                 builder.setTitle("نام نویسی");
 	        builder.setCancelable(false);
@@ -1192,7 +1191,7 @@ toastMessage.show();
 		String test = input.getText().toString().trim();
 		if(TextUtils.isEmpty(test)) {
 
-                            Snackbar snackbar = Snackbar.make(mView, "لطفاابتدا نام خود را وارد کنید", Snackbar.LENGTH_LONG);
+                            Snackbar snackbar = Snackbar.make(layout, "لطفا ابتدا نام خود را وارد کنید", Snackbar.LENGTH_LONG);
                             snackbar.show();
                             return;
                         }	
