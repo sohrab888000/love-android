@@ -1145,7 +1145,7 @@ b.setCompoundDrawables( image, null, null, null );
 //###################################################################functions for helping showing scoores 
 //-----------------------------------------------
 //###################################################################functions for showing wellcome message with username	
-public void wellcome_dialog(){
+public void take_username_and_show_wellcome_message_if_already_exist(){
 
 String Path  = "";
 if (this.getExternalFilesDir(null).getAbsolutePath() != null)
@@ -1188,7 +1188,7 @@ toastMessage.show();
 		String test input.getText().toString().trim();
 		if(TextUtils.isEmpty(test)) {
 
-                            Snackbar snackbar = Snackbar.make(mView, "لطفاابتدا نام خود را وارد کنید", Snackbar.LENGTH_LONG);
+                            Snackbar snackbar = Snackbar.make(MainActivity.this, "لطفاابتدا نام خود را وارد کنید", Snackbar.LENGTH_LONG);
                             snackbar.show();
                             return;
                         }	
@@ -1217,9 +1217,53 @@ toastMessage.show();
                 builder.show();
 			
 
+}	
+}//end of function	
+//---------------------------------------------------------------------------------------------	
+public void show_wellcome_message_if_should_and_change_its_state(){
+String storagePath  = "";
+if (this.getExternalFilesDir(null).getAbsolutePath() != null)
+storagePath = this.getExternalFilesDir(null).getAbsolutePath();
+else
+storagePath = this.getFilesDir().getAbsolutePath();	
+File file = new File(storagePath+File.separator+"save"+File.separator+"archive"+File.separator+"wellcome_state.txt");
+if(file.exists()){//if file exists       
+try {
+BufferedReader brTest = new BufferedReader(new FileReader(file));
+String text = brTest.readLine();		
+if(text.equals("0")){	
+take_username_and_show_wellcome_message_if_already_exist();
+try {
+FileOutputStream stream = new FileOutputStream(storagePath+File.separator+"save"+File.separator+"archive"+File.separator+"wellcome_state.txt");
+try {
+    stream.write("1".getBytes());
+    stream.close();
+}catch (IOException e) {
+System.out.println("Can't write"); // Or something more intellegent
+}		
+} catch (FileNotFoundException e) {
+System.out.println("Can't find"); // Or something more intellegent
+}		
+}//if equals
+}else{//if file does not exist
+try {
+FileOutputStream stream = new FileOutputStream(storagePath+File.separator+"save"+File.separator+"archive"+File.separator+"wellcome_state.txt");
+try {
+    stream.write("0".getBytes());
+    stream.close();
+}catch (IOException e) {
+System.out.println("Can't write"); // Or something more intellegent
+}		
+} catch (FileNotFoundException e) {
+System.out.println("Can't find"); // Or something more intellegent
+}
+
+show_wellcome_message_if_should_and_change_its_state();	
+	
 }
 	
-}//end of function	
+}	
+	
 //###################################################################functions for showing wellcome message with username	
 //---------------------------------
 //###################################################################functions for mute unmute sound and music
@@ -1338,58 +1382,6 @@ System.out.println("Can't find"); // Or something more intellegent
 }		
 }	
 //###################################################################functions for mute unmute sound and music
-//--------------------------------------------
-//###################################################################function for helping wellcome message 	
-public void wellcome_message_changing_state(){	//should be use in on_pause() 
-String storagePath  = "";
-if (this.getExternalFilesDir(null).getAbsolutePath() != null)
-storagePath = this.getExternalFilesDir(null).getAbsolutePath();
-else
-storagePath = this.getFilesDir().getAbsolutePath();	
-File file = new File(storagePath+File.separator+"save"+File.separator+"archive"+File.separator+"wellcome_state.txt");
-if(file.exists()){//if file exists       
-try {
-BufferedReader brTest = new BufferedReader(new FileReader(file));
-String text = brTest.readLine();
-String substr = text.substring(2);	
-int state = Integer.parseInt(substr);		
-if(state == 0){	
-UnMuteAudio();	
-music_btn.setBackgroundResource(R.drawable.music_on);
-try {
-FileOutputStream stream = new FileOutputStream(storagePath+File.separator+"save"+File.separator+"archive"+File.separator+"wellcome_state.txt");
-try {
-    stream.write("1".getBytes());
-    stream.close();
-}catch (IOException e) {
-System.out.println("Can't write"); // Or something more intellegent
-}		
-} catch (FileNotFoundException e) {
-System.out.println("Can't find"); // Or something more intellegent
-}		
-}else{
-MuteAudio();
-music_btn.setBackgroundResource(R.drawable.music_off);	
-try {
-FileOutputStream stream = new FileOutputStream(storagePath+File.separator+"save"+File.separator+"archive"+File.separator+"wellcome_state.txt");
-try {
-    stream.write("0".getBytes());
-    stream.close();
-}catch (IOException e) {
-System.out.println("Can't write"); // Or something more intellegent
-}		
-} catch (FileNotFoundException e) {
-System.out.println("Can't find"); // Or something more intellegent
-}
-	
-}	
-	
-}catch (IOException e) {//| FileNotFoundException
-             System.out.println("Can't write"); // Or something more intellegent
-}	
-}	
-}	
-//###################################################################function for helping wellcome message 	
 	
 	
 }
