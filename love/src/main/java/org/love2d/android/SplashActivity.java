@@ -151,6 +151,12 @@ public static void ImageViewAnimatedChange(final Context c,final ImageView v ,fi
 //################################################################### function for init wellcome msg	
 public void init_wellcome_msg(){
 try {
+String storagePath = "";
+if (this.getExternalFilesDir(null).getAbsolutePath() != null)
+storagePath = this.getExternalFilesDir(null).getAbsolutePath();
+else
+storagePath = this.getFilesDir().getAbsolutePath();	
+ 	
 FileOutputStream stream = new FileOutputStream(storagePath+File.separator+"save"+File.separator+"archive"+File.separator+"wellcome_state.txt");
 try {
     stream.write("0".getBytes());
