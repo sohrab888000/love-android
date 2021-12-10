@@ -1185,7 +1185,7 @@ toastMessage.show();
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                 m_Text = input.getText().toString();
-		String test input.getText().toString().trim();
+		String test = input.getText().toString().trim();
 		if(TextUtils.isEmpty(test)) {
 
                             Snackbar snackbar = Snackbar.make(MainActivity.this, "لطفاابتدا نام خود را وارد کنید", Snackbar.LENGTH_LONG);
@@ -1233,18 +1233,16 @@ BufferedReader brTest = new BufferedReader(new FileReader(file));
 String text = brTest.readLine();		
 if(text.equals("0")){	
 take_username_and_show_wellcome_message_if_already_exist();
-try {
 FileOutputStream stream = new FileOutputStream(storagePath+File.separator+"save"+File.separator+"archive"+File.separator+"wellcome_state.txt");
-try {
     stream.write("1".getBytes());
     stream.close();
+	
+}//if equals
+
 }catch (IOException e) {
 System.out.println("Can't write"); // Or something more intellegent
 }		
-} catch (FileNotFoundException e) {
-System.out.println("Can't find"); // Or something more intellegent
-}		
-}//if equals
+	
 }else{//if file does not exist
 try {
 FileOutputStream stream = new FileOutputStream(storagePath+File.separator+"save"+File.separator+"archive"+File.separator+"wellcome_state.txt");
