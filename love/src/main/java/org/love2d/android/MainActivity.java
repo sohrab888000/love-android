@@ -1188,8 +1188,13 @@ toastMessage.show();
                 m_Text = input.getText().toString();
 		String test = input.getText().toString().trim();
 		if(TextUtils.isEmpty(test)) {
-                            return;
-                        }	
+                        if (toastMessage!= null) {
+    toastMessage.cancel();
+}
+toastMessage = Toast.makeText(MainActivity.this, "هیچ اسمی وارد نشده است!",
+Toast.LENGTH_SHORT);
+toastMessage.show();	    
+                        }else{	
 			
 		try {
 FileOutputStream stream = new FileOutputStream(storagePath+File.separator+"username.txt");
@@ -1209,7 +1214,7 @@ if (toastMessage!= null) {
 toastMessage = Toast.makeText(MainActivity.this, " خوش آمدید " + m_Text,
 Toast.LENGTH_SHORT);
 toastMessage.show();	
-	
+		}
                 }
                 });
                 builder.show();
