@@ -502,17 +502,4 @@
     
    <!-- Seasons four--> 
     
-<!-- music-->
-    <Button xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/music_button"
-    android:layout_width="50dp"
-    android:layout_height="50dp"
-    android:text=" "
-    android:layout_alignParentEnd="true"    
-    android:layout_alignParentTop="true"        
-    android:layout_toRightOf="@+id/sFourEtwoStars"                    
-    android:background="@drawable/music_on"       
-    android:onClick="mute_unmute" />     
-<!-- music-->    
-    
 </RelativeLayout>
