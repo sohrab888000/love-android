@@ -110,7 +110,6 @@ public class MainActivity extends Activity {
 	        mediaPlayer_lock = MediaPlayer.create(MainActivity.this, R.raw.lock);
 		init_seasons_state();				
 		show_wellcome_message_if_should_and_change_its_state();
-		music_init_state();
 	}
 	
         @Override
@@ -121,7 +120,6 @@ public class MainActivity extends Activity {
                 mediaPlayer_menu.seekTo(0);
                 mediaPlayer_menu.start();
                 }
-		music_init_state();
 
         }
 	
@@ -129,7 +127,6 @@ public class MainActivity extends Activity {
         protected void onStart(){
         super.onStart();
         init_seasons_state(); 	
-	music_init_state();	
         }
 	
 	
@@ -623,11 +620,6 @@ mediaPlayer_menu.pause();
 new gotoLevel(MainActivity.this,"1=s4e3").execute(); 
 } 
 }
-
-public void mute_unmute(View v) {	
-function_for_music_button();
-}	
-	
 //all button codes Season three/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //***********************************^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^**********************************	
 //***********************************^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^**********************************	
@@ -1267,124 +1259,5 @@ show_wellcome_message_if_should_and_change_its_state();
 }	
 	
 //###################################################################functions for showing wellcome message with username	
-//---------------------------------
-//###################################################################functions for mute unmute sound and music
-public void MuteAudio(){
-    AudioManager mAlramMAnager = (AudioManager) this.getSystemService(MainActivity.this.AUDIO_SERVICE);
-    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-        mAlramMAnager.adjustStreamVolume(AudioManager.STREAM_MUSIC, AudioManager.ADJUST_MUTE, 0);
-    } else {
-        mAlramMAnager.setStreamMute(AudioManager.STREAM_MUSIC, true);
-    }
-}
-
-public void UnMuteAudio(){
-
-    AudioManager mAlramMAnager = (AudioManager) this.getSystemService(MainActivity.this.AUDIO_SERVICE);
-    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-        mAlramMAnager.adjustStreamVolume(AudioManager.STREAM_MUSIC, AudioManager.ADJUST_UNMUTE,0);
-    } else {
-        mAlramMAnager.setStreamMute(AudioManager.STREAM_MUSIC, false);
-    }
-}
-	
-public void music_init_state(){
-
-Button music_btn = (Button) findViewById(R.id.music_button);		
-String storagePath  = "";
-if (this.getExternalFilesDir(null).getAbsolutePath() != null)
-storagePath = this.getExternalFilesDir(null).getAbsolutePath();
-else
-storagePath = this.getFilesDir().getAbsolutePath();	
-File file = new File(storagePath+File.separator+"save"+File.separator+"archive"+File.separator+"music_state.txt");
-if(file.exists()){//if file exists       
-try {
-BufferedReader brTest = new BufferedReader(new FileReader(file));
-String text = brTest.readLine();
-String substr = text.substring(2);	
-int state = Integer.parseInt(substr);		
-if(state == 0){
-MuteAudio();	
-music_btn.setBackgroundResource(R.drawable.music_off);	
-}else{
-UnMuteAudio();
-music_btn.setBackgroundResource(R.drawable.music_on);	
-}	
-	
-}catch (IOException e) {//| FileNotFoundException
-             System.out.println("Can't write"); // Or something more intellegent
-}	
-}
-
-}
-	
-public void function_for_music_button(){
-Button music_btn = (Button) findViewById(R.id.music_button);		
-String storagePath  = "";
-if (this.getExternalFilesDir(null).getAbsolutePath() != null)
-storagePath = this.getExternalFilesDir(null).getAbsolutePath();
-else
-storagePath = this.getFilesDir().getAbsolutePath();	
-File file = new File(storagePath+File.separator+"save"+File.separator+"archive"+File.separator+"music_state.txt");
-if(file.exists()){//if file exists       
-try {
-BufferedReader brTest = new BufferedReader(new FileReader(file));
-String text = brTest.readLine();
-String substr = text.substring(2);	
-int state = Integer.parseInt(substr);		
-if(state == 0){	
-UnMuteAudio();	
-music_btn.setBackgroundResource(R.drawable.music_on);
-try {
-FileOutputStream stream = new FileOutputStream(storagePath+File.separator+"save"+File.separator+"archive"+File.separator+"music_state.txt");
-try {
-    stream.write("1=1".getBytes());
-    stream.close();
-}catch (IOException e) {
-System.out.println("Can't write"); // Or something more intellegent
-}		
-} catch (FileNotFoundException e) {
-System.out.println("Can't find"); // Or something more intellegent
-}		
-	
-}else{
-MuteAudio();
-music_btn.setBackgroundResource(R.drawable.music_off);	
-try {
-FileOutputStream stream = new FileOutputStream(storagePath+File.separator+"save"+File.separator+"archive"+File.separator+"music_state.txt");
-try {
-    stream.write("1=0".getBytes());
-    stream.close();
-}catch (IOException e) {
-System.out.println("Can't write"); // Or something more intellegent
-}		
-} catch (FileNotFoundException e) {
-System.out.println("Can't find"); // Or something more intellegent
-}
-	
-}	
-	
-}catch (IOException e) {//| FileNotFoundException
-             System.out.println("Can't write"); // Or something more intellegent
-}	
-}else{//file does not exist
-MuteAudio();
-music_btn.setBackgroundResource(R.drawable.music_off);	
-try {
-FileOutputStream stream = new FileOutputStream(storagePath+File.separator+"save"+File.separator+"archive"+File.separator+"music_state.txt");
-try {
-    stream.write("1=0".getBytes());
-    stream.close();
-}catch (IOException e) {
-System.out.println("Can't write"); // Or something more intellegent
-}		
-} catch (FileNotFoundException e) {
-System.out.println("Can't find"); // Or something more intellegent
-}
-	
-}		
-}	
-//###################################################################functions for mute unmute sound and music
-	
 	
 }
