@@ -1,4 +1,6 @@
 package org.love2d.android;
+
+import com.google.android.material.snackbar.Snackbar;
 import android.media.AudioManager;
 import android.app.AlertDialog;
 import android.graphics.drawable.Drawable;
@@ -1172,6 +1174,7 @@ toastMessage.show();
 		//create username
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
                 builder.setTitle("نام نویسی");
+	        builder.setCancelable(false);
                 // Set up the input
                 final EditText input = new EditText(this);
                 // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
@@ -1182,6 +1185,14 @@ toastMessage.show();
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                 m_Text = input.getText().toString();
+		String test input.getText().toString().trim();
+		if(TextUtils.isEmpty(test)) {
+
+                            Snackbar snackbar = Snackbar.make(mView, "لطفاابتدا نام خود را وارد کنید", Snackbar.LENGTH_LONG);
+                            snackbar.show();
+                            return;
+                        }	
+			
 		try {
 FileOutputStream stream = new FileOutputStream(storagePath+File.separator+"username.txt");
 try {
