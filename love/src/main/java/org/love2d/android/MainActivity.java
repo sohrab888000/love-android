@@ -157,30 +157,42 @@ public void goToPage(View v) {
 mediaPlayer_click.seekTo(0);	
 mediaPlayer_click.start();	
 /*bazar*/
-
+/*
 Intent intent = new Intent(Intent.ACTION_VIEW); 
 intent.setData(Uri.parse("bazaar://details?id=" + "com.undeniables.ShadowHero")); 
 intent.setPackage("com.farsitel.bazaar"); 
 startActivity(intent);    
-
+*/
+/*myket*/
+String url= "myket://details?id=com.undeniables.ShadowHero";
+Intent intent = new Intent();
+intent.setAction(Intent.ACTION_VIEW);
+intent.setData(Uri.parse(url));
+startActivity(intent);		
 }	
 		
 public void commenting(View v) {
 mediaPlayer_click.seekTo(0);	
 mediaPlayer_click.start();	
 /*bazar*/
-
+/*
 Intent intent = new Intent(Intent.ACTION_EDIT); 
 intent.setData(Uri.parse("bazaar://details?id=" + "com.undeniables.ShadowHero")); 
 intent.setPackage("com.farsitel.bazaar"); 
 startActivity(intent);
-
+*/
+/*myket*/
+String url= "myket://comment?id=com.undeniables.ShadowHero";
+Intent intent = new Intent();
+intent.setAction(Intent.ACTION_VIEW);
+intent.setData(Uri.parse(url));
+startActivity(intent);	
 }
 
 public void sendingEmail(View v) {
 mediaPlayer_click.seekTo(0);	
 mediaPlayer_click.start();	
-/*bazar*/
+/*bazar and myket*/
 String url = "mailto: 00sohrabiranpak00@gmail.com";		
 Intent intent = new Intent();
 intent.setAction(Intent.ACTION_SENDTO);
@@ -193,12 +205,18 @@ public void goToGamesPage(View v) {
 mediaPlayer_click.seekTo(0);	
 mediaPlayer_click.start();	
 /*bazar*/
-	
+/*	
 Intent intent = new Intent(Intent.ACTION_VIEW); 
 intent.setData(Uri.parse("bazaar://collection?slug=by_author&aid=" + "515731926985")); 
 intent.setPackage("com.farsitel.bazaar"); 
 startActivity(intent);   
-
+*/
+/*myket*/
+String url= "myket://developer/com.undeniables.ShadowHero";
+Intent intent = new Intent();
+intent.setAction(Intent.ACTION_VIEW);
+intent.setData(Uri.parse(url));
+startActivity(intent);			
 }
 	
 public void exit_game(View v) {
