@@ -157,24 +157,24 @@ public void goToPage(View v) {
 mediaPlayer_click.seekTo(0);	
 mediaPlayer_click.start();	
 /*bazar*/
-/*	
+
 Intent intent = new Intent(Intent.ACTION_VIEW); 
-intent.setData(Uri.parse("bazaar://details?id=" + "com.SandSprogrammingGroup.FIFA2022")); 
+intent.setData(Uri.parse("bazaar://details?id=" + "com.undeniables.ShadowHero")); 
 intent.setPackage("com.farsitel.bazaar"); 
 startActivity(intent);    
-*/  
+
 }	
 		
 public void commenting(View v) {
 mediaPlayer_click.seekTo(0);	
 mediaPlayer_click.start();	
 /*bazar*/
-/*
+
 Intent intent = new Intent(Intent.ACTION_EDIT); 
-intent.setData(Uri.parse("bazaar://details?id=" + "com.SandSprogrammingGroup.FIFA2022")); 
+intent.setData(Uri.parse("bazaar://details?id=" + "com.undeniables.ShadowHero")); 
 intent.setPackage("com.farsitel.bazaar"); 
 startActivity(intent);
-*/  
+
 }
 
 public void sendingEmail(View v) {
@@ -193,12 +193,12 @@ public void goToGamesPage(View v) {
 mediaPlayer_click.seekTo(0);	
 mediaPlayer_click.start();	
 /*bazar*/
-/*	
+	
 Intent intent = new Intent(Intent.ACTION_VIEW); 
-intent.setData(Uri.parse("bazaar://collection?slug=by_author&aid=" + "230310009713")); 
+intent.setData(Uri.parse("bazaar://collection?slug=by_author&aid=" + "515731926985")); 
 intent.setPackage("com.farsitel.bazaar"); 
 startActivity(intent);   
-*/
+
 }
 	
 public void exit_game(View v) {
