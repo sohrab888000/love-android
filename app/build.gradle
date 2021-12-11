@@ -7,7 +7,7 @@ android {
     defaultConfig {
         applicationId 'com.undeniables.ShadowHero'
         versionCode 1
-        versionName 'آلفا'
+        versionName 'ابتدایی'
         minSdkVersion 19
         targetSdkVersion 30
     }
