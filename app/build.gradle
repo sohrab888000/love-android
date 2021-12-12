@@ -6,7 +6,7 @@ android {
     ndkVersion '21.3.6528147'
     defaultConfig {
         applicationId 'com.undeniables.ShadowHero'
-        versionCode 2
+        versionCode 3
         versionName 'ابتدایی'
         minSdkVersion 19
         targetSdkVersion 30
