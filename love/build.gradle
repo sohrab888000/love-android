@@ -1,19 +1,12 @@
 apply plugin: 'com.android.library'
 
 android {
-    // If you want to use the debugger for JNI code, you want to debug this lib-project in Debug!
-    // And due to gradle limitations/bugs, the best way is to always debug it in debug.
-    // See https://code.google.com/p/android/issues/detail?id=52962
-    // and http://stackoverflow.com/questions/27277433/why-does-gradle-build-my-module-in-release-mode-when-the-app-is-in-debug
-    // defaultPublishConfig "debug"
-    compileSdkVersion 30
-    buildToolsVersion '30.0.2'
-    ndkVersion '21.3.6528147'
+    namespace 'org.love2d.android'
+    compileSdk 34
+    ndkVersion '26.1.10909125'
 
     defaultConfig {
-        compileSdkVersion 30
-        buildToolsVersion "30.0.2"
-        minSdkVersion 14
+        minSdk 26
         resValue 'bool', 'embed', 'false'
         externalNativeBuild {
             ndkBuild {
@@ -26,12 +19,11 @@ android {
             abiFilters 'armeabi-v7a', 'arm64-v8a'
             debugSymbolLevel 'SYMBOL_TABLE'
         }
-        targetSdkVersion 30
     }
     buildTypes {
         release {
-            minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
         debug {
             ndk {
@@ -70,16 +62,26 @@ android {
             path 'src/jni/Android.mk'
         }
     }
-    lintOptions {
+    lint {
         abortOnError false
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
     packagingOptions {
-        exclude 'lib/arm64-v8a/libSDL2.so'
-        exclude 'lib/armeabi-v7a/libSDL2.so'
+        resources {
+            excludes += ['META-INF/LICENSE.txt', 'META-INF/NOTICE.txt']
+        }
+        jniLibs {
+            // حذف SDL2 تکراری که به صورت دستی هم لینک می‌شود
+            excludes += ['lib/arm64-v8a/libSDL2.so', 'lib/armeabi-v7a/libSDL2.so']
+        }
     }
 }
 
 dependencies {
     api fileTree(dir: 'libs', include: ['*.jar'])
-    api 'androidx.appcompat:appcompat:1.2.0'
+    api 'androidx.appcompat:appcompat:1.6.1'
+    api 'com.google.android.material:material:1.12.0'
 }

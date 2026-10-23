@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="org.love2d.android.executable"
-  android:installLocation="auto" xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  android:installLocation="auto">
+
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.VIBRATE" />
   <uses-permission android:name="android.permission.BLUETOOTH" />
@@ -25,36 +26,39 @@
       android:allowBackup="true"
       android:icon="@drawable/love"
       android:label="قهرمان سایه ای"
+      android:supportsRtl="true"
       android:usesCleartextTraffic="true"
       android:hardwareAccelerated="true" >
+
       <service android:name="org.love2d.android.DownloadService" />
-    
-          <activity android:name="org.love2d.android.MainActivity"
-		android:label="قهرمان سایه ای"
-		android:screenOrientation="landscape" 
-                android:theme="@style/AppTheme" >
-		  <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-	  
-	          <activity android:name="org.love2d.android.SplashActivity"
-		android:label="قهرمان سایه ای"
-		android:screenOrientation="landscape" 
-                android:theme="@style/AppTheme" >
-		  <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>  
-	  
-	  
-    
+
+      <activity android:name="org.love2d.android.MainActivity"
+        android:label="قهرمان سایه ای"
+        android:exported="true"
+        android:screenOrientation="landscape"
+        android:theme="@style/AppTheme" >
+        <intent-filter>
+          <action android:name="android.intent.action.MAIN" />
+          <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+      </activity>
+
+      <activity android:name="org.love2d.android.SplashActivity"
+        android:label="قهرمان سایه ای"
+        android:exported="true"
+        android:screenOrientation="landscape"
+        android:theme="@style/AppTheme" >
+        <intent-filter>
+          <action android:name="android.intent.action.MAIN" />
+          <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+      </activity>
+
       <activity
         android:name="org.love2d.android.GameActivity"
         android:configChanges="layoutDirection|locale|orientation|uiMode|screenLayout|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
         android:label="قهرمان سایه ای"
+        android:exported="true"
         android:launchMode="singleTask"
         android:screenOrientation="landscape"
         android:resizeableActivity="true"
@@ -91,9 +95,11 @@
           <data android:mimeType="application/*" />
         </intent-filter>
       </activity>
+
       <activity
         android:name="org.love2d.android.DownloadActivity"
         android:noHistory="true"
+        android:exported="true"
         android:theme="@style/AppTheme" >
         <intent-filter>
           <action android:name="android.intent.action.VIEW" />
@@ -110,4 +116,4 @@
         </intent-filter>
       </activity>
     </application>
-</manifest> 
+</manifest>

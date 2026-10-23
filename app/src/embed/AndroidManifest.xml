@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
-  package="org.love2d.android.executable"
   xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:tools="http://schemas.android.com/tools"
 >
@@ -18,6 +17,7 @@
         android:name="org.love2d.android.GameActivity"
         android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|keyboard|keyboardHidden|navigation"
         android:label="LÖVE for Android"
+        android:exported="true"
         android:launchMode="singleTask"
         android:screenOrientation="landscape"
         android:resizeableActivity="false"
@@ -32,4 +32,4 @@
         </intent-filter>
       </activity>
     </application>
-</manifest> 
+</manifest>

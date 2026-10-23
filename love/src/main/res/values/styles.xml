@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+        تم Material Design 3 (تیره) برای قهرمان سایه‌ای
+        این تم در ماژول love تعریف شده چون لی‌اوت‌ها و اکتیویتی‌ها اینجاست
+        سازگار با Android 8 (API 26) تا Android 15 (API 35)
+        روی Android 12+ رنگ‌های Dynamic هم اعمال می‌شود
+    -->
+    <style name="AppTheme" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges</item>
+
+        <!-- پالت برند: بنفش سایه‌ای -->
+        <item name="colorPrimary">@color/sh_primary</item>
+        <item name="colorOnPrimary">@color/sh_on_primary</item>
+        <item name="colorPrimaryContainer">@color/sh_primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/sh_on_primary_container</item>
+        <item name="colorSecondary">@color/sh_secondary</item>
+        <item name="colorOnSecondary">@color/sh_on_secondary</item>
+        <item name="colorSecondaryContainer">@color/sh_secondary_container</item>
+        <item name="colorOnSecondaryContainer">@color/sh_on_secondary_container</item>
+        <item name="colorTertiary">@color/sh_tertiary</item>
+        <item name="colorOnTertiary">@color/sh_on_tertiary</item>
+
+        <item name="android:colorBackground">@color/sh_background</item>
+        <item name="colorOnBackground">@color/sh_on_background</item>
+        <item name="colorSurface">@color/sh_surface</item>
+        <item name="colorOnSurface">@color/sh_on_surface</item>
+        <item name="colorSurfaceVariant">@color/sh_surface_variant</item>
+        <item name="colorOnSurfaceVariant">@color/sh_on_surface_variant</item>
+        <item name="colorOutline">@color/sh_outline</item>
+    </style>
+
+    <!-- استایل دکمه‌های منوی اصلی -->
+    <style name="ShadowHero.MenuButton" parent="Widget.Material3.Button.Icon">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:layout_marginStart">24dp</item>
+        <item name="android:layout_marginEnd">24dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconPadding">16dp</item>
+        <item name="iconSize">24dp</item>
+        <item name="cornerRadius">18dp</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <!-- دکمه‌های فصل/اپیزود -->
+    <style name="ShadowHero.EpisodeButton" parent="Widget.Material3.Button.TonalButton.Icon">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">52dp</item>
+        <item name="android:layout_marginStart">24dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:layout_marginTop">6dp</item>
+        <item name="android:layout_marginBottom">6dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="iconGravity">textEnd</item>
+        <item name="iconSize">20dp</item>
+        <item name="cornerRadius">16dp</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+</resources>

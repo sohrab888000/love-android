@@ -1,20 +1,38 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion '30.0.2'
-    ndkVersion '21.3.6528147'
+    namespace 'org.love2d.android.executable'
+    compileSdk 34
+    ndkVersion '26.1.10909125'
     defaultConfig {
         applicationId 'com.SandSprogrammingGroup.RealShadowHero'
-        versionCode 3
-        versionName 'ابتدایی'
-        minSdkVersion 19
-        targetSdkVersion 30
+        versionCode 4
+        versionName '1.1.0-material'
+        // Android 8.0 (API 26) تا Android 15 (API 35) پشتیبانی می‌شود
+        minSdk 26
+        targetSdk 34
+    }
+    signingConfigs {
+        ciRelease {
+            // برای بیلد CI: متغیرهای محیطی SIGNING_* تنظیم می‌شوند
+            def storePath = System.getenv('SIGNING_STORE_PATH')
+            if (storePath != null && !storePath.isEmpty()) {
+                storeFile file(storePath)
+                storePassword System.getenv('SIGNING_STORE_PASSWORD')
+                keyAlias System.getenv('SIGNING_KEY_ALIAS')
+                keyPassword System.getenv('SIGNING_KEY_PASSWORD')
+            }
+        }
     }
     buildTypes {
         release {
-            minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            // minify غیرفعال برای سازگاری کامل JNI/LÖVE در R8 full-mode
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            def storePath = System.getenv('SIGNING_STORE_PATH')
+            if (storePath != null && !storePath.isEmpty()) {
+                signingConfig signingConfigs.ciRelease
+            }
         }
     }
     flavorDimensions 'mode'
@@ -30,14 +48,20 @@ android {
             applicationIdSuffix '.embed'
         }
     }
-    lintOptions {
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    lint {
         abortOnError false
     }
 }
 
 dependencies {
-    api 'androidx.multidex:multidex:2.0.1'
+    api 'androidx.appcompat:appcompat:1.6.1'
+    api 'com.google.android.material:material:1.12.0'
+    api 'androidx.constraintlayout:constraintlayout:2.1.4'
+    api 'androidx.core:core-splashscreen:1.0.1'
     api fileTree(dir: 'libs', include: ['*.jar'])
-    api 'androidx.appcompat:appcompat:1.2.0'
     api project(':love')
 }

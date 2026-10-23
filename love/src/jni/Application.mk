@@ -5,7 +5,7 @@ APP_STL := c++_shared
 APP_ABI := armeabi-v7a
 APP_CPPFLAGS := -frtti
 APP_LDFLAGS := -llog -landroid -lz -fuse-ld=lld
-APP_PLATFORM := 10
+APP_PLATFORM := 21
 NDK_TOOLCHAIN_VERSION := clang
 
 # Fix for building on Windows

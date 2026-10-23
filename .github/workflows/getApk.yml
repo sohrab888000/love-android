@@ -1,69 +1,96 @@
 name: android
 
 on:
-  workflow_dispatch: 
-     inputs:
+  workflow_dispatch:
+    inputs:
       romURL:
-        description: 'Direct URL to game.love'
+        description: '(اختیاری) لینک مستقیم game.love — اگر خالی باشد از پوشه main/ ساخته می‌شود'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-       - name: Checkout repository
-         uses: actions/checkout@v2
-       - name: Checkout submodules
-         run: git submodule update --init --recursive
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-       - name: Setup Java 11
-         uses: actions/setup-java@v2
-         with:
-           distribution: adopt-hotspot
-           java-version: 11
-           cache: gradle
-        
-       - name: Fetch Rom
-         run: |
-          mkdir -p /home/runner/work/love-android/love-android/app/src/main/assets/
-          curl -L# "${{ github.event.inputs.romURL }}" > /home/runner/work/love-android/love-android/app/src/main/assets/game.love
-        
-       - name: Build Release APK
-         run: |
+      - name: Checkout submodules
+        run: git submodule update --init --recursive
+
+      - name: Setup Java 17 (AGP 8.1.1)
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+          cache: gradle
+
+      - name: Package game from main/ folder into game.love
+        if: ${{ github.event.inputs.romURL == '' }}
+        run: |
+          mkdir -p app/src/main/assets/
+          cd main
+          zip -r -X ../app/src/main/assets/game.love .
+          cd ..
+          echo "=== game.love (root files) ==="
+          unzip -l app/src/main/assets/game.love | head -15
+          ls -la app/src/main/assets/
+
+      - name: Fetch game.love from direct URL (fallback mode)
+        if: ${{ github.event.inputs.romURL != '' }}
+        run: |
+          mkdir -p app/src/main/assets/
+          curl -L# "${{ github.event.inputs.romURL }}" -o app/src/main/assets/game.love
+
+      - name: Prepare signing keystore
+        env:
+          KEYSTORE_B64: ${{ secrets.KEYSTORE_BASE64 }}
+          KS_PASSWORD: ${{ secrets.SIGNING_STORE_PASSWORD }}
+        run: |
+          if [ -n "$KEYSTORE_B64" ]; then
+            echo "$KEYSTORE_B64" | base64 -d > release.keystore
+          else
+            if [ -z "$KS_PASSWORD" ]; then
+              KS_PASSWORD="ShadowHero$(date +%Y)Sign!"
+            fi
+            keytool -genkeypair -v \
+              -keystore release.keystore \
+              -alias shadowhero -keyalg RSA -keysize 2048 -validity 10000 \
+              -storepass "$KS_PASSWORD" -keypass "$KS_PASSWORD" \
+              -dname "CN=RealShadowHero, OU=SandS, O=SandSprogrammingGroup, L=Tehran, C=IR"
+          fi
+          echo "SIGNING_STORE_PATH=$GITHUB_WORKSPACE/release.keystore" >> "$GITHUB_ENV"
+          echo "SIGNING_STORE_PASSWORD=$KS_PASSWORD" >> "$GITHUB_ENV"
+          echo "SIGNING_KEY_ALIAS=shadowhero" >> "$GITHUB_ENV"
+          echo "SIGNING_KEY_PASSWORD=$KS_PASSWORD" >> "$GITHUB_ENV"
+
+      - name: Build Signed Release APK
+        run: |
           chmod +x ./gradlew
-          ./gradlew assembleNormal 
-          
-       - name: Get Date
-         id: date
-         run: echo "::set-output name=date::$(date +'%Y-%m-%dT%H-%M-%S')"
+          ./gradlew assembleNormal --no-daemon --stacktrace
 
-       - name: Create Release
-         id: create_release
-         uses: actions/create-release@v1
-         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-         with:
-          tag_name: ludere-${{ steps.date.outputs.date }}
-          release_name: Ludere ${{ steps.date.outputs.date }}
-       
-       - name: get apk name
-         run: find /home/runner/work/ -name "*.apk"
-       
-       - name: Upload Release Asset
-         id: upload-release-asset
-         uses: actions/upload-release-asset@v1
-         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-         with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: /home/runner/work/love-android/love-android/app/build/outputs/apk/normal/release/app-normal-release-unsigned.apk
-          asset_name: ludere.apk
-          asset_content_type: application/apk
+      - name: Get Date
+        id: date
+        run: echo "date=$(date +'%Y-%m-%dT%H-%M-%S')" >> "$GITHUB_OUTPUT"
 
-          
-          
-          #./gradlew bundleRelease
-          #./gradlew assembleRelease
-     #  - name: Fetch Rom
-     #    run: |
-     #     mkdir -p /home/runner/work/love-android/love-android/app/src/main/assets/
-     #     curl -L# "${{ github.event.inputs.romURL }}" > /home/runner/work/love-android/love-android/app/src/main/assets/game.love
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: shadow-hero-apk-${{ steps.date.outputs.date }}
+          path: app/build/outputs/apk/normal/release/*.apk
+          if-no-files-found: error
+
+      - name: Create Release and upload APK
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: shadowhero-${{ steps.date.outputs.date }}
+          name: ShadowHero Material ${{ steps.date.outputs.date }}
+          body: |
+            بیلد اندروید قهرمان سایه‌ای
+            - GUI با Material Design 3
+            - سازگار با Android 8 (API 26) تا Android 15
+            - APK امضاشده — قابل نصب مستقیم
+          files: app/build/outputs/apk/normal/release/*.apk

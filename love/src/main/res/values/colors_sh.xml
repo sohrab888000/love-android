@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- پالت Material 3 اختصاصی قهرمان سایه‌ای (تم تیره) - در ماژول love -->
+
+    <!-- Primary: بنفش سایه‌ای -->
+    <color name="sh_primary">#D0BCFF</color>
+    <color name="sh_on_primary">#381E72</color>
+    <color name="sh_primary_container">#4F378B</color>
+    <color name="sh_on_primary_container">#EADDFF</color>
+
+    <!-- Secondary: خاکستری-بنفش ملایم -->
+    <color name="sh_secondary">#CCC2DC</color>
+    <color name="sh_on_secondary">#332D41</color>
+    <color name="sh_secondary_container">#4A4458</color>
+    <color name="sh_on_secondary_container">#E8DEF8</color>
+
+    <!-- Tertiary: صورتی ملایم (ستاره‌ها/امتیاز) -->
+    <color name="sh_tertiary">#EFB8C8</color>
+    <color name="sh_on_tertiary">#492532</color>
+    <color name="sh_tertiary_container">#633B48</color>
+    <color name="sh_on_tertiary_container">#FFD8E4</color>
+
+    <!-- Surface / Background -->
+    <color name="sh_background">#121016</color>
+    <color name="sh_on_background">#E6E0E9</color>
+    <color name="sh_surface">#1D1B20</color>
+    <color name="sh_on_surface">#E6E0E9</color>
+    <color name="sh_surface_variant">#49454F</color>
+    <color name="sh_on_surface_variant">#CAC4D0</color>
+    <color name="sh_outline">#938F99</color>
+    <color name="sh_scrim">#99000000</color>
+</resources>
